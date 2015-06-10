@@ -2083,12 +2083,12 @@
 		position: relative;
 		margin: 0;
 		text-align: center;
-		padding: 0em 0 0em 0;
+		<!-- padding: 0em 0 0em 0; -->
 		box-shadow: inset 0 1px 0 0 #e6e6e6;
 	}
 
 		#footer .copyright {
-			margin-top: 0em;
+			margin-top:-3em;
 			font-size: 0.8em;
 			color: #aaa;
 		}
@@ -2097,8 +2097,7 @@
 				color: inherit;
 			}
 
-		#footer ul.icons a {
-			box-shadow: inset 0 0 0 1px #d6d6d6;
+	
 		}
 
 /* Wide */
