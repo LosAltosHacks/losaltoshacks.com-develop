@@ -2089,6 +2089,7 @@
 	}
 
 		#footer .copyright {
+            height: 10px
 			margin-top:-3em;
 			font-size: 0.8em;
 			color: #aaa;
