@@ -2076,6 +2076,9 @@
 				padding-top: 0;
 				background: #fff;
 			}
+.circle{
+border-radius: 50%;
+}
 
 /* Footer */
 
