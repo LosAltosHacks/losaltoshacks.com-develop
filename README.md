@@ -1,5 +1,2 @@
-Los Altos HAcks
-==============
-
-A 24-hour hackathon held in Los Altos, California
-January 30 - 31, 2016
+# Los Altos Hacks
+not to be confused with LAHacks
