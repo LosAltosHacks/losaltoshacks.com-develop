@@ -1,4 +1,4 @@
-Los Altos HAcks
+Los Altos Hacks
 ==============
 
 A 24-hour hackathon held in Los Altos, California
