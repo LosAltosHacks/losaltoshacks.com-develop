@@ -7,9 +7,25 @@ Controller('home', {
 
     rendered: function() {
         initiateWaypoints();
+        // setupLinkToggle();
     }
 
 });
+
+
+// function setupLinkToggle() {
+
+//     $(".links > a").click(function() {
+//       // remove classes from all
+
+//       console.log("clicked");
+//       $(".links > a").removeClass("active");
+//       // add class to the one we clicked
+//       $(this).addClass("active");
+//    });
+
+// }
+
 
 function initiateWaypoints() {
 
@@ -67,6 +83,19 @@ function initiateWaypoints() {
                 $('.links > a > li').css('color', 'black');
             } else {
                 $('.links > a > li').css('color', 'white');
+            }
+        },
+        offset: function() {
+            return 0;
+        }
+    });
+    var teamWaypoint = new Waypoint({
+        element: document.getElementById('team'),
+        handler: function(direction) {
+            if(direction === "down") {
+                $('.links > a > li').css('color', 'white');
+            } else {
+                $('.links > a > li').css('color', 'black');
             }
         },
         offset: function() {
