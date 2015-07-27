@@ -25,19 +25,23 @@ function initiateWaypoints() {
         });
     });
 
-    var introWaypoint = new Waypoint({
-        element: document.getElementById('intro'),
-        handler: function(direction) {
-            $('.links > a > li').css('color', 'white');
-        },
-        offset: function() {
-            return 0;
-        }
-    });
+    // var introWaypoint = new Waypoint({
+    //     element: document.getElementById('intro'),
+    //     handler: function(direction) {
+    //         $('.links > a > li').css('color', 'white');
+    //     },
+    //     offset: function() {
+    //         return 0;
+    //     }
+    // });
     var scheduleWaypoint = new Waypoint({
         element: document.getElementById('schedule'),
         handler: function(direction) {
-            $('.links > a > li').css('color', 'black');
+            if(direction === "down") {
+                $('.links > a > li').css('color', 'black');
+            } else {
+                $('.links > a > li').css('color', 'white');
+            }
         },
         offset: function() {
             return 0;
@@ -46,7 +50,11 @@ function initiateWaypoints() {
     var faqWaypoint = new Waypoint({
         element: document.getElementById('faq'),
         handler: function(direction) {
-            $('.links > a > li').css('color', 'white');
+            if(direction === "down") {
+                $('.links > a > li').css('color', 'white');
+            } else {
+                $('.links > a > li').css('color', 'black');
+            }
         },
         offset: function() {
             return 0;
@@ -55,7 +63,11 @@ function initiateWaypoints() {
     var sponsorsWaypoint = new Waypoint({
         element: document.getElementById('sponsors'),
         handler: function(direction) {
-            $('.links > a > li').css('color', 'black');
+            if(direction === "down") {
+                $('.links > a > li').css('color', 'black');
+            } else {
+                $('.links > a > li').css('color', 'white');
+            }
         },
         offset: function() {
             return 0;
