@@ -1,224 +1,27 @@
 <template name="home">
 
-<script type="text/javascript">
-    
-    // You can avoid the document.ready if you put the script at the bottom of the page
-    $(document).ready(function() {
-      // Bind to the click of all links with a #hash in the href
-      $('a[href^="#"]').click(function(e) {
-        // Prevent the jump and the #hash from appearing on the address bar
-        e.preventDefault();
-        // Scroll the window, stop any previous animation, stop on user manual scroll
-        // Check https://github.com/flesler/jquery.scrollTo for more customizability
-        $(window).stop(true).scrollTo(this.hash, {duration:800, interrupt:true});
-      });
-    });
+<!-- ============== INTRO ============== -->
 
-    var introWaypoint = new Waypoint({
-      element: document.getElementById('intro'),
-      handler: function(direction) {
-        $('.links > a > li').css('color', 'white');
-      },
-      offset: function() {
-        return 0;
-      }
-    })
-    var scheduleWaypoint = new Waypoint({
-      element: document.getElementById('schedule'),
-      handler: function(direction) {
-        $('.links > a > li').css('color', 'black');
-      },
-      offset: function() {
-        return 0;
-      }
-    })
-    var faqWaypoint = new Waypoint({
-      element: document.getElementById('faq'),
-      handler: function(direction) {
-        $('.links > a > li').css('color', 'white');
-      },
-      offset: function() {
-        return 0;
-      }
-    })
-    var sponsorsWaypoint = new Waypoint({
-      element: document.getElementById('sponsors'),
-      handler: function(direction) {
-        $('.links > a > li').css('color', 'black');
-      },
-      offset: function() {
-        return 0;
-      }
-    })
+    {{> intro }}
 
-</script>
+<!-- ============== SCHEDULE ============== -->
 
-<section id="intro" class="colored text-center">
-    <header>
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="row">
-<!--                         <a class="navbar-brand" href="{{pathFor 'home'}}">{{Config.name}}</a>
--->                        <div id="main-nav" class="navbar-collapse collapse">
+    {{> schedule }}
 
-                        <ul class="nav navbar-nav navbar-right links">
+<!-- ============== FAQ ============== -->
 
-                            <a id="nav-apply-btn" href="#"><li>{{_ "APPLY"}}</li></a>
-                            <a id="intro-btn" href="#intro"><li>HOME</li></a>
-                            <a id="schedule-btn" href="#schedule"><li>SCHEDULE</li></a>
-                            <a id="faq-btn" href="#faq"><li>FAQ</li></a>
-                            <a id="sponsors-btn" href="#sponsors"><li>SPONSORS</li></a>
+    {{> faq }}
 
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </nav>
+<!-- ============== SPONSORS ============== -->
 
-    </header>
+    {{> sponsors }}
 
-    <div class="container">
-        <div class="intro-well wow animated fadeInDown">
-            <div class="row">
-                <div class="col-lg-12 col-sm-12">
-                    <div class="col-lg-12 col-sm-12">
-                        <img src="img/losaltoshacks.png" id="logo" class="img-responsive">
-                    </div>
-                    
-                    <h2 style="color:white;" class="uppercase">{{Config.subtitle}}</h2>
-                    <h3 style="color:white;" class="uppercase">January 30 - 31, 2016</h3>
+<!-- ============== FOOTER ============== -->
 
-                    <button id="apply-btn" type="button" class="uppercase btn btn-info btn-outline btn-lg">Apply Now</button>
+    {{> footerHome}}
 
-                    <a href="#" id="sponsor-btn"><h5 class="uppercase">Interested in becoming a sponsor?</h5></a>
-                </div>
-                <!--                 <div class="col-lg-6 col-sm-6">
-                                            <img class="img-responsive" src="/img/image-header1.png" alt="">
-                </div> -->
-
-
-            </div>
-        </div>
-
-    </div>
-
-</section>
-<section id="schedule" class="text-center">
-
-    <div class="container wow fadeInLeft animated">
-<!--             <div class="row col-md-12">
-            <h4>{{Config.name}} - {{Config.subtitle}}</h4>
-    </div> -->
-        <div class="row" id="icon-row">
-            <div class="col-xs-12 col-md-8 col-md-push-2">
-                <h2 class="uppercase" style="margin: 0 auto;">{{_ "Schedule"}}</h2>
-
-                <h3 class="uppercase">Day 1</h3>
-                <table class="table centered-table">
-                    <thead>
-                        <tr>
-                            <th class="time uppercase">Time</th>
-                            <th class="event uppercase">Event</th>
-                        </tr>
-                        </thead>
-                    <tbody>
-                        <tr>
-                            <td>12:00 AM</td>
-                            <td>Doors Open</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <h3 class="uppercase">Day 2</h3>
-                <table class="table centered-table">
-                    <thead>
-                        <tr>
-                            <th class="time uppercase">Time</th>
-                            <th class="event uppercase">Event</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>12:00 AM</td>
-                            <td>Something</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- <section id="examples">
-            <div class="container wow fadeInUp animated">
-                    <h1>Great features!</h1>
-                    <h2>You can use {{Config.siteName}} to do anything</h2>
-            </div>
-</section> -->
-<section id="faq" class="colored text-center">
-    <div class="container">
-        <div class="row">
-            <h2 class="uppercase" style="margin: 0 auto;">{{_ "FAQ"}}</h2>
-
-            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                
-                {{> faqPanel}}
-
-            </div>
-
-            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-
-                {{> faqPanel}}
-
-            </div>
-
-            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                
-                {{> faqPanel}}
-
-            </div>
-            
-            <!-- <div class="col-sm-6">
-                <h3>{{_ "section_ipad_header"}}</h3>
-                <p>{{_ "section_ipad_text"}}</p>
-                <p class="text-center">
-                <a href="{{Config.about}}" target="_blank" class="btn btn-success">
-                {{_ "section_ipad_btn"}}
-                </a>
-                </p>
-            </div>
-            <div class="col-sm-6">
-                <img id="ipad" src="/img/ipad.png" alt="" class="wow animated fadeInRight" data-wow-delay="1s">
-            </div> -->
-        </div>
-    </div>
-</section>
-<section id="sponsors" class="text-center"> 
-    <div class="container">
-        <div class="row">
-            <h2 class="uppercase" style="margin: 0 auto;">{{_ "Companies We Admire"}}</h2>
-            <div class="col-md-12">
-                <img src="img/example-sponsor.png" class="img-responsive sponsor-img">
-                <img src="img/example-sponsor2.gif" class="img-responsive sponsor-img">
-
-            </div>
-        </div>
-    </div>
-</section>
-
-{{> footerHome}}
 </template>
 
-<template name="faqPanel">
-    <div class="panel panel-default">
-        <div class="panel-heading uppercase">
-            <h4 class="panel-title">Something</h4>
-        </div>
-        <div id="faq-1" class="panel-collapse">
-            <div class="panel-body uppercase">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </div>
-        </div>
-    </div>
-</template>
 
 <template name="footerHome">
     <footer id="footer-home">
@@ -226,20 +29,12 @@
             <div class="row text-center">
                 <div class="col-md-offset-2 col-md-8">
                     <ul class="social-networks">
-                        {{#each socialMedia}}
-                        <li><a href="{{url}}" target="_blank">
-                        <span class="fa-stack fa-2x">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-{{icon}} fa-stack-1x fa-inverse"></i>
-                        </span></a>
-                        </li>
-                        {{/each}}
                     </ul>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12 text-center">
-                    {{{Config.footer}}}
+                    Made with ♥ by the Los Altos Hacks team
                 </div>
             </div>
         </div>

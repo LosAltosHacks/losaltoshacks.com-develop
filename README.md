@@ -1,5 +1,7 @@
-Los Altos Hacks
-==============
+# Los Altos Hacks
+=======
+not to be confused with LAHacks
 
-A 24-hour hackathon held in Los Altos, California
-January 30 - 31, 2016
+Things to be done:
+ - actual waypoints implementation
+
