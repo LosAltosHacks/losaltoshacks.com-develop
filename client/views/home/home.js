@@ -102,4 +102,6 @@ function initiateWaypoints() {
             return 0;
         }
     });
+
+    new WOW().init();
 }
