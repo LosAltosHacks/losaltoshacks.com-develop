@@ -1,0 +1,81 @@
+#intro
+{
+
+  overflow: visible;
+  padding-top: 0;
+  padding-bottom: 150px;
+  background-color: black;
+
+  background: @home-intro-bg no-repeat center fixed;
+  background-size: cover;
+
+  a {
+    color: white;
+    text-decoration: none;
+    -webkit-transition: color 0.2s;
+    -moz-transition: color 0.2s;
+    transition: color 0.2s;
+    &:hover {
+      color: #4aa3df;
+    }
+  }
+  h1
+  {
+    padding-top: 100px;
+  }
+  &.mobile
+  {
+    background: @home-intro-bg no-repeat center;
+    background-size: cover;
+  }
+}
+
+.links {
+  -webkit-transition: color 0.2s;
+  -moz-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+/*
+.active {
+  border-width: 2px;
+  border-color: #f1c40f;
+  border-radius: 5px;
+}
+*/
+
+/* Nav Styles */
+
+.navbar {
+  background-color: transparent;
+  border: 0;
+
+  font-size: 18px;
+
+  li {
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 15px;
+  }
+}
+
+/* Misc. */
+#main-nav
+{
+  border: none;
+  box-shadow: none;
+}
+
+#logo {
+  max-height: 350px; margin: 0 auto; padding-top: 20px; padding-bottom: 20px;
+}
+
+#apply-btn {
+  margin-top: 10px;
+}
+
+#sponsor-btn {
+  position: relative;
+  margin-top: 40px;
+}

@@ -1,0 +1,111 @@
+@import "/client/views/intro/intro.import.less";
+@import "/client/views/schedule/schedule.import.less";
+@import "/client/views/faq/faq.import.less";
+@import "/client/views/sponsors/sponsors.import.less";
+@import "/client/views/team/team.import.less";
+
+@import url("http://fonts.googleapis.com/css?family=Share:400,400italic,700");
+
+@home-intro-bg: url(img/header.jpg);
+@home-colored-section-bg: @brand-primary;
+@home-colored-section-color: white;
+
+/* Global Stuff */
+
+* {
+   font-family: 'Share';
+}
+
+html {
+ height:100%;
+ min-height:100%;
+}
+body {
+ min-height:100%;
+}
+
+@media (max-width: 768px)
+{
+    #ipad {
+        h3 {
+            padding-top: 0;
+       }
+  }
+}
+
+section {
+  padding-top: 100px;
+   padding-bottom: 100px;
+   &.colored {
+     background: @home-colored-section-bg;
+     color: @home-colored-section-color;
+  }
+ }
+ header {
+   z-index: 1000;
+   position: relative;
+   width: 100%;
+   padding-top: 50px;
+}
+
+//Mobile 
+@media (max-width: 768px) {
+  #logo {
+    max-height: 350px; margin: 0 auto; padding-top: 40px; padding-bottom: 20px;
+  }
+}
+
+/* CUSTOM */
+
+/* Inverted Bootstrap Buttons */
+.btn-outline {
+    background-color: transparent;
+    color: inherit;
+    transition: all .5s;
+}
+
+.btn-primary.btn-outline {
+    color: #428bca;
+}
+
+.btn-success.btn-outline {
+    color: #5cb85c;
+}
+
+.btn-info.btn-outline {
+    color: #5bc0de;
+}
+
+.btn-warning.btn-outline {
+    color: #f0ad4e;
+}
+
+.btn-danger.btn-outline {
+    color: #d9534f;
+}
+
+.btn-primary.btn-outline:hover,
+.btn-success.btn-outline:hover,
+.btn-info.btn-outline:hover,
+.btn-warning.btn-outline:hover,
+.btn-danger.btn-outline:hover {
+    color: #fff;
+}
+
+/* Misc. styles */
+
+#schedule {
+  overflow: hidden;
+}
+
+/* Helper classes */
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.centered-table {
+  overflow: hidden;
+  margin: 0 auto;
+  float: none;
+}
