@@ -1,3 +1,2 @@
-#Los Altos Hacks
-
-Code moved to justinvyu's [repository](https://github.com/justinvyu/losaltoshacks.github.io)
+# Los Altos Hacks
+not to be confused with LAHacks
