@@ -1,15 +1,45 @@
 <template name="team">
-	
-<section id="team" class="colored text-center wow fadeIn animated">
+
+<section id="team" class="colored text-center">
+
   <div class="container">
+
   	<div class="row">
 
   		<h2 class="uppercase" style="margin: 0 auto;">Team</h2>
+  			<ul class="flex-container">
+	  			<li class="flex-item">
+	  				{{> teamBoxSely}}
+	  			</li>
+	  			<li class="flex-item">
+	  			{{> teamBoxAlicia}}
+	  			</li>
+	  			<li class="flex-item">
+	  			{{> teamBoxJustin}}
+	  			</li>
+	  			<li class="flex-item">
+	  			{{> teamBoxDan}}
+	  			</li>
+	  			<li class="flex-item">
+	  			{{> teamBoxJavin}}
+	  			</li>
+	  			<li class="flex-item">
+	  			{{> teamBoxZooey}}
+	  			</li>
+	  			<li class="flex-item">
+	  			{{> teamBoxAn}}
+	  			</li>
+	  			<li class="flex-item">
+	  			{{> teamBoxAllison}}
+	  			</li>
+	  		</ul>
+  		
 
-  		<div class="col-sm-12">
 
-  			<div class="row">
-  				<div class="col-xs-6 col-sm-3 col-md-3">
+<!--   		<div class="col-sm-12">
+
+  			 <div class="row">
+  			 		<div class="col-xs-6 col-sm-3 col-md-3">
 		  			 {{> teamBoxSely}}
 		  		</div>
 		  		<div class="col-xs-6 col-sm-3 col-md-3">
@@ -20,23 +50,9 @@
 		  		</div>
 		  		<div class="col-xs-6 col-sm-3 col-md-3">
 		  				  			 {{> teamBoxDan}}
-		  		</div>
+		  	</div>
+  				
   			</div>
-
-<!-- 				<div class="row">
-  				<div class="col-xs-6 col-sm-3 col-md-3">
-		  			 {{> teamBoxJavin}}
-		  		</div>
-		  		<div class="col-xs-6 col-sm-3 col-md-3">
-		  			 {{> teamBoxZooey}}
-		  		</div>
-		  		<div class="col-xs-6 col-sm-3 col-md-3">
-		  			{{> teamBoxAn}}
-		  		</div>
-		  		<div class="col-xs-6 col-sm-3 col-md-3">
-		  			{{> teamBoxAllison}}
-		  		</div>
-  			</div> -->
   			<div class="row">
   				<div class="col-xs-6 col-sm-3 col-md-3">
 		  			 {{> teamBoxJavin}}
@@ -52,7 +68,7 @@
 		  		</div>
   			</div>
   			
-  		</div>
+  		</div> -->
   		
   	</div>
   </div>
@@ -60,17 +76,19 @@
 
 </template>
 
+
 <template name="teamBoxSely">
-	<div class="team box">
-		<div class="inner">
-				<div class="avatar"><img src="img/sely.jpg" alt="" class="img-responsive avatar-circle"></div>
-				<h3 class="uppercase">Selynna Sun</h3>
-		    <p class="subtitle uppercase" style="color:white;">Lead Organizer</p>
-		</div>
-	</div>
+			<div class="team box">
+				<div class="inner">
+						<div class="avatar" style="margin: 0 auto;"><img src="img/sely.jpg" alt="" class="img-responsive avatar-circle " style="text-align: center;"></div>
+						<h3 class="uppercase">Selynna Sun</h3>
+				    <p class="subtitle uppercase" style="color:white;">Lead Organizer</p>
+				</div>
+			</div>			
 </template>
 
 <template name="teamBoxAlicia">
+
 	<div class="team box">
 		<div class="inner">
 				<div class="avatar"><img src="img/alicia.jpg" alt="" class="img-responsive avatar-circle"></div>
@@ -81,6 +99,7 @@
 </template>
 
 <template name="teamBoxDan">
+
 	<div class="team box">
 		<div class="inner">
 				<div class="avatar"><img src="img/dan.jpg" alt="" class="img-responsive avatar-circle"></div>
@@ -88,9 +107,11 @@
 		    <p class="subtitle uppercase" style="color:white;">Tech Team</p>
 		</div>
 	</div>
+
 </template>
 
 <template name="teamBoxJustin">
+
 	<div class="team box">
 		<div class="inner">
 				<div class="avatar"><img src="img/justin.jpg" alt="" class="img-responsive avatar-circle"></div>
@@ -98,9 +119,11 @@
 		    <p class="subtitle uppercase" style="color:white;">Tech Team</p>
 		</div>
 	</div>
+
 </template>
 
 <template name="teamBoxJavin">
+
 	<div class="team box">
 		<div class="inner">
 				<div class="avatar"><img src="img/javin.jpg" alt="" class="img-responsive avatar-circle"></div>
@@ -108,9 +131,11 @@
 		    <p class="subtitle uppercase" style="color:white;">Tech Team</p>
 		</div>
 	</div>
+
 </template>
 
 <template name="teamBoxZooey">
+
 	<div class="team box">
 		<div class="inner">
 				<div class="avatar"><img src="img/zooey.jpg" alt="" class="img-responsive avatar-circle"></div>
@@ -118,9 +143,11 @@
 		    <p class="subtitle uppercase" style="color:white;">Outreach Team</p>
 		</div>
 	</div>
+
 </template>
 
 <template name="teamBoxAn">
+
 	<div class="team box">
 		<div class="inner">
 				<div class="avatar"><img src="img/an.jpg" alt="" class="img-responsive avatar-circle"></div>
@@ -128,9 +155,11 @@
 		    <p class="subtitle uppercase" style="color:white;">Outreach Team</p>
 		</div>
 	</div>
+
 </template>
 
 <template name="teamBoxAllison">
+
 	<div class="team box">
 		<div class="inner">
 				<div class="avatar"><img src="img/allison.jpg" alt="" class="img-responsive avatar-circle"></div>
@@ -138,4 +167,5 @@
 		    <p class="subtitle uppercase" style="color:white;">Outreach Team</p>
 		</div>
 	</div>
+
 </template>
