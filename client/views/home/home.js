@@ -50,58 +50,78 @@ function initiateWaypoints() {
     //         return 0;
     //     }
     // });
-    var scheduleWaypoint = new Waypoint({
+
+    if( ! /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        var scheduleWaypoint = new Waypoint({
         element: document.getElementById('schedule'),
-        handler: function(direction) {
-            if(direction === "down") {
-                $('.links > a > li').css('color', 'black');
-            } else {
-                $('.links > a > li').css('color', 'white');
+            handler: function(direction) {
+                if(direction === "down") {
+
+
+                    $('.links > a > li').animate({'color': '#333'}, 300);
+
+                    $('.navbar').animate({
+                        'background-color': 'white',
+                        'opacity': 0.95,
+                    }, 200);
+
+                    $('.navbar').addClass('nav-shadow');
+
+                } else {
+                    $('.navbar').animate({
+                        backgroundColor: 'transparent',
+                    });
+                    $('.navbar').removeClass('nav-shadow');
+
+                    $('.links > a > li').animate({'color': 'white'});
+                }
+            },
+            offset: function() {
+                return 0;
             }
-        },
-        offset: function() {
-            return 0;
-        }
-    });
-    var faqWaypoint = new Waypoint({
-        element: document.getElementById('faq'),
-        handler: function(direction) {
-            if(direction === "down") {
-                $('.links > a > li').css('color', 'white');
-            } else {
-                $('.links > a > li').css('color', 'black');
-            }
-        },
-        offset: function() {
-            return 0;
-        }
-    });
-    var sponsorsWaypoint = new Waypoint({
-        element: document.getElementById('sponsors'),
-        handler: function(direction) {
-            if(direction === "down") {
-                $('.links > a > li').css('color', 'black');
-            } else {
-                $('.links > a > li').css('color', 'white');
-            }
-        },
-        offset: function() {
-            return 0;
-        }
-    });
-    var teamWaypoint = new Waypoint({
-        element: document.getElementById('team'),
-        handler: function(direction) {
-            if(direction === "down") {
-                $('.links > a > li').css('color', 'white');
-            } else {
-                $('.links > a > li').css('color', 'black');
-            }
-        },
-        offset: function() {
-            return 0;
-        }
-    });
+        });
+    }
+
+    
+    // var faqWaypoint = new Waypoint({
+    //     element: document.getElementById('faq'),
+    //     handler: function(direction) {
+    //         if(direction === "down") {
+    //             $('.links > a > li').css('color', 'white');
+    //         } else {
+    //             $('.links > a > li').css('color', 'black');
+    //         }
+    //     },
+    //     offset: function() {
+    //         return 0;
+    //     }
+    // });
+    // var sponsorsWaypoint = new Waypoint({
+    //     element: document.getElementById('sponsors'),
+    //     handler: function(direction) {
+    //         if(direction === "down") {
+    //             $('.links > a > li').css('color', 'black');
+    //         } else {
+    //             $('.links > a > li').css('color', 'white');
+    //         }
+    //     },
+    //     offset: function() {
+    //         return 0;
+    //     }
+    // });
+    // var teamWaypoint = new Waypoint({
+    //     element: document.getElementById('team'),
+    //     handler: function(direction) {
+    //         if(direction === "down") {
+    //             $('.links > a > li').css('color', 'white');
+    //         } else {
+    //             $('.links > a > li').css('color', 'black');
+    //         }
+    //     },
+    //     offset: function() {
+    //         return 0;
+    //     }
+    // });
 
     new WOW().init();
 }
