@@ -21,8 +21,8 @@ var frequentlyAskedQuestions = [
 		answer: "Answer 5"
 	},
 	{
-		question: "Question 6",
-		answer: "Answer 6"
+		question: "test",
+		answer: "test"
 	}
 ]
 
