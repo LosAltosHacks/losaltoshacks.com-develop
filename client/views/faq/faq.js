@@ -10,19 +10,19 @@ var frequentlyAskedQuestions = [
 	},
 	{
 		question: "question 3",
-		answer: "qnswer 3"
+		answer: "answer 3"
 	},
 	{
 		question: "question 4",
-		answer: "qnswer 4"
+		answer: "answer 4"
 	},
 	{
 		question: "question 5",
 		answer: "answer 5"
 	},
 	{
-		question: "test",
-		answer: "test"
+		question: "question 6",
+		answer: "question 6"
 	}
 ]
 
