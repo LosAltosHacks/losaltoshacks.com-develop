@@ -1,5 +1,6 @@
 <template name="intro">
 
+
 <section id="intro" class="colored text-center">
     <header>
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -25,16 +26,17 @@
 
     </header>
 
-    <div class="container">     
+    <div class="container">  
         <div class="intro-well wow animated fadeIn" data-wow-delay="0.4s">
+            
             <div class="row">
                 <div class="col-lg-12 col-sm-12">
                     <div class="col-lg-12 col-sm-12">
                         <img src="img/losaltoshacks.png" id="logo" class="img-responsive">
                     </div>
 
-                    <h2 style="color:white;" class="uppercase">A 24-hour hackathon held in Los Altos, California</h2>
-                    <h3 style="color:white;" class="uppercase">Hillview Community Center, January 30 - 31, 2016</h3>
+                    <h2 style="color:white;" class="uppercase">{{description}}</h2>
+                    <h3 style="color:white;" class="uppercase">{{location}}, {{date}}</h3>
 
                     <button id="apply-btn" type="button" class="uppercase btn btn-info btn-outline btn-lg">Apply Now</button>
 
@@ -49,7 +51,6 @@
         </div>
 
     </div>
-
 </section>
 
 </template>

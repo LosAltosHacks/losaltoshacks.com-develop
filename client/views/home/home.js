@@ -58,9 +58,9 @@ function initiateWaypoints() {
                 if(direction === "down") {
 
 
-                    $('.links > a > li').animate({'color': '#333'}, 300);
+                    $('.links > a > li').css({'color': '#333'}, 300);
 
-                    $('.navbar').animate({
+                    $('.navbar').css({
                         'background-color': 'white',
                         'opacity': 0.95,
                     }, 200);
@@ -68,12 +68,12 @@ function initiateWaypoints() {
                     $('.navbar').addClass('nav-shadow');
 
                 } else {
-                    $('.navbar').animate({
-                        backgroundColor: 'transparent',
+                    $('.navbar').css({
+                        backgroundColor: 'transparent'
                     });
                     $('.navbar').removeClass('nav-shadow');
 
-                    $('.links > a > li').animate({'color': 'white'});
+                    $('.links > a > li').css({'color': 'white'});
                 }
             },
             offset: function() {
