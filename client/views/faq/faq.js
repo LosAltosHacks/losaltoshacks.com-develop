@@ -1,28 +1,28 @@
 
 var frequentlyAskedQuestions = [
 	{
-		question: "question 1",
-		answer: "answer 1"
+		question: "Question 1",
+		answer: "Answer 1"
 	},
 	{
-		question: "question 2",
-		answer: "answer 2"
+		question: "Question 2",
+		answer: "Answer 2"
 	},
 	{
-		question: "question 3",
-		answer: "answer 3"
+		question: "Question 3",
+		answer: "Answer 3"
 	},
 	{
-		question: "question 4",
-		answer: "answer 4"
+		question: "Question 4",
+		answer: "Answer 4"
 	},
 	{
-		question: "question 5",
-		answer: "answer 5"
+		question: "Question 5",
+		answer: "Answer 5"
 	},
 	{
-		question: "question 6",
-		answer: "question 6"
+		question: "Question 6",
+		answer: "Answer 6"
 	}
 ]
 
