@@ -1,24 +1,24 @@
 
 var frequentlyAskedQuestions = [
 	{
-		question: "Question 1",
-		answer: "Answer 1"
+		question: "question 1",
+		answer: "answer 1"
 	},
 	{
-		question: "Question 2",
-		answer: "Answer 2"
+		question: "question 2",
+		answer: "answer 2"
 	},
 	{
-		question: "Question 3",
-		answer: "Answer 3"
+		question: "question 3",
+		answer: "qnswer 3"
 	},
 	{
-		question: "Question 4",
-		answer: "Answer 4"
+		question: "question 4",
+		answer: "qnswer 4"
 	},
 	{
-		question: "Question 5",
-		answer: "Answer 5"
+		question: "question 5",
+		answer: "answer 5"
 	},
 	{
 		question: "test",
