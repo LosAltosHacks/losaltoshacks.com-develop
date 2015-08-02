@@ -11,11 +11,6 @@ Controller('team', {
 				imageLink: "img/sely.jpg"
 			},
 			{
-				name: "Alicia Leong",
-				position: "Lead Organizer",
-				imageLink: "img/alicia.jpg"
-			},
-			{
 				name: "Justin Yu",
 				position: "Tech Team",
 				imageLink: "img/justin.jpg"
@@ -29,6 +24,16 @@ Controller('team', {
 				name: "Javin Pombra",
 				position: "Tech Team",
 				imageLink: "img/javin.jpg"
+			},
+			{
+				name: "Ryan Huang",
+				position: "Tech Team",
+				imageLink: "img/ryan.JPG"
+			},
+			{
+				name: "Alicia Leong",
+				position: "Lead Organizer",
+				imageLink: "img/alicia.jpg"
 			},
 			{
 				name: "Zooey Nguyen",
