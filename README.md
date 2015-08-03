@@ -1,4 +1,5 @@
 # Los Altos Hacks
-not to be confused with LAHacks
+Developed in [Meteor.js](https://www.meteor.com)
 
-[Website](http://www.losaltoshacks.com)
+[Static version](https://github.com/losaltoshacks/losaltoshacks.github.io)
+[Statification script](https://github.com/Danappelxx/meteor-statify)
