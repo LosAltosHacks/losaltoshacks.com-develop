@@ -11,6 +11,7 @@ Controller('intro', {
 
     rendered: function() {
         // setupAffix();
+        $.stellar();
     }
 
 });
