@@ -8,7 +8,7 @@ Controller('map', {
 	        return {
 	          center: new google.maps.LatLng(-37.8136, 144.9631),
 	          zoom: 8,
-	          scaleControl: false,
+	          scaleControl: true,
 	      	 scrollwheel: false
 	        };
 	      }
