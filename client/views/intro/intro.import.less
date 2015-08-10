@@ -10,19 +10,28 @@
   background-size: cover;
 
   a {
-    color: white;
+    color: #F8F8F8;
     text-decoration: none;
     -webkit-transition: color 0.2s;
     -moz-transition: color 0.2s;
     transition: color 0.2s;
     &:hover {
-      color: #4aa3df;
+      color: #5bc0de;
     }
   }
-  h1
-  {
-    padding-top: 100px;
+
+  .btn {
+    color: #F8F8F8;
   }
+
+  h1, h2, h3{
+    color: #F8F8F8;
+  }
+
+  #title {
+    color: #5bc0de;
+  }
+
   .bcg {
     background: @home-intro-bg no-repeat center;
   }
@@ -31,8 +40,13 @@
     background: @home-intro-bg no-repeat center;
     background-size: cover;
   }
+  
+
   #apply-btn {
-    background-color: black;
+    
+    margin-top: 20px;
+    margin-bottom: 20px;
+
   }
 }
 
@@ -40,6 +54,7 @@
   -webkit-transition: color 0.2s;
   -moz-transition: color 0.2s;
   transition: color 0.2s;
+  color: #F8F8F8;
 }
 
 /*
@@ -53,17 +68,60 @@
 /* Nav Styles */
 
 .navbar {
-  background-color: transparent;
+  //background-color: transparent;
+  background-color: #222;
+  opacity: 0.85;
   border: 0;
 
   font-size: 18px;
 
   li {
-    float: left;
+    display: inline-block;
+    float: none;
     padding-left: 15px;
     padding-right: 15px;
     margin-top: 15px;
   }
+
+  #apply {
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 10px;
+    background-color: #5bc0de;
+    border-radius: 3px;
+
+    -webkit-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+
+    &:hover {
+      color: white;
+      background-color: #40869B;
+    }
+  }
+
+
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar {
+  text-align: center;
 }
 
 .nav-shadow {
@@ -80,12 +138,7 @@
 }
 
 #logo {
-  max-height: 320px; margin: 0 auto; padding-top: 30px; padding-bottom: 20px;
-}
-
-#apply-btn {
-  margin-top: 8px;
-  margin-bottom: 12px;
+  max-height: 320px; margin: 0 auto; margin-top: 20px; padding-top: 30px; padding-bottom: 20px;
 }
 
 #sponsor-label {
