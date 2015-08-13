@@ -51,36 +51,36 @@ function initiateWaypoints() {
     //     }
     // });
 
-    if( ! /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-        var scheduleWaypoint = new Waypoint({
-        element: document.getElementById('schedule'),
-            handler: function(direction) {
-                if(direction === "down") {
+    // if( ! /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    //     var scheduleWaypoint = new Waypoint({
+    //     element: document.getElementById('map'),
+    //         handler: function(direction) {
+    //             if(direction === "down") {
 
 
-                    $('.links > a > li').css({'color': '#333'}, 300);
+    //                 // $('.links > a > li').css({'color': '#333'}, 300);
 
-                    $('.navbar').css({
-                        'background-color': 'white',
-                        'opacity': 0.95,
-                    }, 200);
+    //                 $('.navbar').animate({
+    //                     'background-color': 'black',
+    //                     'opacity': 0.8,
+    //                 }, 150);
 
-                    $('.navbar').addClass('nav-shadow');
+    //                 $('.navbar').addClass('nav-shadow');
 
-                } else {
-                    $('.navbar').css({
-                        backgroundColor: 'transparent'
-                    });
-                    $('.navbar').removeClass('nav-shadow');
+    //             } else {
+    //                 $('.navbar').css({
+    //                     backgroundColor: 'transparent'
+    //                 });
+    //                 $('.navbar').removeClass('nav-shadow');
 
-                    $('.links > a > li').css({'color': 'white'});
-                }
-            },
-            offset: function() {
-                return 0;
-            }
-        });
-    }
+    //                 // $('.links > a > li').css({'color': '#f4f4f4'});
+    //             }
+    //         },
+    //         offset: function() {
+    //             return 0;
+    //         }
+    //     });
+    // }
 
     
     // var faqWaypoint = new Waypoint({
