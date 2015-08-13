@@ -1,11 +1,42 @@
-#faq 
+#faq
 {
   //padding-bottom: 0 !important;
   overflow-x: hidden;
   h2 {
-      padding-bottom: 50px;
+    padding-bottom: 50px;
   }
   p {
     color: black;
+  }
+
+  .row {
+
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-content: flex-start;
+    align-content: flex-start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+
+  	.flex-item-faq {
+      -webkit-flex-grow: 0;
+      flex-grow: 0;
+      -webkit-flex-shrink: 0;
+      flex-shrink: 0;
+
+      max-width: 300px;
+
+      margin: 15px;
+
+      .panel {
+      	height: 250px;
+      }
+  	}
   }
 }
