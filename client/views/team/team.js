@@ -38,7 +38,7 @@ Controller('team', {
 			{
 				name: "Zooey Nguyen",
 				position: "Outreach Team",
-				imageLink: "img/zooey.jpg"
+				imageLink: "img/zooey.png"
 			},
 			{
 				name: "An Huynh",
