@@ -28,7 +28,7 @@ Controller('team', {
 			{
 				name: "Ryan Huang",
 				position: "Tech Team",
-				imageLink: "img/ryan.JPG"
+				imageLink: "img/ryan.jpg"
 			},
 			{
 				name: "Alicia Leong",
