@@ -4,10 +4,19 @@ Controller('map', {
 		exampleMapOptions: function() {
 	      // Make sure the maps API has loaded
 	      if (GoogleMaps.loaded()) {
+             //Not sure if this should go here
+             GoogleMaps.ready('exampleMap', function(map) {
+                var marker = new google.maps.Marker({
+                    animation: google.maps.Animation.DROP,
+                    position: map.options.center,
+                    title: "Hillview Community Center",
+                    map: map.instance
+                });
+             });
 	        // Map initialization options
 	        return {
-	          center: new google.maps.LatLng(-37.8136, 144.9631),
-	          zoom: 8,
+	          center: new google.maps.LatLng(37.380323, -122.110906),
+	          zoom: 12,
 	          scaleControl: true,
 	      	 scrollwheel: false
 	        };
