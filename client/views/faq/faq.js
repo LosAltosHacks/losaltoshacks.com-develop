@@ -6,7 +6,7 @@ var frequentlyAskedQuestions = [
 	},
 	{
 		question: "Who can participate?",
-		answer: "Students from all high schools, not just Los Altos High School, can participate. If you've already graduated from high school, you can't participate, but you can come help mentor others."
+		answer: "Students from all high schools, not just Los Altos High School, can participate. If you’ve already graduated from high school, you can’t participate, but you can come help mentor others."
 	},
 	{
 		question: "What should I bring? Will I need my own laptop?",
