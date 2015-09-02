@@ -6,17 +6,17 @@
 
 @import url(http://fonts.googleapis.com/css?family=PT+Sans);
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
-@import url(http://fonts.googleapis.com/css?family=Work+Sans);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
 @import url(http://fonts.googleapis.com/css?family=Rubik:400,500);
 
 @home-intro-bg: url(img/header.jpg);
-@home-colored-section-bg: #33ADD6;
+@home-colored-section-bg: #52B3D9;
 @home-colored-section-color: white;
 
 /* Global Stuff */
 
 * {
-    font-family: 'Rubik';//url("font/BebasNeue Bold.otf");//'Work Sans';//'Montserrat';//'PT Sans', sans-serif;//'Droid Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 /*
 html {
@@ -39,10 +39,23 @@ body {
 
 section {
   padding-top: 100px;
-   padding-bottom: 100px;
-   &.colored {
-     background: @home-colored-section-bg;
-     color: @home-colored-section-color;
+  padding-bottom: 100px;
+  &.colored {
+   background: @home-colored-section-bg;
+   color: @home-colored-section-color;
+  }
+  &.semi-white {
+    background: #F5F5F5;
+  }
+  &.red {
+    background: #E26A6A;
+  }
+  .section-body {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
   }
  }
  header {
@@ -65,46 +78,78 @@ section {
     width: 28%;
     display: none;
   }
+
+  .slant {
+    display: none;
+  }
+
+  .button {
+    width: 100%;
+    margin: 8px 0px;
+    text-align: center;
+  }
+
+  .button.apply {
+    width: initial;
+  }
+
+  #faq .faq-row {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }
 
 /* CUSTOM */
 
-/* Inverted Bootstrap Buttons */
-.btn-outline {
-    background-color: transparent;
-    color: inherit;
-    transition: all .5s;
+.button {
+  border: 2px solid white;
+  color: white;
+  background-color: transparent;
+  padding: 12px 25px;
+  display: inline-block;
+  text-transform: uppercase;
+  margin: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border-radius: 2px;
 }
 
-.btn-primary.btn-outline {
-    color: #428bca;
-}
-
-.btn-success.btn-outline {
-    color: #5cb85c;
-}
-
-.btn-info.btn-outline {
-    color: #5bc0de;
-}
-
-.btn-warning.btn-outline {
-    color: #f0ad4e;
-}
-
-.btn-danger.btn-outline {
-    color: #d9534f;
-}
-
-.btn-primary.btn-outline:hover,
-.btn-success.btn-outline:hover,
-.btn-info.btn-outline:hover,
-.btn-warning.btn-outline:hover,
-.btn-danger.btn-outline:hover {
-    color: #fff;
+.button:hover {
+  color: #3E3E3E;
+  background-color: white;
 }
 
 /* Misc. styles */
+
+.slant {
+  width: 120%;
+  height: 90px;
+  position: absolute;
+  left: -20px;
+  background: inherit;
+  z-index: 1;
+}
+
+.slant.bottom {
+  bottom: -40px;
+}
+
+.slant.top {
+  top: -40px;
+}
+
+.slant.left {
+  transform: rotate(-2deg);
+}
+
+.slant.right {
+  transform: rotate(2deg);
+}
+
+.clear {
+  clear: both;
+}
 
 #schedule {
   overflow: hidden;
