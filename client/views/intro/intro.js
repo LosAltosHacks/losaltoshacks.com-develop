@@ -3,9 +3,8 @@ Controller('intro', {
     helpers: {
 
     	title: "Los Altos Hacks",
-    	description: "A 24-hour hackathon",
     	location: "Hillview Community Center",
-    	date: "January 30 - 31, 2016"
+    	date: "Jan. 30-31, 2016"
 
     },
 

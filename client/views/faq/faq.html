@@ -1,15 +1,25 @@
 <template name="faq">
 
 <section id="faq" class="colored text-center">
-    <div class="container">
+    <div class="container section-body">
         <h2 class="uppercase" style="margin: 0 auto;">FAQ</h2>
         <div class="row">
 
-            {{#each faqs}}
+            <div class="faq-row">
+                {{#each faqsLeft}}
 
-                {{> faqPanel}}
+                    {{> faqPanel}}
 
-            {{/each}}
+                {{/each}}
+            </div>
+            
+            <div class="faq-row">
+                {{#each faqsRight}}
+
+                    {{> faqPanel}}
+
+                {{/each}}
+            </div>
         </div>
     </div>
 </section>
@@ -17,19 +27,8 @@
 </template>
 
 <template name="faqPanel">
-    <div class="flex-item-faq">
-
-
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">{{question}}</h4>
-            </div>
-            <div id="faq-1" class="panel-collapse">
-                <div class="panel-body text-left">
-                    <p>{{{answer}}}</p>
-                 </div>
-            </div>
-        </div>
-
+    <div class="faq-card">
+        <div class="card-title">{{question}}</div>
+        <div class="card-body">{{answer}}</div>
     </div>
 </template>
