@@ -31,6 +31,11 @@ Controller('team', {
 				imageLink: "img/ryan.jpg"
 			},
 			{
+				name: "Kyle Sandell",
+				position: "Tech Team",
+				imageLink: "img/kyle.jpg"
+			},
+			{
 				name: "Alicia Leong",
 				position: "Lead Organizer",
 				imageLink: "img/alicia.jpg"
