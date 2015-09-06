@@ -4,10 +4,8 @@
 @import "/client/views/sponsors/sponsors.import.less";
 @import "/client/views/team/team.import.less";
 
-@import url(http://fonts.googleapis.com/css?family=PT+Sans);
-@import url(http://fonts.googleapis.com/css?family=Montserrat);
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,300);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
-@import url(http://fonts.googleapis.com/css?family=Rubik:400,500);
 
 @home-intro-bg: url(img/header.jpg);
 @home-colored-section-bg: #52B3D9;
@@ -68,7 +66,11 @@ section {
 //Mobile 
 @media (max-width: 768px) {
   #logo {
-    margin: 0 auto; margin-top: 20px; padding-bottom: 20px;
+    margin: 0 auto; 
+    margin-top: 0px; 
+    padding-top: 0;
+    padding-bottom: 20px;
+    max-height: 250px;
   }
   nav {
     visibility: hidden;
@@ -79,13 +81,21 @@ section {
     display: none;
   }
 
+  h1, h2 {
+    font-size: 35px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+
   .slant {
     display: none;
   }
 
   .button {
     width: 100%;
-    margin: 8px 0px;
+    margin: 0 auto;
+    margin-right: 40px;
     text-align: center;
   }
 
@@ -95,8 +105,8 @@ section {
 
   #faq .faq-row {
     width: 100%;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 

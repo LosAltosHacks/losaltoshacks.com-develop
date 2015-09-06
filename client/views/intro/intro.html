@@ -3,20 +3,20 @@
 
 <section id="intro" class="colored text-center" data-stellar-background-ratio="0.5">
     <header>
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <nav id="nav" class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container bcg-container">
                 <div class="row">
 <!--                         <a class="navbar-brand" href="{{pathFor 'home'}}">{{Config.name}}</a>
 -->                  <div id="main-nav" class="navbar-collapse collapse">
 
                         <ul class="nav navbar-nav links">
-
                             <a id="intro-btn" href="#intro"><li>Home</li></a>
                             <a id="schedule-btn" href="#schedule"><li>Schedule</li></a>
                             <a id="faq-btn" href="#faq"><li>FAQ</li></a>
                             <a id="sponsors-btn" href="#sponsors"><li>Sponsors</li></a>
                             <a id="team-btn" href="#team"><li>Team</li></a>
                             <button href="#" id="apply-btn" class="button">Apply</button>
+                            
                         </ul>
 
                     </div>
@@ -37,13 +37,13 @@
 
 <!--                     <h2 id="desc" style="color:white;" class="">{{description}}</h2>
  -->                 
-                    <div class="col-lg-12 col-sm-12">
+                    <div class="col-lg-12">
                         <h1 class="uppercase">{{title}}</h1>
-                        <h4 id="about" style="color:white;" class="">{{location}} | {{date}}</h4>
+                        <h4 id="about" style="color:white;" class="">{{location}}</h4>
+                        <h4>{{date}}</h4>
                     </div>
-                    <div class="col-sm-12">
+                    <div class="col-sm-12 col-xs-12">
                         <button type="button" class="button">Applications Open Soon</button>
-
                     </div>
 
                     <h5 class="" id="sponsor-label">Interested in becoming a sponsor?</h5>
