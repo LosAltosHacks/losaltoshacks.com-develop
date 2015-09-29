@@ -11,6 +11,26 @@ Controller('team', {
 				imageLink: "img/sely.jpg"
 			},
 			{
+				name: "Alicia Leong",
+				position: "Lead Organizer",
+				imageLink: "img/alicia.jpg"
+			},
+			{
+				name: "Zooey Nguyen",
+				position: "Outreach Team",
+				imageLink: "img/zooey.png"
+			},
+			{
+				name: "An Huynh",
+				position: "Outreach Team",
+				imageLink: "img/an.jpg"
+			},
+			{
+				name: "Aashia Mehta",
+				position: "Outreach Team",
+				imageLink: "img/aashia.jpg"
+			},
+			{
 				name: "Justin Yu",
 				position: "Tech Team",
 				imageLink: "img/justin.jpg"
@@ -34,31 +54,6 @@ Controller('team', {
 				name: "Kyle Sandell",
 				position: "Tech Team",
 				imageLink: "img/kyle.jpg"
-			},
-			{
-				name: "Alicia Leong",
-				position: "Lead Organizer",
-				imageLink: "img/alicia.jpg"
-			},
-			{
-				name: "Zooey Nguyen",
-				position: "Outreach Team",
-				imageLink: "img/zooey.png"
-			},
-			{
-				name: "An Huynh",
-				position: "Outreach Team",
-				imageLink: "img/an.jpg"
-			},
-			{
-				name: "Aashia Mehta",
-				position: "Outreach Team",
-				imageLink: "img/aashia.jpg"
-			},
-			{
-				name: "Allison Yih",
-				position: "Outreach Team",
-				imageLink: "img/allison.jpg"
 			}
 		]
 

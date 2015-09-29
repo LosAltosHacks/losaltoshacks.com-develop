@@ -16,6 +16,11 @@
 * {
     font-family: 'Montserrat', sans-serif;
 }
+
+a {
+  text-decoration: none;
+}
+
 /*
 html {
  height:100%;
@@ -63,11 +68,11 @@ section {
    padding-top: 50px;
 }
 
-//Mobile 
+//Mobile
 @media (max-width: 768px) {
   #logo {
-    margin: 0 auto; 
-    margin-top: 20px; 
+    margin: 0 auto;
+    margin-top: 20px;
     padding-bottom: 20px;
     max-height: 250px;
   }
@@ -91,14 +96,14 @@ section {
     display: none;
   }
 
-  .button {
-    width: 100%;
+  .button, .button-inv {
+    // width: 100%;
     margin: 0 auto;
     margin-right: 40px;
     text-align: center;
   }
 
-  .button.apply {
+  .button.apply, .button-inv.apply {
     width: initial;
   }
 
@@ -127,6 +132,36 @@ section {
 .button:hover {
   color: #3E3E3E;
   background-color: white;
+}
+
+.button-inv {
+  border: 2px solid #3E3E3E;
+  color: #3E3E3E;
+  background-color: transparent;
+  padding: 12px 25px;
+  display: inline-block;
+  text-transform: uppercase;
+  margin: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border-radius: 2px;
+  text-decoration: none;
+
+  a {
+    color: #3E3E3E;
+    text-decoration: none;
+    transition: 0.3s ease;
+  }
+}
+
+.button-inv:hover {
+  color: white;
+  background-color: #3E3E3E;
+
+  a {
+    color: white;
+    transition: 0.3s ease;
+  }
 }
 
 /* Misc. styles */
@@ -171,7 +206,7 @@ section {
   -webkit-transition: color 0.2s;
   -moz-transition: color 0.2s;
   transition: color 0.2s;
-  
+
   &:hover {
     color: @home-colored-section-bg;
 
