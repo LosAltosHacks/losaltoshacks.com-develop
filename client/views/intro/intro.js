@@ -4,7 +4,7 @@ Controller('intro', {
 
     	title: "Los Altos Hacks",
     	location: "Hillview Community Center",
-	date: "January 30th-31th"
+	date: "January 30th-31th, 2016"
 
     },
 
