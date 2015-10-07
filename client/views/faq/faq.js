@@ -2,7 +2,7 @@
 var faqs = [
 	{
 		question: "What is Los Altos Hacks?",
-		answer: "A hackathon is an event where people can get together and code an entirely new project. At Los Altos Hacks, you will have 24 hours to make your idea a reality."
+		answer: "A hackathon is an event where people get together and code an entirely new project. At Los Altos Hacks, you will have 24 hours to make your idea a reality."
 	},
 	{
 		question: "Who can participate?",
