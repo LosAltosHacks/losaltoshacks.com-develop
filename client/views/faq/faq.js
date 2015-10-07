@@ -22,7 +22,8 @@ var faqs = [
 	},
 	{
 		question: "Can I get travel reimbursements?",
-		answer: "Travel reimbursements will be provided on a case-by-case basis. Contact us at info@losaltoshacks.com"
+		answer: "Travel reimbursements will be provided on a case-by-case basis. Contact us at <a href=\"mailto:info@losaltoshacks.com\" class=\"\" id=\"info-email-anchor\">info@losaltoshacks.com</a>."
+
 	}
 ];
 
