@@ -1,5 +1,5 @@
 
-var faqsLeft = [
+var faqs = [
 	{
 		question: "What is Los Altos Hacks?",
 		answer: "A hackathon is an event where people can get together and code an entirely new project. At Los Altos Hacks, you will have 24 hours to make your idea a reality."
@@ -11,10 +11,7 @@ var faqsLeft = [
 	{
 		question: "What should I bring? Will I need my own laptop?",
 		answer: "Bring a valid student ID for admission and anything else you might need for the weekend, such as a laptop, phone, or charger. Power strips, ethernet cables, sleeping bags, and toiletries are highly recommended."
-	}
-];
-
-var faqsRight = [
+	},
 	{
 		question: "When can I apply and how will I know I’ve been accepted?",
 		answer: "Applications will begin early October, and decisions will be sent out by late October. We are accepting people regardless of experience, so you can participate even if you can’t code."
@@ -27,15 +24,12 @@ var faqsRight = [
 		question: "Can I get travel reimbursements?",
 		answer: "Travel reimbursements will be provided on a case-by-case basis. Contact us at info@losaltoshacks.com"
 	}
-	];
-
-
+];
 
 Controller('faq', {
 		helpers: {
 
-			faqsLeft: faqsLeft,
-			faqsRight: faqsRight
+			faqs: faqs
 
 		},
 

@@ -5,16 +5,8 @@
         <h2 class="uppercase" style="margin: 0 auto;">FAQ</h2>
         <div class="row">
 
-            <div class="faq-row">
-                {{#each faqsLeft}}
-
-                    {{> faqPanel}}
-
-                {{/each}}
-            </div>
-            
-            <div class="faq-row">
-                {{#each faqsRight}}
+            <div class="col-md-12 col-sm-12">
+                {{#each faqs}}
 
                     {{> faqPanel}}
 
@@ -27,9 +19,18 @@
 </template>
 
 <template name="faqPanel">
-    <div class="faq-card">
+    <!-- <div class="faq-card">
         <div class="card-title">{{question}}</div>
         <hr/>
         <div class="card-body">{{answer}}</div>
+    </div> -->
+
+    <div class="faq-block">
+        <div class="question">
+            <p>{{question}}</p>
+        </div>
+        <div class="answer">
+            <p>{{answer}}</p>
+        </div>
     </div>
 </template>
