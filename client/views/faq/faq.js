@@ -2,7 +2,7 @@
 var faqs = [
 	{
 		question: "What is Los Altos Hacks?",
-		answer: "A hackathon is an event where people can get together and code an entirely new project. At Los Altos Hacks, you will have 24 hours to make your idea a reality."
+		answer: "A hackathon is an event where people get together and code an entirely new project. At Los Altos Hacks, you will have 24 hours to make your idea a reality."
 	},
 	{
 		question: "Who can participate?",
@@ -22,7 +22,8 @@ var faqs = [
 	},
 	{
 		question: "Can I get travel reimbursements?",
-		answer: "Travel reimbursements will be provided on a case-by-case basis. Contact us at info@losaltoshacks.com"
+		answer: "Travel reimbursements will be provided on a case-by-case basis. Contact us at <a href=\"mailto:info@losaltoshacks.com\" class=\"\" id=\"info-email-anchor\">info@losaltoshacks.com</a>."
+
 	}
 ];
 
