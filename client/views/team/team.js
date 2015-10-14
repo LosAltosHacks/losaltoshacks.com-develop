@@ -7,12 +7,22 @@ Controller('team', {
 		team: [
 			{
 				name: "Selynna Sun",
-				position: "Lead Organizer",
+				position: "Sponsorship Director",
 				imageLink: "img/sely.jpg"
 			},
 			{
+				name: "Justin Yu",
+				position: "Tech Director",
+				imageLink: "img/justin.jpg"
+			},
+			{
+				name: "Dan Appel",
+				position: "Tech Director",
+				imageLink: "img/dan.jpg"
+			},
+			{
 				name: "Alicia Leong",
-				position: "Lead Organizer",
+				position: "Outreach Director",
 				imageLink: "img/alicia.jpg"
 			},
 			{
@@ -29,16 +39,6 @@ Controller('team', {
 				name: "Aashia Mehta",
 				position: "Outreach Team",
 				imageLink: "img/aashia.jpg"
-			},
-			{
-				name: "Justin Yu",
-				position: "Tech Team",
-				imageLink: "img/justin.jpg"
-			},
-			{
-				name: "Dan Appel",
-				position: "Tech Team",
-				imageLink: "img/dan.jpg"
 			},
 			{
 				name: "Javin Pombra",
