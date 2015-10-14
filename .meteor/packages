@@ -4,7 +4,6 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
-meteor-platform
 iron:router
 fortawesome:fontawesome
 themeteorchef:controller
@@ -15,3 +14,17 @@ timmyg:wow
 mrt:jquery-color-animation
 meteorhacks:fast-render
 noorderstorm:stellar
+standard-minifiers
+meteor-base
+mobile-experience
+mongo
+blaze-html-templates
+session
+jquery
+tracker
+logging
+reload
+random
+ejson
+spacebars
+check

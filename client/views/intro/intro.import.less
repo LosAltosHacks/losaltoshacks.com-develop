@@ -1,69 +1,76 @@
 #intro {
 
-  padding-top: 0;
-  padding-bottom: 150px;
-  background-color: black;
-  max-height: 100%;
+    padding-top: 0;
+    background-color: black;
+    max-height: 100%;
 
-  background: @home-intro-bg no-repeat center;
-  background-size: cover;
-
-  #nav {
-      background-color: transparent;
-      transition: background-color 0.5s ease;
-      -webkit-transition: background-color 0.5s ease;
-      -moz-transition: background-color 0.5s ease;
-  }
-
-  .links {
-    font-size: 18px;
-    font-weight: 300;
-  }
-
-  a {
-    color: #F8F8F8;
-    text-decoration: none;
-    -webkit-transition: color 0.2s;
-    -moz-transition: color 0.2s;
-    transition: color 0.2s;
-    &:hover {
-      color: #5bc0de;
-    }
-  }
-
-  .btn {
-    color: #F8F8F8;
-  }
-
-  h1, h2, h3{
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 5px;
-    padding-bottom: 10px;
-  }
-
-  #title {
-    color: #5bc0de;
-  }
-
-  .bcg {
-    background: @home-intro-bg no-repeat center;
-  }
-  &.mobile
-  {
     background: @home-intro-bg no-repeat center;
     background-size: cover;
-  }
+
+    #nav {
+        background-color: transparent;
+        transition: background-color 0.5s ease;
+        -webkit-transition: background-color 0.5s ease;
+        -moz-transition: background-color 0.5s ease;
+    }
+
+    .links {
+        font-size: 18px;
+        font-weight: 300;
+    }
+
+    a {
+        color: #F8F8F8;
+        text-decoration: none;
+        -webkit-transition: color 0.2s;
+        -moz-transition: color 0.2s;
+        transition: color 0.2s;
+        &:hover {
+            color: #5bc0de;
+        }
+    }
+
+    .btn {
+        color: #F8F8F8;
+    }
+
+    h1, h2, h3{
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 5px;
+        padding-bottom: 10px;
+    }
+
+    #title {
+        color: #5bc0de;
+    }
+
+    .bcg {
+        background: @home-intro-bg no-repeat center;
+    }
+    &.mobile
+    {
+        background: @home-intro-bg no-repeat center;
+        background-size: cover;
+    }
 
 
-  #apply-btn {
-    height: 30px;
-    padding: 0;
-    margin-top: 3px;
-    padding-left: 15px;
-    padding-right: 15px;
-    max-width: 100px;
-  }
+    #apply-btn-header {
+        height: 30px;
+        padding: 0;
+        margin-top: 3px;
+        padding-left: 15px;
+        padding-right: 15px;
+        max-width: 100px;
+
+        &:hover {
+            cursor: not-allowed;
+        }
+    }
+
+    #apply-btn:hover {
+        cursor: not-allowed;
+    }
 }
 
 .links {
@@ -183,10 +190,10 @@
 }
 
 #logo {
-  max-height: 320px;
+  max-height: 280px;
   margin: 0 auto;
-  padding-top: 30px;
-  padding-bottom: 20px;
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 #sponsor-label {
