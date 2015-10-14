@@ -6,54 +6,67 @@ Controller('team', {
 
 		team: [
 			{
-				name: "Selynna Sun",
-				position: "Sponsorship Director",
-				imageLink: "img/sely.jpg"
-			},
-			{
-				name: "Justin Yu",
-				position: "Tech Director",
-				imageLink: "img/justin.jpg"
-			},
-			{
-				name: "Dan Appel",
-				position: "Tech Director",
-				imageLink: "img/dan.jpg"
-			},
-			{
-				name: "Alicia Leong",
-				position: "Outreach Director",
-				imageLink: "img/alicia.jpg"
-			},
-			{
-				name: "Zooey Nguyen",
+				firstName: "Zooey",
+				lastName: "Nguyen",
 				position: "Outreach Team",
 				imageLink: "img/zooey.png"
 			},
 			{
-				name: "An Huynh",
+				firstName: "An",
+				lastName: "Huynh",
 				position: "Outreach Team",
 				imageLink: "img/an.jpg"
 			},
 			{
-				name: "Aashia Mehta",
+				firstName: "Aashia",
+				lastName: "Mehta",
 				position: "Outreach Team",
 				imageLink: "img/aashia.jpg"
 			},
 			{
-				name: "Javin Pombra",
+				firstName: "Javin",
+				lastName: "Pombra",
 				position: "Tech Team",
 				imageLink: "img/javin.jpg"
 			},
 			{
-				name: "Ryan Huang",
+				firstName: "Ryan",
+				lastName: "Huang",
 				position: "Tech Team",
 				imageLink: "img/ryan.jpg"
 			},
 			{
-				name: "Kyle Sandell",
+				firstName: "Kyle",
+				lastName: "Sandell",
 				position: "Tech Team",
 				imageLink: "img/kyle.jpg"
+			}
+		],
+
+		directors: [
+			{
+				firstName: "Selynna",
+				lastName: "Sun",
+				position: "Sponsorship Director",
+				imageLink: "img/sely.jpg"
+			},
+			{
+				firstName: "Justin",
+				lastName: "Yu",
+				position: "Tech Director",
+				imageLink: "img/justin.jpg"
+			},
+			{
+				firstName: "Dan",
+				lastName: "Appel",
+				position: "Tech Director",
+				imageLink: "img/dan.jpg"
+			},
+			{
+				firstName: "Alicia",
+				lastName: "Leong",
+				position: "Outreach Director",
+				imageLink: "img/alicia.jpg"
 			}
 		]
 
