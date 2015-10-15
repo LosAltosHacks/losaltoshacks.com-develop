@@ -18,7 +18,7 @@ var faqs = [
 	},
 	{
 		question: "When can I apply and how will I know I’ve been accepted?",
-		answer: "Applications will begin early October, and decisions will be sent out by late October. "
+		answer: "Applications will begin early October, and decisions will be sent out by mid-November."
 	},
 	{
 		question: "What should I bring? Will I need my own laptop?",
