@@ -13,10 +13,6 @@ var faqs = [
 		answer: "No! Los Altos Hacks is free for all participants — all food, swag, and other costs are covered."
 	},
 	{
-		question: "What if I can't stay for the full 24 hours?",
-		answer: "That's fine! Just specify that on your application."
-	},
-	{
 		question: "What if I can't code?",
 		answer: "No problem! We are accepting people regardless of experience. Plus, we'll have workshops where you can learn."
 	},
