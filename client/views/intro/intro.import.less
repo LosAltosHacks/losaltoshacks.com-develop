@@ -63,14 +63,26 @@
         padding-right: 15px;
         max-width: 100px;
 
+        transition: background-color 0.25s;
+        -moz-transition: background-color 0.25s;
+        -webkit-transition: background-color 0.25s;
+
         &:hover {
-            cursor: not-allowed;
+            // cursor: not-allowed;
+            color: #333;
         }
     }
 
-    #apply-btn:hover {
-        cursor: not-allowed;
+    #apply-btn {
+        transition: background-color 0.25s;
+        -moz-transition: background-color 0.25s;
+        -webkit-transition: background-color 0.25s;
+        &:hover {
+            // cursor: not-allowed;
+            color: #333;
+        }
     }
+
 }
 
 .links {
