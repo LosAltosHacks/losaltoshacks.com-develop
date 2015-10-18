@@ -33,12 +33,19 @@
 	.sponsor-item {
 		padding: 12px;
 		margin: 5px;
-		height: 55px;
+		height: 60px;
 
 		&.partner {
-			height: 80px;
+			height: 90px;
 		}
 	}
+
+    //Only fix baseline when pictures are side-by-side
+    @media (min-width: 637px) {
+        #google {
+            margin-top: 17px;
+        }
+    }
 
 	// img {
 	// 	margin: 30px;
