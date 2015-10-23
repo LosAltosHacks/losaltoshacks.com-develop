@@ -16,10 +16,14 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
+# Must be relative becomes meteor-build-client does not support absolute paths
 mbcDir=$(mktemp -d --tmpdir=..)
 
 cd $devDir
 meteor-build-client $mbcDir
+
+# Change to absolute path
+mbcDir=$(readlink -f $mbcDir)
 
 cd $mbcDir
 
