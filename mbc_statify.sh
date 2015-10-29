@@ -1,12 +1,20 @@
 #!/bin/bash
 
+set -e
+
 if [ $# -ne 1 ]; then
     echo "usage: $0 [static repo]"
     exit 1
 fi
 
+platform=$(uname)
 devDir=$(pwd)
-staticDir=$(readlink -f $1)
+
+if [ $platform == "Darwin" ]; then
+  staticDir=$(greadlink -f $1) # greadlink for mac (requires brew install coreutils)
+else
+  staticDir=$(readlink -f $1)
+fi
 
 #Does meteor-build-client exist?
 command -v meteor-build-client > /dev/null 2>&1
@@ -16,14 +24,23 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
-# Must be relative becomes meteor-build-client does not support absolute paths
-mbcDir=$(mktemp -d --tmpdir=..)
+# Must be relative becomes meteor-build-client does not support absolute paths...
+#mbcDir=$(mktemp -d --tmpdir=..) doesn't work on mac
+
+# To support both darwin and linux: http://unix.stackexchange.com/questions/30091/fix-or-alternative-for-mktemp-in-os-x
+mbcDir=$(mktemp -d 2>/dev/null || mktemp -d -t '/tmp/') # doesn't work
+
+echo $mbcDir
 
 cd $devDir
 meteor-build-client $mbcDir
 
 # Change to absolute path
-mbcDir=$(readlink -f $mbcDir)
+if [ $platform == "Darwin" ]; then
+  mbcDir=$(greadlink -f $mbcDir) # greadlink for mac (requires brew install coreutils)
+else
+  mbcDir=$(readlink -f $mbcDir)
+fi
 
 cd $mbcDir
 
