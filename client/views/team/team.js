@@ -6,12 +6,6 @@ Controller('team', {
 
 		team: [
 			{
-				firstName: "Javin",
-				lastName: "Pombra",
-				position: "Tech Team",
-				imageLink: "img/javin.jpg"
-			},
-			{
 				firstName: "Ryan",
 				lastName: "Huang",
 				position: "Tech Team",
@@ -36,10 +30,16 @@ Controller('team', {
 				imageLink: "img/an.jpg"
 			},
 			{
-				firstName: "Aashia",
-				lastName: "Mehta",
-				position: "Outreach Team",
-				imageLink: "img/aashia.jpg"
+				firstName: "Javin",
+				lastName: "Pombra",
+				position: "Tech Team",
+				imageLink: "img/javin.jpg"
+			},
+			{
+				firstName: "Alicia",
+				lastName: "Leong",
+				position: "Outreach Advisor",
+				imageLink: "img/alicia.jpg"
 			}
 		],
 
@@ -63,10 +63,10 @@ Controller('team', {
 				imageLink: "img/dan.jpg"
 			},
 			{
-				firstName: "Alicia",
-				lastName: "Leong",
+				firstName: "Aashia",
+				lastName: "Mehta",
 				position: "Outreach Director",
-				imageLink: "img/alicia.jpg"
+				imageLink: "img/aashia.jpg"
 			}
 		]
 
