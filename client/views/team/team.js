@@ -32,7 +32,7 @@ Controller('team', {
 			{
 				firstName: "Javin",
 				lastName: "Pombra",
-				position: "Tech Team",
+				position: "Outreach Team",
 				imageLink: "img/javin.jpg"
 			},
 			{
