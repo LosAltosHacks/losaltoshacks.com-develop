@@ -31,10 +31,10 @@ cd $mbcDir
 
 # Rename css and js files
 mv -v $(echo "*.css") "style.css"
-sed index.html -i -e 's/href="\/.\+\.css?.\+true"/href="style\.css"/'
+sed -E index.html -i -e 's/href="\/.+\.css?.+true"/href="style\.css"/'
 
 mv -v $(echo "*.js") "script.js"
-sed index.html -i -e 's/src="\/.\+\.js"/src="script\.js"/'
+sed -E index.html -i -e 's/src="\/.+\.js"/src="script\.js"/'
 
 cd ..
 
