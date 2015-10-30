@@ -30,11 +30,18 @@ meteor-build-client $mbcDir
 cd $mbcDir
 
 # Rename css and js files
+# -i option isn't used because of differences between GNU and BSD implementations
+temp=$(mktemp tmp.XXXXXXXXXX)
+
 mv -v $(echo "*.css") "style.css"
-sed -E index.html -i -e 's/href="\/.+\.css?.+true"/href="style\.css"/'
+sed -Ee 's/href="\/.+\.css?.+true"/href="style\.css"/' index.html > $temp
+mv $temp index.html
 
 mv -v $(echo "*.js") "script.js"
-sed -E index.html -i -e 's/src="\/.+\.js"/src="script\.js"/'
+sed -Ee 's/src="\/.+\.js"/src="script\.js"/' index.html > $temp
+mv $temp index.html
+
+# temp is not rm'd because it is renamed by mv
 
 cd ..
 
