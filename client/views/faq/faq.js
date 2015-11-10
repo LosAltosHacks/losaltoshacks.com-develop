@@ -29,11 +29,6 @@ var faqs = [
 		answer: "You can either specify your team on the application or form teams at the hackathon, where we’ll have a session for you to meet others. Each team can have a maximum of 4 people."
 	},
 	{
-		question: "Can I get travel reimbursements?",
-		answer: "Travel reimbursements will be provided on a case-by-case basis. Contact us at <a href=\"mailto:info@losaltoshacks.com\" class=\"\" id=\"info-email-anchor\">info@losaltoshacks.com</a>."
-
-	},
-	{
 		question: "What if I still have a question?",
 		answer: "Contact us at <a href=\"mailto:info@losaltoshacks.com\" class=\"\" id=\"info-email-anchor\">info@losaltoshacks.com</a>."
 
