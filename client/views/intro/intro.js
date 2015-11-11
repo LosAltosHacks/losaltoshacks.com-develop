@@ -3,7 +3,7 @@ Controller('intro', {
     helpers: {
 
     	title: "Los Altos Hacks",
-    	location: "Hillview Community Center",
+    	location: "Microsoft Silicon Valley Campus",
 	    date: "January 30th-31th, 2016"
 
     },
