@@ -4,7 +4,7 @@ Controller('intro', {
 
     	title: "Los Altos Hacks",
     	location: "Microsoft Silicon Valley Campus",
-	    date: "January 30th-31th, 2016"
+	    date: "January 30th-31st, 2016"
 
     },
 
