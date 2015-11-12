@@ -2,7 +2,7 @@
 var faqs = [
 	{
 		question: "What is Los Altos Hacks?",
-		answer: "Los Altos Hacks is the first ever <a href=\"https://medium.com/essays-by-kern/what-is-a-hackathon-c2162b893b0a\">hackathon</a> to be in Los Altos. A hackathon is an event where people can code a project together. At Los Altos Hacks, you will have 24 hours to make your idea a reality."
+		answer: "Los Altos Hacks is the first <a href=\"https://medium.com/essays-by-kern/what-is-a-hackathon-c2162b893b0a\">hackathon</a> run by students from Los Altos High School. A hackathon is an event where people can code a project together. At Los Altos Hacks, you will have 24 hours to make your idea a reality."
 	},
 	{
 		question: "Who can participate?",
