@@ -23,36 +23,9 @@
             <h4 class="sponsor-title uppercase">Sponsored By:</h4>
 
             <ul class="flex-container logos">
-                <li>
-                    <a href = "http://adatao.com/">
-                        <img src="img/adatao.png" alt="Adatao" class="sponsor-item img-responsive">
-                    </a>
-                </li>
-
-                <li >
-                    <a href="https://www.stickermule.com/">
-                        <img src="img/stickermule.png" alt="Sticker Mule" class="sponsor-item img-responsive">
-                    </a>
-                </li>
-                <li>
-                    <a href = "http://brandmakers.com/">
-                        <img src="img/brandmakers.jpg" alt="Brandmakers" class="sponsor-item img-responsive">
-                    </a>
-                </li>
-                <li>
-                    <a href = "http://lob.com/">
-                        <img src="img/lob.png" alt="Lob" class="sponsor-item img-responsive">
-                    </a>
-                </li>
-
-                <!-- Sponsors but not totally confirmed yet
-                <a href = "http://hacker.fund/">
-               		<img src="img/hackerfund.png" class="img-responsive sponsor-img">
-               	</a>
-               	<a href = "https://www.makeschool.com/">
-                	<img src="img/makeschool.svg" class="img-responsive sponsor-img">
-                </a>
-                -->
+                {{#each sponsor}}
+                    {{> sponsorItem}}
+                {{/each}}
             </ul>
 
             <h5 class="" id="sponsor-label">Interested in becoming a sponsor?</h5>
@@ -67,4 +40,12 @@
 </section>
 
 
+</template>
+
+<template name="sponsorItem">
+    <li>
+        <a href={{url}}>
+            <img src={{image}} alt={{name}} class="sponsor-item img-responsive">
+        </a>
+    </li>
 </template>
