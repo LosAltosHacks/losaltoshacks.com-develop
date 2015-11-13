@@ -1,6 +1,6 @@
 Controller('sponsors', {
     helpers: {
-        sponsor: [
+        sponsors: [
             {
                 name: "Adatao",
                 image: "img/adatao.png",
@@ -29,5 +29,6 @@ Controller('sponsors', {
         ]
     },
     rendered: function() {
+
     }
 });

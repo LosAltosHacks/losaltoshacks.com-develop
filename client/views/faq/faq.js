@@ -18,7 +18,7 @@ var faqs = [
 	},
 	{
 		question: "When can I apply and how will I know I’ve been accepted?",
-		answer: "Applications will begin early October, and decisions will be sent out by mid-November."
+		answer: "Priority registration closes on November 20th and waves of acceptances will be sent out every other Monday. The deadline for regular registration is December 18th."
 	},
 	{
 		question: "What should I bring? Will I need my own laptop?",
