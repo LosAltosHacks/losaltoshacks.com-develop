@@ -2,12 +2,14 @@
 
 <section id="faq" class="colored text-center">
     <div class="container section-body">
-        <h2 class="uppercase" id="faq-header">FAQ</h2>
+        <h2 class="uppercase" style="margin: 0 auto;">FAQ</h2>
         <div class="row">
 
-            <div class="flex-container col-md-12 col-sm-12">
+            <div class="col-md-12 col-sm-12">
                 {{#each faqs}}
+
                     {{> faqPanel}}
+
                 {{/each}}
             </div>
         </div>

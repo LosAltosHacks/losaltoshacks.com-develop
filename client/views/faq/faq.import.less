@@ -1,67 +1,73 @@
 #faq
 {
+  overflow-x: hidden;
+  width: 100%;
+  h2 {
+    padding-bottom: 50px;
+  }
+  p {
+    color: #444444;
+    font-size: 1em;
+  }
 
-    #faq-header {
-        margin: 0 auto 5rem auto;
-        background-color: darken(@blue, 12%);
-        padding: 1rem 2rem;
-        position: relative;
-        width: 12rem;
-        box-shadow: 3px 3px whitesmoke;
+  .faq-block {
 
-    }
+      a {
+          color: hsl(51, 100%, 50%);
+      }
 
-    overflow-x: hidden;
-    h2 {
-        padding-bottom: 50px;
-    }
-    p {
-        color: #444;
-        font-size: 1em;
-    }
+      .answer {
+          font-size: 16px;
 
+          p {
+              color: #EEEEEE;
+          }
+      }
 
-    .flex-container {
-		display: -webkit-flex;
-		display: flex;
-		-webkit-flex-direction: row;
-		flex-direction: row;
-		-webkit-justify-content: center;
-		justify-content: center;
-		-webkit-flex-flow: row wrap;
-		flex-flow: row wrap;
-		list-style: none;
+      .question {
+          font-size: 24px;
+
+          p {
+              color: white;
+              margin-bottom: 16px;
+          }
+      }
+      text-align: left;
+      margin-bottom: 40px;
+  }
+
+  /*.row {
+
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-content: flex-start;
+    align-content: flex-start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+
+  	.flex-item-faq {
+      -webkit-flex-grow: 0;
+      flex-grow: 0;
+      -webkit-flex-shrink: 0;
+      flex-shrink: 0;
+
+      max-width: 300px;
+
+      margin: 15px;
+      .panel {
+      	height: 255px;
+      }
+
+      .panel-body {
+        font-size: @font-size-base;
+      }
   	}
 
-    .faq-block {
-        width: 300px;
-        margin: 0 2rem;
-        position: relative;
-        box-shadow: 5px 5px whitesmoke;
-        background-color: darken(@blue, 10%);
-        padding: 2rem;
-        a {
-            color: hsl(51, 100%, 50%);
-        }
-
-        .answer {
-            font-size: 16px;
-
-            p {
-                //color: darken(grey, 20%);
-                color: white;
-            }
-        }
-
-        .question {
-            font-size: 24px;
-            p {
-                //color: darken(grey, 20%);
-                color: white;
-                margin-bottom: 16px;
-            }
-        }
-        text-align: left;
-        margin-bottom: 40px;
-    }
+  }*/
 }
