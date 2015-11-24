@@ -17,6 +17,11 @@ Controller('sponsors', {
                 name: "Kleiner Perkins Caufield & Byers",
                 image: "img/kpcb.png",
                 url: "http://www.kpcb.com/"
+            },
+            {
+                name: "DigitalOcean",
+                image: "img/digitalocean.png",
+                url: "https://www.digitalocean.com/"
             }
         ],
         sponsor: [
