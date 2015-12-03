@@ -17,15 +17,6 @@ Controller('intro', {
               $("#nav-sections").addClass("active");
             }, 50);
         });
-
-        var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
-
-        // if(is_chrome === false) {
-        //     $.stellar();
-        // } else {
-        //     $("#intro").css("background-attachment", "fixed");
-        // }
-
         var navbar = document.getElementById("nav");
         window.addEventListener("scroll", function() {
             var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
