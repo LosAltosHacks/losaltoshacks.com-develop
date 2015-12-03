@@ -15,7 +15,7 @@ fi
 
 staticDir=$1
 
-#Does meteor-build-client exist?
+# Does meteor-build-client exist?
 if ! command -v meteor-build-client > /dev/null 2>&1; then
     echo "Could not find meteor-build-client. Make sure it is installed."
     exit 1
@@ -50,4 +50,4 @@ cd ..
 rsync -tr $mbcDir/ $staticDir
 rm -rf $mbcDir
 
-echo -e "\nFiles should now be updated in $staticDir. Please inspect them and commit when ready."
+printf "\nFiles should now be updated in $staticDir. Please inspect them and commit when ready."
