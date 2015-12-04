@@ -36,6 +36,11 @@ Controller('sponsors', {
                 url: "http://samsung.com/"
             },
             {
+                name: "GitHub",
+                image: "img/github.png",
+                url: "https://github.com/"
+            },
+            {
                 name: "Sticker Mule",
                 image: "img/stickermule.png",
                 url: "https://stickermule.com/"
