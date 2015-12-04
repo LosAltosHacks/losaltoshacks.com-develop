@@ -22,6 +22,11 @@ Controller('sponsors', {
                 name: "DigitalOcean",
                 image: "img/digitalocean.png",
                 url: "https://www.digitalocean.com/"
+            },
+            {
+                name: "Make School",
+                image: "img/makeschool.png"
+                url: "https://www.makeschool.com/"
             }
         ],
         sponsor: [
