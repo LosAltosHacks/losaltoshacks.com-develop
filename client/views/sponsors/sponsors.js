@@ -25,7 +25,7 @@ Controller('sponsors', {
             },
             {
                 name: "Make School",
-                image: "img/makeschool.png"
+                image: "img/makeschool.png",
                 url: "https://www.makeschool.com/"
             }
         ],
