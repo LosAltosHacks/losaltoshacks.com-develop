@@ -50,4 +50,4 @@ cd ..
 rsync -tr $mbcDir/ $staticDir
 rm -rf $mbcDir
 
-printf "\nFiles should now be updated in $staticDir. Please inspect them and commit when ready."
+printf "\n%s%s%s\n" "Files should now be updated in " "$staticDir" ". Please inspect them and commit when ready."
