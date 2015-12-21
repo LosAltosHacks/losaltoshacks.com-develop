@@ -1,16 +1,12 @@
 Controller('intro', {
 
     helpers: {
-
     	title: "Los Altos Hacks",
     	location: "Microsoft Silicon Valley Campus",
 	    date: "January 30th-31st, 2016"
-
     },
 
     rendered: function() {
-        // setupAffix();
-
         $(".nav-menu").click(function() {
             $("#nav-sections").show();
             setTimeout(function() {

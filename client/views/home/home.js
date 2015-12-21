@@ -2,30 +2,13 @@ Controller('home', {
 
     helpers: {
 
-
     },
 
     rendered: function() {
         initiateWaypoints();
-        // setupLinkToggle();
     }
 
 });
-
-
-// function setupLinkToggle() {
-
-//     $(".links > a").click(function() {
-//       // remove classes from all
-
-//       console.log("clicked");
-//       $(".links > a").removeClass("active");
-//       // add class to the one we clicked
-//       $(this).addClass("active");
-//    });
-
-// }
-
 
 function initiateWaypoints() {
 
