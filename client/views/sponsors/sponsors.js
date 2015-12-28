@@ -51,6 +51,11 @@ Controller('sponsors', {
                 url: "https://stickermule.com/"
             },
             {
+                name: "POP.co",
+                image: "img/pop.png",
+                url: "https://pop.co/"
+            },
+            {
                 name: "Brandmakers",
                 image: "img/brandmakers.jpg",
                 url: "http://brandmakers.com/"
