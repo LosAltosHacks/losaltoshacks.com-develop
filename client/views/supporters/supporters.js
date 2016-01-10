@@ -1,4 +1,4 @@
-Controller('sponsors', {
+Controller('supporters', {
     helpers: {
         gold: [
             {
@@ -29,7 +29,7 @@ Controller('sponsors', {
                 url: "https://www.makeschool.com/"
             }
         ],
-        sponsor: [
+        supporter: [
             {
                 name: "Lob",
                 image: "img/lob.png",
