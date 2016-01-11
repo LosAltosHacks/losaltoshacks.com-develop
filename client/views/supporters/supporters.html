@@ -20,10 +20,6 @@
                 </li>
             </ul>
 
-            <a href="http://hacker.fund">
-                <img src="img/hackerfund.png" alt="Hacker Fund" class="supporter-item partner">
-            </a>
-
             <h4 class="supporter-title uppercase">Sponsored By:</h4>
 
             <ul class="flex-container logos">
@@ -38,8 +34,10 @@
                 {{/each}}
             </ul>
 
+            <h4 class="supporter-title uppercase">Community Partners:</h4>
+
             <ul class="flex-container logos">
-                {{#each supporter}}
+                {{#each communityPartner}}
                     {{> supporterItem}}
                 {{/each}}
             </ul>

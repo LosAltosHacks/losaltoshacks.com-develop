@@ -17,19 +17,29 @@ Controller('supporters', {
                 name: "Kleiner Perkins Caufield & Byers",
                 image: "img/kpcb.png",
                 url: "http://www.kpcb.com/"
+            }
+        ],
+        communityPartner: [
+            {
+                name: "Hacker Fund",
+                image: "img/hackerfund.png",
+                url: "http://hacker.fund"
+            },
+            {
+                name: "Major League Hacking",
+                image: "img/mlh.png",
+                url: "https://mlh.io/"
+            },
+            {
+                name: "Make School",
+                image: "img/makeschool.png",
+                url: "https://www.makeschool.com/"
             },
             {
                 name: "DigitalOcean",
                 image: "img/digitalocean.png",
                 url: "https://www.digitalocean.com/"
             },
-            {
-                name: "Make School",
-                image: "img/makeschool.png",
-                url: "https://www.makeschool.com/"
-            }
-        ],
-        supporter: [
             {
                 name: "Lob",
                 image: "img/lob.png",
