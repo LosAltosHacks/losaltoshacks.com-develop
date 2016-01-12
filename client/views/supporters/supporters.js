@@ -58,6 +58,11 @@ Controller('supporters', {
                 url: "http://hacker.fund"
             },
             {
+                name: "Major League Hacking",
+                image: "img/mlh.png",
+                url: "https://mlh.io/"
+            },
+            {
                 name: "Make School",
                 image: "img/makeschool.png",
                 url: "https://www.makeschool.com/"
@@ -66,11 +71,6 @@ Controller('supporters', {
                 name: "Samsung",
                 image: "img/samsung.png",
                 url: "http://samsung.com/"
-            },
-            {
-                name: "Major League Hacking",
-                image: "img/mlh.png",
-                url: "https://mlh.io/"
             }
         ]
     },
