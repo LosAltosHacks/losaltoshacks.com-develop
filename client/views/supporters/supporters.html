@@ -34,9 +34,15 @@
                 {{/each}}
             </ul>
 
+            <ul class="flex-container logos">
+                {{#each inKind}}
+                    {{> supporterItem}}
+                {{/each}}
+            </ul>
+
             <h4 class="supporter-title uppercase">Community Partners:</h4>
 
-            <ul class="flex-container logos">
+            <ul class="flex-container logos" id="community-partners">
                 {{#each communityPartner}}
                     {{> supporterItem}}
                 {{/each}}
