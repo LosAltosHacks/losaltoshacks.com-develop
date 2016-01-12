@@ -17,10 +17,6 @@ var faqs = [
 		answer: "No problem! We are accepting people regardless of experience. Plus, we'll have workshops where you can learn."
 	},
 	{
-		question: "When can I apply and how will I know I’ve been accepted?",
-		answer: "Priority registration closes on November 20th and waves of acceptances will be sent out every other Monday. The deadline for regular registration is December 18th."
-	},
-	{
 		question: "What should I bring? Will I need my own laptop?",
 		answer: "Bring a valid student ID for admission and your laptop, phone, chargers, etc. We will <em>not</em> provide laptops or chargers for you. Power strips, ethernet cables, sleeping bags, and toiletries are highly recommended."
 	},
@@ -30,7 +26,7 @@ var faqs = [
 	},
     {
         question: "Do you have a code of conduct?",
-        answer: "Yes, we are an MLH event, so we abide by and expect all participants to follow the <a href='http://static.mlh.io/docs/mlh-code-of-conduct.pdf'>MLH Code of Conduct</a>."
+        answer: "Yes. We expect all participants to read and follow the <a href='https://docs.google.com/document/d/1OdIVefNLUfE9CLe-B8WuDZIPyqRaJ6GZO0KjBfrJOqc/edit'>Hacker Fund</a> and <a href='http://static.mlh.io/docs/mlh-code-of-conduct.pdf'>MLH</a> Code of Conducts."
     },
 	{
 		question: "What if I still have a question?",
