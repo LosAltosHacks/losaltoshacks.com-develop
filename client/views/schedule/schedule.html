@@ -1,96 +1,48 @@
 <template name="schedule">
 
-
-<!-- NEEDS FIXING!!!! -->
-
 <section id="schedule" class="text-center semi-white">
 
     <div class="container">
-
-
-        <div class="row" id="icon-row">
-            <div class="col-xs-12 col-md-8 col-md-push-2">
-                <h2 class="">Tentative Schedule</h2>
-
-                <h3>Saturday, January 30<sup>th</sup></h3>
-                <table class="table centered-table">
-                    <thead>
-                        <tr>
-                            <th class="text-center">Time</th>
-                            <th class="text-center">Event</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>11:00 AM</td>
-                            <td>Doors Open</td>
-                        </tr>
-                        <tr>
-                            <td>12:00 PM</td>
-                            <td>Lunch</td>
-                        </tr>
-                        <tr>
-                            <td>1:00 PM</td>
-                            <td>Start Hacking!</td>
-                        </tr>
-                        <tr>
-                            <td>6:00 PM</td>
-                            <td>Dinner</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+        <h2>Schedule</h2>
+        <div class="row">
+            {{#each days}}
+                {{> day}}
+            {{/each}}
         </div>
-
-        <div class="row" id="icon-row">
-            <div class="col-xs-12 col-md-8 col-md-push-2">
-                <h3>Sunday, January 31<sup>st</sup></h3>
-                <table class="table centered-table">
-                    <thead>
-                        <tr>
-                            <th class="text-center">Time</th>
-                            <th class="text-center">Event</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>12:00 AM</td>
-                            <td>Midnight Snack</td>
-                        </tr>
-                        <tr>
-                            <td>8:00 AM</td>
-                            <td>Breakfast</td>
-                        </tr>
-                        <tr>
-                            <td>11:00 AM</td>
-                            <td>Lunch</td>
-                        </tr>
-                        <tr>
-                            <td>1:00 PM</td>
-                            <td>Submit Hacks</td>
-                        </tr>
-                        <tr>
-                            <td>4:00 PM</td>
-                            <td>Hackathon Ends</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-
    </div>
-
 
 </section>
 
 </template>
 
-
-<template name="liveSchedule">
-
-    <div class="table-container">
-
+<template name="day">
+    <div class="col-xs-12">
+        <h3>{{date}}</h3>
+        <table class="table centered-table">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Event</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{!--
+                    This can't be {{#each events}} because events is a reserved word.
+                    See https://github.com/meteor/meteor/issues/3156
+                --}}
+                {{#each scheduleItems}}
+                    {{> scheduleItem}}
+                {{/each}}
+            </tbody>
+        </table>
     </div>
+</template>
 
+<template name="scheduleItem">
+    <tr>
+        <td>{{time}}</td>
+        <td>{{name}}</td>
+        <td>{{location}}</td>
+    </tr>
 </template>
