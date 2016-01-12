@@ -26,13 +26,19 @@ var faqs = [
 	},
     {
         question: "Do you have a code of conduct?",
-        answer: "Yes. We expect all participants to read and follow the <a href='https://docs.google.com/document/d/1OdIVefNLUfE9CLe-B8WuDZIPyqRaJ6GZO0KjBfrJOqc/edit'>Hacker Fund</a> and <a href='http://static.mlh.io/docs/mlh-code-of-conduct.pdf'>MLH</a> Code of Conducts."
+        answer: "Yes. We expect all participants to read and follow the <a href='https://docs.google.com/document/d/1OdIVefNLUfE9CLe-B8WuDZIPyqRaJ6GZO0KjBfrJOqc/edit'>Hacker Fund</a> and <a href='http://static.mlh.io/docs/mlh-code-of-conduct.pdf'>MLH</a> Code of Conducts. You can electronically sign (with your parents) at <a href='http://bit.ly/LosAltosHacksParentPacket'>this HelloSign link</a>.  You will not be let into the hackathon without the packet."
     },
+		{
+			question: "Is there a privacy policy?",
+			answer: "Yes, you are under Hacker Fund's privacy policy.  "
+
+		},
 	{
 		question: "What if I still have a question?",
 		answer: "Contact us at <a href=\"mailto:info@losaltoshacks.com\" class=\"\" id=\"info-email-anchor\">info@losaltoshacks.com</a>."
 
 	}
+
 ];
 
 Controller('faq', {
