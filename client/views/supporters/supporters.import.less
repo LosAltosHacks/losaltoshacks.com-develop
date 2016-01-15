@@ -23,7 +23,6 @@
   .flex-item {
 		padding: 5px;
 		max-height: 100px;
-		max-width: 80%;
 		margin-top: 0px;
 		margin-bottom: 0px;
 		margin-left: 10px;
@@ -34,11 +33,15 @@
 	.supporter-item {
 		padding: 12px;
 		margin: 5px;
-		height: 70px;
+		max-height: 70px;
 
 		&.partner {
-			height: 90px;
+			max-height: 90px;
 		}
+	}
+
+	#google {
+		height: 90px;
 	}
 
     //Only fix baseline when pictures are side-by-side
