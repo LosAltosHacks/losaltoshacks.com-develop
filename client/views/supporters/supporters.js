@@ -57,11 +57,11 @@ Controller('supporters', {
                 image: "img/hackerfund.png",
                 url: "http://hacker.fund"
             },
-          /*  {
+            {
                 name: "Major League Hacking",
                 image: "img/mlh.png",
                 url: "https://mlh.io/"
-            }, */
+            },
             {
                 name: "Make School",
                 image: "img/makeschool.png",
