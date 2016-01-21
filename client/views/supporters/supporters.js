@@ -1,12 +1,5 @@
 Controller('supporters', {
     helpers: {
-        gold: [
-            {
-                name: "Moxtra",
-                image: "img/moxtra.png",
-                url: "http://www.moxtra.com/"
-            }
-        ],
         bronze: [
             {
                 name: "Adatao",
