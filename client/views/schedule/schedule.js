@@ -7,6 +7,7 @@ Controller('schedule', {
                     {time: "9:00 AM", name: "Sponsor and Mentor Check In", location:"Lobby"},
                     {time: "10:30 AM", name: "Hackers Check In", location:"Lobby"},
                     {time: "11:30 AM", name: "Team Mixer", location:"Saturn"},
+                    {time: "12:00 PM", name: "Opening Ceremony", location:"Galileo"},
                     {time: "1:00 PM", name: "Hacking Starts", location:"Everywhere"},
                     {time: "1:00 PM", name: "Lunch", location:"Cosmic Cafe"},
                     {time: "1:30 PM", name: "How to Get Started With Python (Microsoft)", location:"Saturn"},
