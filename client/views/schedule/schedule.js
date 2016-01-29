@@ -4,7 +4,7 @@ Controller('schedule', {
             {
                 date: "Saturday, January 30th",
                 scheduleItems: [
-                    {time: "9:00 AM", name: "Sponsor and Mentor Check In", location:"Lobby"},
+                    {time: "9:30 AM", name: "Sponsor and Mentor Check In", location:"Lobby"},
                     {time: "10:30 AM", name: "Hackers Check In", location:"Lobby"},
                     {time: "11:30 AM", name: "Team Mixer", location:"Saturn"},
                     {time: "12:00 PM", name: "Opening Ceremony", location:"Galileo"},
