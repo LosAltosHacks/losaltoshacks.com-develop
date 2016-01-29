@@ -32,13 +32,14 @@ Controller('team', {
 				lastName: "Pombra",
 				position: "Outreach Team",
 				imageLink: "img/javin.jpg"
-			},
-			{
-				firstName: "Alicia",
-				lastName: "Leong",
-				position: "Outreach Team",
-				imageLink: "img/alicia.jpg"
 			}
+			// },
+			// {
+			// 	firstName: "Alicia",
+			// 	lastName: "Leong",
+			// 	position: "Outreach Team",
+			// 	imageLink: "img/alicia.jpg"
+			// }
 		],
 
 		directors: [
