@@ -1,4 +1,3 @@
-
 var faqs = [
 	{
 		question: "What is Los Altos Hacks?",
@@ -26,7 +25,7 @@ var faqs = [
 	},
 	{
 		question: "Do you have a code of conduct?",
-		answer: "Yes. We expect all participants to read and follow the <a href='https://docs.google.com/document/d/1OdIVefNLUfE9CLe-B8WuDZIPyqRaJ6GZO0KjBfrJOqc/edit'>Hacker Fund</a> and <a href='http://static.mlh.io/docs/mlh-code-of-conduct.pdf'>MLH</a> Code of Conducts. You can electronically sign (with your parents) at <a href='http://bit.ly/LosAltosHacksParentPacket'>this HelloSign link</a>.  You will not be let into the hackathon without the packet."
+		answer: "Yes. We expect all participants to read and follow the Hacker Fund <a href='https://docs.google.com/document/d/1K8hEdSsjgARjdCQeGJYpcgyMFdaFS_UtFIJJiTP9NrI/edit?usp=sharing'>Code of Conduct, <a href='https://docs.google.com/document/d/1OdIVefNLUfE9CLe-B8WuDZIPyqRaJ6GZO0KjBfrJOqc/edit'>parent packet</a>, and the <a href='http://static.mlh.io/docs/mlh-code-of-conduct.pdf'>MLH</a> Code of Conduct. You can electronically sign (with your parents) at <a href='http://bit.ly/LosAltosHacksParentPacket'>this HelloSign link</a>.  You will not be let into the hackathon without the packet."
 	},
 	{
 		question: "Is there a privacy policy?",
