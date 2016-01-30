@@ -42,6 +42,11 @@ Controller('supporters', {
                 name: "Brandmakers",
                 image: "img/brandmakers.jpg",
                 url: "http://brandmakers.com/"
+            },
+            {
+                name: "LinkedIn",
+                image: "img/linkedin.png",
+                url: "https://www.linkedin.com/"
             }
         ],
         communityPartner: [
