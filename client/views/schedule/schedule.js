@@ -37,6 +37,7 @@ Controller('schedule', {
                     {time: "11:00 AM", name: "Lunch", location:"Cosmic Cafe"},
                     {time: "12:00 PM", name: "Judging Expo", location:"Mercury/Saturn/Jupiter"},
                     {time: "2:00 PM", name: "Closing Ceremony", location:"Galileo"},
+                    {time: "3:15 PM", name: "Oculus Demo", location: "Saturn"}
                 ]
             }
         ],
