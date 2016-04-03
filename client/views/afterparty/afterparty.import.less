@@ -1,0 +1,230 @@
+
+@font-face {
+    font-family: 'Brandon Free';
+    src: url('font/Brandon_bld.otf');
+}
+
+body {
+    background-color: rgba(44, 62, 80,1.0);
+    font-family: 'Brandon Free';
+}
+
+.afterparty_wrapper {
+
+
+    .hero {
+        padding: 0;
+
+        background-size: cover;
+        height: 100vh;
+        width: auto;
+        background: url("img/bg.jpg") no-repeat center;
+
+        .overlay {
+            width: 100%;
+            height: 100%;
+
+            background-color: rgba(52, 73, 94, 0.4);
+            position: relative;
+
+            .soon-tm {
+                position: absolute;
+                vertical-align: middle;
+                line-height: 130px;
+                text-align: center;
+                top: 70%; left: 50%;
+                transform: translate(-50%,-70%);
+            }
+
+            .desktop-banner {
+                position: absolute;
+                vertical-align: middle;
+                line-height: 130px;
+                text-align: center;
+                top: 50%; left: 50%;
+                transform: translate(-50%,-50%);
+                width: 100%;
+                height: 140px;
+                background-color: rgb(52, 152, 219);
+                // border-top: rgba(52, 73, 94,1.0) solid 10px;
+                border-bottom: rgba(52, 73, 94,1.0) solid 10px;
+
+                font-size: 72pt;
+                color: white;
+
+                @media only screen and (max-width: 872px) {
+                    display: none;
+                }
+            }
+
+            .mobile-banner {
+                display: none;
+
+                position: absolute;
+                vertical-align: middle;
+                line-height: 65px;
+                text-align: center;
+                top: 50%; left: 50%;
+                transform: translate(-50%,-50%);
+                width: 100%;
+                height: 145px;
+                background-color: rgb(52, 152, 219);
+                // border-top: rgba(52, 73, 94,1.0) solid 10px;
+                border-bottom: rgba(52, 73, 94,1.0) solid 10px;
+
+                font-size: 48pt;
+                color: white;
+
+                @media only screen and (max-width: 872px) {
+                    display: block;
+                }
+            }
+
+
+        }
+    }
+
+
+    .arrow {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        margin-left: -20px;
+        width: 40px;
+        height: 40px;
+        background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yOTMuNzUxLDQ1NS44NjhjLTIwLjE4MSwyMC4xNzktNTMuMTY1LDE5LjkxMy03My42NzMtMC41OTVsMCwwYy0yMC41MDgtMjAuNTA4LTIwLjc3My01My40OTMtMC41OTQtNzMuNjcyICBsMTg5Ljk5OS0xOTBjMjAuMTc4LTIwLjE3OCw1My4xNjQtMTkuOTEzLDczLjY3MiwwLjU5NWwwLDBjMjAuNTA4LDIwLjUwOSwyMC43NzIsNTMuNDkyLDAuNTk1LDczLjY3MUwyOTMuNzUxLDQ1NS44Njh6Ii8+DQo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjIwLjI0OSw0NTUuODY4YzIwLjE4LDIwLjE3OSw1My4xNjQsMTkuOTEzLDczLjY3Mi0wLjU5NWwwLDBjMjAuNTA5LTIwLjUwOCwyMC43NzQtNTMuNDkzLDAuNTk2LTczLjY3MiAgbC0xOTAtMTkwYy0yMC4xNzgtMjAuMTc4LTUzLjE2NC0xOS45MTMtNzMuNjcxLDAuNTk1bDAsMGMtMjAuNTA4LDIwLjUwOS0yMC43NzIsNTMuNDkyLTAuNTk1LDczLjY3MUwyMjAuMjQ5LDQ1NS44Njh6Ii8+DQo8L3N2Zz4=);
+        background-size: contain;
+
+        @media only screen and (max-height: 346px) {
+            display: none;
+        }
+    }
+
+    #ap-stats {
+
+        font-family: 'Brandon Free';
+
+        padding-top: 4rem;
+        a {
+            text-decoration: none;
+        }
+
+        height: 700px;
+
+        @media only screen and (max-width: 546px) {
+            height: 750px;
+        }
+
+        background-color: white;
+
+        .stats-title {
+            font-size: 40pt;
+            text-align: center;
+        }
+
+        .participants {
+            display: block;
+            margin: 3rem auto;
+            text-align: center;
+
+            .hacker-count {
+                display: inline-block;
+                margin-right: 0;
+                background-color: rgba(52, 152, 219, 1.0);
+                color: white;
+                border-bottom: 8px rgba(44, 62, 80,1.0) solid;
+                padding: 2rem 2rem;
+                font-size: 28pt;
+            }
+
+            .mentor-count {
+                display: inline-block;
+                margin-left: 0;
+                padding: 2rem 2rem;
+                color: white;
+                background-color: rgba(231, 76, 60,1.0);
+                border-bottom: 8px rgba(44, 62, 80,1.0) solid;
+                font-size: 28pt;
+            }
+        }
+
+        .prizes {
+            display: block;
+            margin: 3rem auto;
+            text-align: center;
+
+            h1 {
+                display: inline-block;
+                padding: 3rem 3.2rem;
+                border: 4px rgba(44, 62, 80,1.0) dashed;
+                font-size: 28pt;
+            }
+        }
+
+        .projects {
+            display: block;
+            margin: 4rem auto 0 auto;
+            padding-bottom: 2rem;
+            text-align: center;
+            a {
+                font-size: 28pt;
+                color: white;
+                padding: 1.5rem 2rem;
+                display: inline-block;
+                background-color: rgba(155, 89, 182,1.0);
+                transition: 0.2s;
+
+                box-shadow: 0px 8px 0px rgba(44, 62, 80,1.0);
+                position: relative;
+                top: 0px;
+                right: 0;
+                bottom: 0;
+                left: 0px;
+
+                &:hover {
+                    background-color: rgba(142, 68, 173,1.0);
+                }
+
+                &:active {
+                    top: 8px;
+                    box-shadow: 0px 0px 0px;
+                }
+            }
+        }
+
+    }
+
+    .soon {
+        height: 120px;
+        padding: 3rem 0;
+        margin: 0;
+        background-color: rgba(52, 152, 219,1.0);
+        border-bottom: 10px rgba(44, 62, 80,1.0) solid;
+
+        .soon-tm-desktop {
+            text-align: center;
+            font-size: 36pt;
+            color: white;
+            line-height: 40px;
+
+            @media only screen and (max-width: 700px) {
+                display: none;
+            }
+        }
+        .soon-tm-mobile {
+            display: none;
+            text-align: center;
+            font-size: 24pt;
+            color: white;
+            line-height: 30px;
+
+            @media only screen and (max-width: 700px) {
+                display: block;
+            }
+        }
+
+        @media only screen and (max-width: 700px) {
+            padding-top: 1.5rem;
+        }
+    }
+}
