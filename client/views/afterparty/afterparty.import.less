@@ -15,17 +15,33 @@ body {
     .hero {
         padding: 0;
 
-        background-size: cover;
+        // background-size: cover;
+        // height: 100vh;
+        // width: auto;
+        // background: url("img/bg.png") no-repeat center center;
+
+        .stretch {
+            width:100%;
+            height:100%;
+            object-fit: cover;
+        }
+
+        width: 100%;
         height: 100vh;
-        width: auto;
-        background: url("img/bg.jpg") no-repeat center;
+        position: relative;
+        left: 0px;
+        top: 0px;
+        z-index: 0;
 
         .overlay {
+            position: absolute;
+            top: 0;
+
+            z-index: 1;
             width: 100%;
             height: 100%;
 
             background-color: rgba(52, 73, 94, 0.4);
-            position: relative;
 
             .soon-tm {
                 position: absolute;
@@ -63,11 +79,12 @@ body {
                 position: absolute;
                 vertical-align: middle;
                 line-height: 65px;
+                padding-top: 10px;
                 text-align: center;
                 top: 50%; left: 50%;
                 transform: translate(-50%,-50%);
                 width: 100%;
-                height: 145px;
+                height: 160px;
                 background-color: rgb(52, 152, 219);
                 // border-top: rgba(52, 73, 94,1.0) solid 10px;
                 border-bottom: rgba(52, 73, 94,1.0) solid 10px;
@@ -77,6 +94,12 @@ body {
 
                 @media only screen and (max-width: 872px) {
                     display: block;
+                }
+
+                @media only screen and (max-width: 348px) {
+                    font-size: 38pt;
+                    line-height: 48px;
+                    padding-top: 30px;
                 }
             }
 
@@ -104,15 +127,9 @@ body {
 
         font-family: 'Brandon Free';
 
-        padding-top: 5rem;
+        padding: 6rem 0 7rem 0;
         a {
             text-decoration: none;
-        }
-
-        height: 680px;
-
-        @media only screen and (max-width: 546px) {
-            height: 800px;
         }
 
         background-color: white;
@@ -165,9 +182,14 @@ body {
                 padding: 3rem 3.2rem;
                 border: 4px rgba(44, 62, 80,1.0) dashed;
                 font-size: 28pt;
+                color: rgba(44, 62, 80,1.0);
 
                 @media only screen and (max-width: 546px) {
                     padding: 2.5rem 1.5rem;
+                }
+
+                @media only screen and (max-width: 348px) {
+                    font-size: 24pt;
                 }
             }
         }
@@ -197,8 +219,8 @@ body {
                 }
 
                 &:active {
-                    top: 8px;
-                    box-shadow: 0px 0px 0px;
+                    top: 4px;
+                    box-shadow: 0px 4px 0px rgba(44, 62, 80,1.0);
                 }
             }
         }
