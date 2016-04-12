@@ -25,21 +25,21 @@ fi
 # Provide explicit template for compatibility with BSD mktemp
 mbcDir=$(mktemp -d tmp.XXXXXXXXXX)
 
-meteor-build-client $mbcDir
+meteor-build-client "$mbcDir"
 
-cd $mbcDir
+cd "$mbcDir"
 
 # Rename css and js files
 # -i option isn't used because of differences between GNU and BSD implementations
 temp=$(mktemp tmp.XXXXXXXXXX)
 
-mv -v $(echo "*.css") "style.css"
-sed -Ee 's/href="\/.+\.css?.+true"/href="style\.css"/' index.html > $temp
-mv $temp index.html
+mv -v "*.css" "style.css"
+sed -Ee 's/href="\/.+\.css?.+true"/href="style\.css"/' index.html > "$temp"
+mv "$temp" index.html
 
-mv -v $(echo "*.js") "script.js"
-sed -Ee 's/src="\/.+\.js"/src="script\.js"/' index.html > $temp
-mv $temp index.html
+mv -v "*.js" "script.js"
+sed -Ee 's/src="\/.+\.js"/src="script\.js"/' index.html > "$temp"
+mv "$temp" index.html
 
 # temp is not rm'd because it is renamed by mv
 
@@ -47,7 +47,7 @@ cd ..
 
 # Copy the contents of mbcDir to staticDir recursively, only copying changed files
 # Trailing slash needed for rsync to copy contents of directory, not directory itself
-rsync -tr $mbcDir/ $staticDir
-rm -rf $mbcDir
+rsync -tr "$mbcDir/" "$staticDir"
+rm -rf "$mbcDir"
 
 printf "\n%s%s%s\n" "Files should now be updated in " "$staticDir" ". Please inspect them and commit when ready."
