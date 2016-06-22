@@ -1,1 +1,0 @@
-// Meteor method definitions
