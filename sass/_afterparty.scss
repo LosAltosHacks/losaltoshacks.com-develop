@@ -1,113 +1,84 @@
-
 @font-face {
     font-family: 'Brandon Free';
-    src: url('font/Brandon_bld.otf');
+    src: url('/font/Brandon_bld.otf');
 }
 
+* {
+    font-size: 14px; // bootstrap default
+}
+
+
 body {
-    background-color: rgba(44, 62, 80,1.0);
+    background-color: #2c3e50;
     font-family: 'Brandon Free';
+    margin: 0;
+    padding: 0;
 }
 
 .afterparty_wrapper {
-
-
     .hero {
         padding: 0;
-
-        // background-size: cover;
-        // height: 100vh;
-        // width: auto;
-        // background: url("img/bg.png") no-repeat center center;
-
-        .stretch {
-            width:100%;
-            height:100%;
-            object-fit: cover;
-        }
-
         width: 100%;
         height: 100vh;
         position: relative;
         left: 0px;
         top: 0px;
         z-index: 0;
-
+        .stretch {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
         .overlay {
             position: absolute;
             top: 0;
-
             z-index: 1;
             width: 100%;
             height: 100%;
-
             background-color: rgba(52, 73, 94, 0.4);
-
             .soon-tm {
                 position: absolute;
                 vertical-align: middle;
                 line-height: 130px;
                 text-align: center;
-                top: 70%; left: 50%;
-                transform: translate(-50%,-70%);
+                top: 70%;
+                left: 50%;
+                transform: translate(-50%, -50%);
             }
-
             .desktop-banner {
                 position: absolute;
                 vertical-align: middle;
                 line-height: 130px;
                 text-align: center;
-                top: 50%; left: 50%;
-                transform: translate(-50%,-50%);
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
                 width: 100%;
                 height: 140px;
-                background-color: rgb(52, 152, 219);
-                // border-top: rgba(52, 73, 94,1.0) solid 10px;
-                border-bottom: rgba(52, 73, 94,1.0) solid 10px;
-
+                background-color: #3498db;
+                border-bottom: #34495e solid 10px;
                 font-size: 72pt;
                 color: white;
-
-                @media only screen and (max-width: 872px) {
-                    display: none;
-                }
             }
-
             .mobile-banner {
                 display: none;
-
                 position: absolute;
                 vertical-align: middle;
                 line-height: 65px;
                 padding-top: 10px;
                 text-align: center;
-                top: 50%; left: 50%;
-                transform: translate(-50%,-50%);
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
                 width: 100%;
                 height: 160px;
-                background-color: rgb(52, 152, 219);
-                // border-top: rgba(52, 73, 94,1.0) solid 10px;
-                border-bottom: rgba(52, 73, 94,1.0) solid 10px;
-
+                background-color: #3498db;
+                border-bottom: #34495e solid 10px;
                 font-size: 48pt;
                 color: white;
-
-                @media only screen and (max-width: 872px) {
-                    display: block;
-                }
-
-                @media only screen and (max-width: 348px) {
-                    font-size: 38pt;
-                    line-height: 48px;
-                    padding-top: 30px;
-                }
             }
-
-
         }
     }
-
-
     .arrow {
         position: absolute;
         bottom: 20px;
@@ -117,86 +88,62 @@ body {
         height: 40px;
         background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yOTMuNzUxLDQ1NS44NjhjLTIwLjE4MSwyMC4xNzktNTMuMTY1LDE5LjkxMy03My42NzMtMC41OTVsMCwwYy0yMC41MDgtMjAuNTA4LTIwLjc3My01My40OTMtMC41OTQtNzMuNjcyICBsMTg5Ljk5OS0xOTBjMjAuMTc4LTIwLjE3OCw1My4xNjQtMTkuOTEzLDczLjY3MiwwLjU5NWwwLDBjMjAuNTA4LDIwLjUwOSwyMC43NzIsNTMuNDkyLDAuNTk1LDczLjY3MUwyOTMuNzUxLDQ1NS44Njh6Ii8+DQo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjIwLjI0OSw0NTUuODY4YzIwLjE4LDIwLjE3OSw1My4xNjQsMTkuOTEzLDczLjY3Mi0wLjU5NWwwLDBjMjAuNTA5LTIwLjUwOCwyMC43NzQtNTMuNDkzLDAuNTk2LTczLjY3MiAgbC0xOTAtMTkwYy0yMC4xNzgtMjAuMTc4LTUzLjE2NC0xOS45MTMtNzMuNjcxLDAuNTk1bDAsMGMtMjAuNTA4LDIwLjUwOS0yMC43NzIsNTMuNDkyLTAuNTk1LDczLjY3MUwyMjAuMjQ5LDQ1NS44Njh6Ii8+DQo8L3N2Zz4=);
         background-size: contain;
-
-        @media only screen and (max-height: 346px) {
-            display: none;
-        }
     }
-
     #ap-stats {
-
         font-family: 'Brandon Free';
-
         padding: 6rem 0 7rem 0;
+        background-color: white;
         a {
             text-decoration: none;
         }
-
-        background-color: white;
-
         .stats-title {
             font-size: 40pt;
             text-align: center;
         }
-
         .stats-subtitle {
             font-size: 24pt;
             text-align: center;
             margin: 0 auto;
             color: #7f8c8d;
         }
-
         .participants {
             display: block;
-            margin: 3rem auto;
+            margin: 1rem auto;
             text-align: center;
-
             .hacker-count {
                 display: inline-block;
                 margin-right: 0;
-                background-color: rgba(52, 152, 219, 1.0);
+                background-color: #3498db;
                 color: white;
-                border-bottom: 8px rgba(44, 62, 80,1.0) solid;
+                border-bottom: 8px #2c3e50 solid;
                 padding: 2rem 2rem;
                 font-size: 28pt;
             }
-
             .mentor-count {
                 display: inline-block;
                 margin-left: 0;
                 padding: 2rem 2rem;
                 color: white;
-                background-color: rgba(231, 76, 60,1.0);
-                border-bottom: 8px rgba(44, 62, 80,1.0) solid;
+                background-color: #e74c3c;
+                border-bottom: 8px #2c3e50 solid;
                 font-size: 28pt;
             }
         }
-
         .prizes {
             display: block;
-            margin: 3rem auto;
+            margin: 0 auto 1rem auto;
             text-align: center;
-
             h1 {
                 display: inline-block;
                 padding: 3rem 3.2rem;
-                border: 4px rgba(44, 62, 80,1.0) dashed;
+                border: 4px #2c3e50 dashed;
                 font-size: 28pt;
-                color: rgba(44, 62, 80,1.0);
-
-                @media only screen and (max-width: 546px) {
-                    padding: 2.5rem 1.5rem;
-                }
-
-                @media only screen and (max-width: 348px) {
-                    font-size: 24pt;
-                }
+                color: #2c3e50;
             }
         }
-
         .projects {
             display: block;
-            margin: 4rem auto 0 auto;
+            margin: 0 auto 1rem auto;
             padding-bottom: 2rem;
             text-align: center;
             a {
@@ -204,45 +151,35 @@ body {
                 color: white;
                 padding: 1.5rem 2rem;
                 display: inline-block;
-                background-color: rgba(155, 89, 182,1.0);
+                background-color: #9b59b6;
                 transition: 0.2s;
-
-                box-shadow: 0px 8px 0px rgba(44, 62, 80,1.0);
+                box-shadow: 0px 8px 0px #2c3e50;
                 position: relative;
                 top: 0px;
                 right: 0;
                 bottom: 0;
                 left: 0px;
-
                 &:hover {
-                    background-color: rgba(142, 68, 173,1.0);
+                    background-color: #8e44ad;
                 }
-
                 &:active {
                     top: 4px;
-                    box-shadow: 0px 4px 0px rgba(44, 62, 80,1.0);
+                    box-shadow: 0px 4px 0px #2c3e50;
                 }
             }
         }
-
     }
-
     .soon {
         height: 120px;
-        padding: 3rem 0;
+        padding: 0.4rem 0 2rem 0;
         margin: 0;
-        background-color: rgba(52, 152, 219,1.0);
-        border-bottom: 10px rgba(44, 62, 80,1.0) solid;
-
+        background-color: #3498db;
+        border-bottom: 10px #2c3e50 solid;
         .soon-tm-desktop {
             text-align: center;
             font-size: 36pt;
             color: white;
             line-height: 40px;
-
-            @media only screen and (max-width: 700px) {
-                display: none;
-            }
         }
         .soon-tm-mobile {
             display: none;
@@ -250,14 +187,62 @@ body {
             font-size: 24pt;
             color: white;
             line-height: 30px;
-
-            @media only screen and (max-width: 700px) {
-                display: block;
-            }
         }
+    }
+}
 
-        @media only screen and (max-width: 700px) {
-            padding-top: 1.5rem;
-        }
+@media only screen and (max-width: 872px) {
+    .afterparty_wrapper .hero .overlay .desktop-banner {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 872px) {
+    .afterparty_wrapper .hero .overlay .mobile-banner {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 348px) {
+    .afterparty_wrapper .hero .overlay .mobile-banner {
+        font-size: 38pt;
+        line-height: 48px;
+        padding-top: 30px;
+    }
+}
+
+@media only screen and (max-height: 346px) {
+    .afterparty_wrapper .arrow {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 546px) {
+    .afterparty_wrapper #ap-stats .prizes h1 {
+        padding: 2.5rem 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 348px) {
+    .afterparty_wrapper #ap-stats .prizes h1 {
+        font-size: 24pt;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .afterparty_wrapper .soon .soon-tm-desktop {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .afterparty_wrapper .soon .soon-tm-mobile {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .afterparty_wrapper .soon {
+        padding-top: 1.5rem;
     }
 }
