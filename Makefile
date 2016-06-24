@@ -15,6 +15,8 @@ HTML_PATHS = $(patsubst %,$(TEMPLATE_DIR)/%/,$(basename $(_HTML_FILES)))
 HTML_FILES = $(join $(HTML_PATHS), $(_HTML_FILES))
 HEAD = $(TEMPLATE_DIR)/head/head.html
 HTML_BUILD = $(BUILD_DIR)/index.html
+EMPTY_STRING :=
+HTML_INDENT := $(EMPTY_STRING)    # Four spaces
 
 JS_FILES = $(wildcard $(JS_DIR)/*.js)
 JS_BUILD = $(BUILD_DIR)/script.js
@@ -45,13 +47,14 @@ site: $(BUILD_DIR) $(HTML_BUILD) $(CSS_BUILD) $(JS_BUILD) $(ASSET_BUILD)
 $(BUILD_DIR):
 	mkdir $(BUILD_DIR)
 
+# Hacky code to indent HTML with sed
 $(HTML_BUILD): $(HEAD) $(HTML_FILES)
-	printf "<!DOCTYPE html>\n<html>\n" | cat - $(HEAD) > $(HTML_BUILD)
-	printf "<body>\n" >> $(HTML_BUILD)
-
-	cat $(HTML_FILES) >> $(HTML_BUILD)
-
-	printf "</body>\n</html>" >> $(HTML_BUILD)
+	printf "<!DOCTYPE html>\n<html>\n" > $(HTML_BUILD)
+	cat $(HEAD) | sed 's/^/${HTML_INDENT}/' >> $(HTML_BUILD)
+	printf "${HTML_INDENT}<body>\n" >> $(HTML_BUILD)
+	cat $(HTML_FILES) | sed 's/^/${HTML_INDENT}${HTML_INDENT}/' >> $(HTML_BUILD)
+	printf "${HTML_INDENT}</body>\n" >> $(HTML_BUILD)
+	printf "</html>\n" >> $(HTML_BUILD)
 
 %.html: %.yaml %.mustache
 	mustache -e $^ > $@
