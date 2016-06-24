@@ -2,7 +2,6 @@
 
 # Build directories and files
 build
-stylesheets
 templates/*/*.html
 
 # Compass

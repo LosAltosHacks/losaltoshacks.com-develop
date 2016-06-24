@@ -1,7 +1,6 @@
 # Directory definitions
 TEMPLATE_DIR = templates
 SASS_DIR = sass
-CSS_DIR = stylesheets
 JS_DIR = js
 ASSET_DIR = assets
 BUILD_DIR = build
@@ -22,9 +21,7 @@ JS_FILES = $(wildcard $(JS_DIR)/*.js)
 JS_BUILD = $(BUILD_DIR)/script.js
 
 SASS_FILES = $(wildcard $(SASS_DIR)/*.scss)
-CSS_BUNDLE = style.css
-COMPASS_OUTPUT = $(CSS_DIR)/$(CSS_BUNDLE)
-CSS_BUILD = $(BUILD_DIR)/$(CSS_BUNDLE)
+CSS_BUILD = $(BUILD_DIR)/style.css
 
 ASSET_FILES = $(shell find $(ASSET_DIR))
 ASSET_BUILD = $(subst $(ASSET_DIR),$(BUILD_DIR),$(ASSET_FILES))
@@ -61,7 +58,6 @@ $(HTML_BUILD): $(HEAD) $(HTML_FILES)
 
 $(CSS_BUILD): $(SASS_FILES)
 	compass compile
-	cp $(COMPASS_OUTPUT) $(CSS_BUILD)
 
 $(JS_BUILD): $(JS_FILES)
 	cat $(JS_FILES) > $(JS_BUILD)
@@ -74,5 +70,3 @@ $(BUILD_DIR)/%: $(ASSET_DIR)/%
 clean:
 	rm -rf $(BUILD_DIR)
 	find $(TEMPLATE_DIR) -type f -name '*.html' -exec rm {} +
-	compass clean
-	rmdir $(CSS_DIR)
