@@ -52,6 +52,7 @@ $(HTML_BUILD): $(HEAD) $(HTML_FILES)
 	cat $(HTML_FILES) | sed 's/^/${HTML_INDENT}${HTML_INDENT}/' >> $(HTML_BUILD)
 	printf "${HTML_INDENT}</body>\n" >> $(HTML_BUILD)
 	printf "</html>\n" >> $(HTML_BUILD)
+	ex +'%s/^\s\+$$' -scwq $(HTML_BUILD)
 
 %.html: %.yaml %.mustache
 	mustache -e $^ > $@
