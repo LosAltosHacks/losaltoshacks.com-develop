@@ -1,30 +1,30 @@
 # Directory definitions
-TEMPLATE_DIR = templates
-SASS_DIR = sass
-JS_DIR = js
-ASSET_DIR = assets
-BUILD_DIR = build
+TEMPLATE_DIR := templates
+SASS_DIR := sass
+JS_DIR := js
+ASSET_DIR := assets
+BUILD_DIR := build
 
 # File list and build file definitions
 
 # Specify compiled html files here in the order they should be concatenated in the final file
 # Don't include head.html, it's added separately
-_HTML_FILES = afterparty.html
-HTML_PATHS = $(patsubst %,$(TEMPLATE_DIR)/%/,$(basename $(_HTML_FILES)))
-HTML_FILES = $(join $(HTML_PATHS), $(_HTML_FILES))
-HEAD = $(TEMPLATE_DIR)/head/head.html
-HTML_BUILD = $(BUILD_DIR)/index.html
+HTML_FILES := afterparty.html
+HTML_PATHS := $(patsubst %,$(TEMPLATE_DIR)/%/,$(basename $(HTML_FILES)))
+HTML_FILES := $(join $(HTML_PATHS), $(HTML_FILES))
+HEAD := $(TEMPLATE_DIR)/head/head.html
+HTML_BUILD := $(BUILD_DIR)/index.html
 EMPTY_STRING :=
 HTML_INDENT := $(EMPTY_STRING)    # Four spaces
 
-JS_FILES = $(wildcard $(JS_DIR)/*.js)
-JS_BUILD = $(BUILD_DIR)/script.js
+JS_FILES := $(wildcard $(JS_DIR)/*.js)
+JS_BUILD := $(BUILD_DIR)/script.js
 
-SASS_FILES = $(wildcard $(SASS_DIR)/*.scss)
-CSS_BUILD = $(BUILD_DIR)/style.css
+SASS_FILES := $(wildcard $(SASS_DIR)/*.scss)
+CSS_BUILD := $(BUILD_DIR)/style.css
 
-ASSET_FILES = $(shell find $(ASSET_DIR))
-ASSET_BUILD = $(subst $(ASSET_DIR),$(BUILD_DIR),$(ASSET_FILES))
+ASSET_FILES := $(shell find $(ASSET_DIR))
+ASSET_BUILD := $(subst $(ASSET_DIR),$(BUILD_DIR),$(ASSET_FILES))
 
 # Testing for necessary programs
 COMPASS := $(shell command -v compass 2> /dev/null)
@@ -47,10 +47,10 @@ $(BUILD_DIR):
 # Hacky code to indent HTML with sed
 $(HTML_BUILD): $(HEAD) $(HTML_FILES)
 	printf "<!DOCTYPE html>\n<html>\n" > $(HTML_BUILD)
-	cat $(HEAD) | sed 's/^./${HTML_INDENT}&/' >> $(HTML_BUILD)
-	printf "${HTML_INDENT}<body>\n" >> $(HTML_BUILD)
-	cat $(HTML_FILES) | sed 's/^./${HTML_INDENT}${HTML_INDENT}&/' >> $(HTML_BUILD)
-	printf "${HTML_INDENT}</body>\n" >> $(HTML_BUILD)
+	cat $(HEAD) | sed 's/^./$(HTML_INDENT)&/' >> $(HTML_BUILD)
+	printf "$(HTML_INDENT)<body>\n" >> $(HTML_BUILD)
+	cat $(HTML_FILES) | sed 's/^./$(HTML_INDENT)$(HTML_INDENT)&/' >> $(HTML_BUILD)
+	printf "$(HTML_INDENT)</body>\n" >> $(HTML_BUILD)
 	printf "</html>\n" >> $(HTML_BUILD)
 
 %.html: %.yaml %.mustache
