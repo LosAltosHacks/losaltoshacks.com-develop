@@ -98,6 +98,6 @@ ifndef FSWATCH
 endif
 	printf "document.body.appendChild(document.createElement('script')).src='http://livejs.com/live.js';" > $(LIVEJS)
 	make WATCHING=true
-# -e regex excludes Vim specific files (https://github.com/afcowie/buildtools/blob/master/inotifymake.sh)
+# -e regex excludes Vim specific files (modified from https://github.com/afcowie/buildtools/blob/master/inotifymake.sh)
 # and html files generated from templates
-	fswatch -xrE -e '^\..*\.sw[px]*$$|4913|~$$|templates/.+\.html' --event Removed --event Created --event Updated --batch-marker assets/ js/ sass/ templates/ | grep --line-buffered NoOp | xargs -n1 -I{} make WATCHING=true
+	fswatch -xrE -e '.swp|.swx|4913|~$$|templates/.+\.html' --event Removed --event Created --event Updated --batch-marker assets/ js/ sass/ templates/ | grep --line-buffered NoOp | xargs -n1 -I{} make WATCHING=true
