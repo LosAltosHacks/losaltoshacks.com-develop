@@ -65,8 +65,14 @@ $(JS_BUILD): $(JS_FILES)
 $(BUILD_DIR)/%: $(ASSET_DIR)/%
 	cp -r $< $@
 
-.PHONY: clean
+.PHONY: clean prod
 
 clean:
 	rm -rf $(BUILD_DIR)
 	find $(TEMPLATE_DIR) -type f -name '*.html' -exec rm {} +
+
+prod: site
+ifndef DIR
+	$(error "Please specify a directory to copy the built files to. Usage: make prod DIR=[directory]")
+endif
+	rsync -tr $(BUILD_DIR)/ $(DIR)
