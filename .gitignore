@@ -6,3 +6,6 @@ templates/*/*.html
 
 # Compass
 .sass-cache
+
+# Live.js
+js/live.js
