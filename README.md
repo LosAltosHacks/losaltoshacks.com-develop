@@ -1,6 +1,12 @@
 # Los Altos Hacks
-Developed in [Meteor.js](https://www.meteor.com)
 
-[Static version](https://github.com/losaltoshacks/losaltoshacks.github.io)
+The development source for the Los Altos Hacks website.
 
-[Statification script](https://github.com/losaltoshacks/losaltoshacks.com-develop/blob/master/mbc_statify.sh) (Uses [meteor-build-client](https://github.com/frozeman/meteor-build-client))
+## Dependencies
+
+* Mustache
+* Compass
+
+## Building
+
+Install dependencies with `bundler` or `gem install` and then run `make` to build the website.
