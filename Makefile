@@ -47,7 +47,7 @@ $(BUILD_DIR):
 # Hacky code to indent HTML with sed
 $(HTML_BUILD): $(HEAD) $(HTML_FILES)
 	printf "<!DOCTYPE html>\n<html>\n" > $(HTML_BUILD)
-	cat $(HEAD) | sed 's/^./$(HTML_INDENT)&/' >> $(HTML_BUILD)
+	sed 's/^./$(HTML_INDENT)&/' $(HEAD) >> $(HTML_BUILD)
 	printf "$(HTML_INDENT)<body>\n" >> $(HTML_BUILD)
 	cat $(HTML_FILES) | sed 's/^./$(HTML_INDENT)$(HTML_INDENT)&/' >> $(HTML_BUILD)
 	printf "$(HTML_INDENT)</body>\n" >> $(HTML_BUILD)
