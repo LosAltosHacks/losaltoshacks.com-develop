@@ -1,1 +1,11 @@
 .DS_Store
+
+# Build directories and files
+build
+templates/*/*.html
+
+# Compass
+.sass-cache
+
+# Live.js
+js/live.js
