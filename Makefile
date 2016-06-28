@@ -3,6 +3,7 @@ TEMPLATE_DIR := templates
 SASS_DIR := sass
 JS_DIR := js
 ASSET_DIR := assets
+WATCH_DIRS := $(TEMPLATE_DIR) $(SASS_DIR) $(JS_DIR) $(ASSET_DIR)
 BUILD_DIR := build
 
 # File list and build file definitions
@@ -100,4 +101,4 @@ endif
 	make WATCHING=true
 # -e regex excludes Vim specific files (modified from https://github.com/afcowie/buildtools/blob/master/inotifymake.sh)
 # and html files generated from templates
-	fswatch -xrE -e '.swp|.swx|4913|~$$|templates/.+\.html' --event Removed --event Created --event Updated --batch-marker assets/ js/ sass/ templates/ | grep --line-buffered NoOp | xargs -n1 -I{} make WATCHING=true
+	fswatch -xrE -e '.swp|.swx|4913|~$$|templates/.+\.html' --event Removed --event Created --event Updated --batch-marker $(WATCH_DIRS) | grep --line-buffered NoOp | xargs -n1 -I{} make WATCHING=true
