@@ -104,12 +104,6 @@ body {
                 img {
                     max-width: 230px;
                     max-height: 100px;
-                    // &.invert {
-                    //     &:hover {
-                    //         transition: -webkit-filter 0.2s;
-                    //         -webkit-filter: invert(100%);
-                    //     }
-                    // }
                     &.darken {
                         &:hover {
                             transition: opacity 0.2s;
@@ -119,11 +113,6 @@ body {
                 }
             }
         }
-    }
-
-    // Sketchy filter
-    .invert {
-        -webkit-filter: invert(100%);
     }
     .darken {
         opacity: 0.6;
