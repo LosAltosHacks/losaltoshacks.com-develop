@@ -2,7 +2,6 @@
 
 # Build directories and files
 build
-templates/*/*.html
 
 # Compass
 .sass-cache

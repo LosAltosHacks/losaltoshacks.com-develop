@@ -7,16 +7,8 @@ WATCH_DIRS := $(TEMPLATE_DIR) $(SASS_DIR) $(JS_DIR) $(ASSET_DIR)
 BUILD_DIR := build
 
 # File list and build file definitions
-
-# Specify compiled html files here in the order they should be concatenated in the final file
-# Don't include head.html, it's added separately
-HTML_FILES := afterparty.html
-HTML_PATHS := $(patsubst %,$(TEMPLATE_DIR)/%/,$(basename $(HTML_FILES)))
-HTML_FILES := $(join $(HTML_PATHS), $(HTML_FILES))
-HEAD := $(TEMPLATE_DIR)/head/head.html
-HTML_BUILD := $(BUILD_DIR)/index.html
-EMPTY_STRING :=
-HTML_INDENT := $(EMPTY_STRING)    # Four spaces
+HTML_FILES := $(wildcard $(TEMPLATE_DIR)/[!_]*)
+HTML_BUILD := $(subst $(TEMPLATE_DIR),$(BUILD_DIR),$(HTML_FILES:.mustache=.html))
 
 JS_FILES := $(wildcard $(JS_DIR)/*.js)
 JS_BUILD := $(BUILD_DIR)/script.js
@@ -50,17 +42,17 @@ site: checkLiveJS $(BUILD_DIR) $(HTML_BUILD) $(CSS_BUILD) $(JS_BUILD) $(ASSET_BU
 $(BUILD_DIR):
 	mkdir $(BUILD_DIR)
 
-# Hacky code to indent HTML with sed
-$(HTML_BUILD): $(HEAD) $(HTML_FILES)
-	printf "<!DOCTYPE html>\n<html>\n" > $(HTML_BUILD)
-	sed 's/^./$(HTML_INDENT)&/' $(HEAD) >> $(HTML_BUILD)
-	printf "$(HTML_INDENT)<body>\n" >> $(HTML_BUILD)
-	cat $(HTML_FILES) | sed 's/^./$(HTML_INDENT)$(HTML_INDENT)&/' >> $(HTML_BUILD)
-	printf "$(HTML_INDENT)</body>\n" >> $(HTML_BUILD)
-	printf "</html>\n" >> $(HTML_BUILD)
+# Absolute paths let us cd to the templates directory so that Mustache can find partials.
+$(TEMPLATE_DIR)/%.html: $(TEMPLATE_DIR)/%.yaml $(TEMPLATE_DIR)/%.mustache
+	cd $(TEMPLATE_DIR) && mustache $(abspath $^) > $(abspath $@)
 
-%.html: %.yaml %.mustache
-	mustache $^ > $@
+$(TEMPLATE_DIR)/%.html: $(TEMPLATE_DIR)/%.mustache
+	cd $(TEMPLATE_DIR) && echo | mustache - $(abspath $^) > $(abspath $@)
+
+$(BUILD_DIR)/%.html: $(TEMPLATE_DIR)/%.html
+# Mustache indents blank lines in partials
+	ex +'%s/\s\+$$' -scwq $^
+	cp $^ $@
 
 $(CSS_BUILD): $(SASS_FILES)
 	compass compile
@@ -85,7 +77,6 @@ endif
 
 clean:
 	rm -rf $(BUILD_DIR)
-	find $(TEMPLATE_DIR) -type f -name '*.html' -exec rm {} +
 
 prod: site
 ifndef DIR
@@ -100,5 +91,4 @@ endif
 	printf "document.body.appendChild(document.createElement('script')).src='http://livejs.com/live.js';" > $(LIVEJS)
 	make WATCHING=true
 # -e regex excludes Vim specific files (modified from https://github.com/afcowie/buildtools/blob/master/inotifymake.sh)
-# and html files generated from templates
-	fswatch -xrE -e '.swp|.swx|4913|~$$|templates/.+\.html' --event Removed --event Created --event Updated --batch-marker $(WATCH_DIRS) | grep --line-buffered NoOp | xargs -n1 -I{} make WATCHING=true
+	fswatch -xrE -e '.swp|.swx|4913|~$$' --event Removed --event Created --event Updated --batch-marker $(WATCH_DIRS) | grep --line-buffered NoOp | xargs -n1 -I{} make WATCHING=true
