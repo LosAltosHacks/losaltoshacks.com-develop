@@ -82,7 +82,7 @@ prod: site
 ifndef DIR
 	$(error "Please specify a directory to copy the built files to. Usage: make prod DIR=[directory]")
 endif
-	rsync -Cavh --del --exclude README.md --exclude LICENSE $(BUILD_DIR)/ $(DIR)
+	rsync -Cavh --del --exclude README.md --exclude LICENSE --exclude CNAME $(BUILD_DIR)/ $(DIR)
 
 watch:
 ifndef FSWATCH
