@@ -7,7 +7,8 @@ WATCH_DIRS := $(TEMPLATE_DIR) $(SASS_DIR) $(JS_DIR) $(ASSET_DIR)
 BUILD_DIR := build
 
 # File list and build file definitions
-HTML_FILES := $(wildcard $(TEMPLATE_DIR)/[!_]*)
+HTML_FILES := $(wildcard $(TEMPLATE_DIR)/[!_]*.mustache)
+HTML_PARTIALS := $(wildcard $(TEMPLATE_DIR)/_*.mustache)
 HTML_BUILD := $(subst $(TEMPLATE_DIR),$(BUILD_DIR),$(HTML_FILES:.mustache=.html))
 
 JS_FILES := $(wildcard $(JS_DIR)/*.js)
@@ -43,11 +44,13 @@ $(BUILD_DIR):
 	mkdir $(BUILD_DIR)
 
 # Absolute paths let us cd to the templates directory so that Mustache can find partials.
-$(TEMPLATE_DIR)/%.html: $(TEMPLATE_DIR)/%.yaml $(TEMPLATE_DIR)/%.mustache
-	cd $(TEMPLATE_DIR) && mustache $(abspath $^) > $(abspath $@)
+# HTML_PARTIALS added as a hack to rebuild non-partials when partials are updated
+# Partials are filtered or ignored from the actual prerequisites
+$(TEMPLATE_DIR)/%.html: $(TEMPLATE_DIR)/%.yaml $(TEMPLATE_DIR)/%.mustache $(HTML_PARTIALS)
+	cd $(TEMPLATE_DIR) && mustache $(abspath $(filter-out $(TEMPLATE_DIR)/_%,$^)) > $(abspath $@)
 
-$(TEMPLATE_DIR)/%.html: $(TEMPLATE_DIR)/%.mustache
-	cd $(TEMPLATE_DIR) && echo | mustache - $(abspath $^) > $(abspath $@)
+$(TEMPLATE_DIR)/%.html: $(TEMPLATE_DIR)/%.mustache $(HTML_PARTIALS)
+	cd $(TEMPLATE_DIR) && echo | mustache - $(abspath $<) > $(abspath $@)
 
 $(BUILD_DIR)/%.html: $(TEMPLATE_DIR)/%.html
 # Mustache indents blank lines in partials
