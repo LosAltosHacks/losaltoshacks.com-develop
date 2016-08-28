@@ -1,19 +1,33 @@
-$("#show-arrow").click(function() {
+$("#show-arrow").click(function () {
     $("html, body").animate({scrollTop: $("#ap-stats").offset().top}, 800);
 });
 
-$("#email").keypress(function (e) {
+
+var spinner = new Spinner($(".spinner"));
+var $email = $(".email");
+var $submit = $(".submit");
+
+$email.keypress(function (e) {
     if ((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)) {
-        $('#submit').click();
+        $submit.click();
     }
 });
 
-$("#submit").click(function (e) {
-    var email = $("#email").val();
-    $.ajax({
-        type: "POST",
-        url: "http://api.losaltoshacks.com/subscribe",
-        data: JSON.stringify({ email: email }),
-        contentType: "application/json"
+$submit.click(function (e) {
+    var email = $email.val();
+
+    spinner.start(function (finish) {
+        $.ajax({
+            type: "POST",
+            url: "http://api.losaltoshacks.com/subscribe",
+            data: JSON.stringify({ email: email }),
+            contentType: "application/json",
+            success: function() {
+                finish(true);
+            },
+            error: function() {
+                finish(false);
+            }
+        })
     })
 });
