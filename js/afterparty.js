@@ -29,6 +29,8 @@ $submit.click(function (e) {
             success: function() {
                 finish(true);
                 $email.addClass("faded");
+                $email.attr("disabled", true);
+                $submit.attr("disabled", true);
             },
             error: function() {
                 finish(false);
