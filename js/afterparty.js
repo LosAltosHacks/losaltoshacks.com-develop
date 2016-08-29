@@ -7,6 +7,10 @@ var spinner = new Spinner($(".spinner"));
 var $email = $(".email");
 var $submit = $(".submit");
 
+$email.on("change paste keyup", function() {
+    $email.removeClass("faded");
+});
+
 $email.keypress(function (e) {
     if ((e.which && e.which == 13) || (e.keyCode && e.keyCode == 13)) {
         $submit.click();
@@ -24,6 +28,7 @@ $submit.click(function (e) {
             contentType: "application/json",
             success: function() {
                 finish(true);
+                $email.addClass("faded");
             },
             error: function() {
                 finish(false);

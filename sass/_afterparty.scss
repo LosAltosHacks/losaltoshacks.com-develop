@@ -253,6 +253,10 @@ body {
                     border: 0;
                     border-bottom: 2px solid rgba(255, 255, 255, 0.7);
                 }
+                &.faded {
+                    transition: .5s;
+                    opacity: .6;
+                }
                 @include placeholder {
                     color: rgba(255, 255, 255, 0.5);
                 }
