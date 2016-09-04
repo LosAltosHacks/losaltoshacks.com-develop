@@ -1,0 +1,90 @@
+@keyframes spin {
+    0% { transform: rotateZ(0deg); }
+    100% { transform: rotateZ(360deg); }
+}
+@keyframes quarterspin {
+    0% { transform: rotateZ(0deg); }
+    100% { transform: rotateZ(90deg); }
+}
+@keyframes dash {
+    0% { stroke-dashoffset: 1000; }
+    100% { stroke-dashoffset: 0; }
+}
+
+.spinner {
+    height: 75px;
+    width: 75px;
+    .checkmark {
+        &.inactive {
+            display: none;
+        }
+        &.active {
+            animation: dash 2s ease-in-out;
+        }
+    }
+    .cross {
+        &.inactive {
+            display: none;
+        }
+        &.active {
+            animation: dash 2s ease-in-out;
+        }
+    }
+    .circle {
+        transform-origin: 50% 50%;
+        &.inactive {
+            animation: quarterspin 1.5s ease-out;
+        }
+        &.active {
+            animation: spin 3s infinite linear;
+        }
+    }
+    &.hidden {
+        display: none;
+    }
+}
+
+.email-container {
+    display: block;
+    margin: 0 auto;
+    margin-top: -40px;
+    width: 75%;
+    .email {
+        background-color: #3498db;
+        color: #fff;
+        display: inline-block;
+        font-family: 'Brandon Free';
+        font-size: 2em;
+        font-weight: bold;
+        height: 50px;
+        outline-width: 0;
+        margin-left: 75px; // shift it right by width of spinner
+        padding: 10px 15px 10px 15px;
+        border: 0;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+        transition: .2s;
+        width: 80%;
+        &:focus {
+            border: 0;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+        }
+        &.faded {
+            opacity: .6;
+            transition: .5s;
+        }
+        &:disabled {
+            -webkit-text-fill-color: white;
+        }
+        @include placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+    }
+    .email-spinner {
+        display: inline-block;
+        height: 75px;
+        margin-top: -30px;
+        position: relative;
+        top: 25px;
+        width: 75px;
+    }
+}
