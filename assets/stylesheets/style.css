@@ -43,22 +43,21 @@
 section {
   z-index: 0;
   padding: 2rem 0;
-  position: relative;
 }
-/* line 53, ../sass/style.scss */
+/* line 52, ../sass/style.scss */
 section#main {
   text-align: center;
   height: 100vh;
   position: relative;
   padding: 0;
 }
-/* line 59, ../sass/style.scss */
+/* line 58, ../sass/style.scss */
 section:before {
   position: absolute;
   content: '';
 }
 
-/* line 65, ../sass/style.scss */
+/* line 64, ../sass/style.scss */
 .container {
   margin: 0 auto;
   display: block;
@@ -66,18 +65,18 @@ section:before {
   width: 50%;
 }
 
-/* line 74, ../sass/style.scss */
+/* line 73, ../sass/style.scss */
 .content {
   padding: 5rem auto;
   height: calc(100% - 44px);
 }
-/* line 78, ../sass/style.scss */
+/* line 77, ../sass/style.scss */
 .content #title {
   letter-spacing: 2px;
   color: #333;
 }
 
-/* line 96, ../sass/style.scss */
+/* line 95, ../sass/style.scss */
 .logo-container {
   width: 20rem;
   margin: 0 auto;
@@ -87,7 +86,7 @@ section:before {
   transform: translateY(-50%);
 }
 
-/* line 105, ../sass/style.scss */
+/* line 104, ../sass/style.scss */
 .logo-container-small {
   max-width: 2rem;
   margin: 0 auto;
@@ -95,7 +94,7 @@ section:before {
   text-align: center;
 }
 
-/* line 111, ../sass/style.scss */
+/* line 110, ../sass/style.scss */
 .logo {
   width: 90%;
   height: 90%;
@@ -104,7 +103,7 @@ section:before {
 }
 
 /* Big half circle */
-/* line 118, ../sass/style.scss */
+/* line 117, ../sass/style.scss */
 #bigHalfCircle path {
   fill: #2386c8;
   stroke: #2386c8;
@@ -113,24 +112,24 @@ section:before {
 }
 
 /* Common style for pseudo-elements */
-/* line 126, ../sass/style.scss */
+/* line 125, ../sass/style.scss */
 *, *:after, *::before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 134, ../sass/style.scss */
+/* line 133, ../sass/style.scss */
 #tldr {
   margin: 3rem auto;
 }
-/* line 136, ../sass/style.scss */
+/* line 135, ../sass/style.scss */
 #tldr h1 {
   text-align: center;
   margin: 0 auto;
 }
 
-/* line 146, ../sass/style.scss */
+/* line 145, ../sass/style.scss */
 #faq {
   display: inline-block;
   vertical-align: top;
@@ -138,11 +137,11 @@ section:before {
   margin: 0;
 }
 
-/* line 155, ../sass/style.scss */
+/* line 154, ../sass/style.scss */
 header {
   z-index: 999;
 }
-/* line 157, ../sass/style.scss */
+/* line 156, ../sass/style.scss */
 header ul {
   list-style-type: none;
   margin: 0;
@@ -152,20 +151,20 @@ header ul {
   text-align: center;
   list-style: none;
 }
-/* line 167, ../sass/style.scss */
+/* line 166, ../sass/style.scss */
 header li {
   display: inline-block;
 }
-/* line 169, ../sass/style.scss */
+/* line 168, ../sass/style.scss */
 header li.apply {
   margin-left: 1rem;
   background-color: #3498db;
 }
-/* line 174, ../sass/style.scss */
+/* line 173, ../sass/style.scss */
 header li.sponsor {
   background-color: #e67e22;
 }
-/* line 180, ../sass/style.scss */
+/* line 179, ../sass/style.scss */
 header li a {
   display: block;
   color: white;
@@ -176,11 +175,27 @@ header li a {
   text-align: center;
   letter-spacing: 1px;
 }
-/* line 191, ../sass/style.scss */
+/* line 190, ../sass/style.scss */
 header li.apply a:hover {
   background-color: #2980b9;
 }
-/* line 194, ../sass/style.scss */
+/* line 193, ../sass/style.scss */
 header li.sponsor a:hover {
   background-color: #d35400;
+}
+
+/* line 204, ../sass/style.scss */
+#faq {
+  max-width: 768px;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+/* line 210, ../sass/style.scss */
+#faq h1 {
+  text-align: center;
+}
+/* line 214, ../sass/style.scss */
+#faq h2 {
+  font-family: "Bebas Neue Book";
 }
