@@ -1,56 +1,64 @@
 @font-face {
-  font-family: "Bebas Neue";
-  src: url("../fonts/BebasNeue.otf");
+  font-family: 'Bebas Neue Regular';
+  src: url("../fonts/bebasneue_regular-webfont.woff2") format("woff2"), url("../fonts/bebasneue_regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
-/* line 14, ../sass/style.scss */
+@font-face {
+  font-family: 'Bebas Neue Book';
+  src: url("../fonts/bebasneue_book-webfont.woff2") format("woff2"), url("../fonts/bebasneue_book-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 25, ../sass/style.scss */
 * {
   font-size: 20px;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Bebas Neue Regular', sans-serif;
   color: #444;
 }
-/* line 18, ../sass/style.scss */
+/* line 29, ../sass/style.scss */
 * h1 {
   font-size: 50px;
   margin: 0;
 }
-/* line 22, ../sass/style.scss */
+/* line 33, ../sass/style.scss */
 * h2 {
   font-size: 35px;
 }
-/* line 25, ../sass/style.scss */
+/* line 36, ../sass/style.scss */
 * h3 {
   font-size: 30px;
 }
-/* line 28, ../sass/style.scss */
+/* line 39, ../sass/style.scss */
 * h4 {
   font-size: 25px;
 }
-/* line 31, ../sass/style.scss */
+/* line 42, ../sass/style.scss */
 * p {
   font-family: "Helvetica Neue", sans-serif;
   color: #666;
 }
 
-/* line 38, ../sass/style.scss */
+/* line 49, ../sass/style.scss */
 section {
   z-index: 0;
   padding: 2rem 0;
   position: relative;
 }
-/* line 42, ../sass/style.scss */
+/* line 53, ../sass/style.scss */
 section#main {
   text-align: center;
   height: 100vh;
   position: relative;
   padding: 0;
 }
-/* line 48, ../sass/style.scss */
+/* line 59, ../sass/style.scss */
 section:before {
   position: absolute;
   content: '';
 }
 
-/* line 54, ../sass/style.scss */
+/* line 65, ../sass/style.scss */
 .container {
   margin: 0 auto;
   display: block;
@@ -58,18 +66,18 @@ section:before {
   width: 50%;
 }
 
-/* line 63, ../sass/style.scss */
+/* line 74, ../sass/style.scss */
 .content {
   padding: 5rem auto;
   height: calc(100% - 44px);
 }
-/* line 67, ../sass/style.scss */
+/* line 78, ../sass/style.scss */
 .content #title {
   letter-spacing: 2px;
   color: #333;
 }
 
-/* line 85, ../sass/style.scss */
+/* line 96, ../sass/style.scss */
 .logo-container {
   width: 20rem;
   margin: 0 auto;
@@ -79,7 +87,7 @@ section:before {
   transform: translateY(-50%);
 }
 
-/* line 94, ../sass/style.scss */
+/* line 105, ../sass/style.scss */
 .logo-container-small {
   max-width: 2rem;
   margin: 0 auto;
@@ -87,7 +95,7 @@ section:before {
   text-align: center;
 }
 
-/* line 100, ../sass/style.scss */
+/* line 111, ../sass/style.scss */
 .logo {
   width: 90%;
   height: 90%;
@@ -96,7 +104,7 @@ section:before {
 }
 
 /* Big half circle */
-/* line 107, ../sass/style.scss */
+/* line 118, ../sass/style.scss */
 #bigHalfCircle path {
   fill: #2386c8;
   stroke: #2386c8;
@@ -105,24 +113,24 @@ section:before {
 }
 
 /* Common style for pseudo-elements */
-/* line 115, ../sass/style.scss */
+/* line 126, ../sass/style.scss */
 *, *:after, *::before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 123, ../sass/style.scss */
+/* line 134, ../sass/style.scss */
 #tldr {
   margin: 3rem auto;
 }
-/* line 125, ../sass/style.scss */
+/* line 136, ../sass/style.scss */
 #tldr h1 {
   text-align: center;
   margin: 0 auto;
 }
 
-/* line 135, ../sass/style.scss */
+/* line 146, ../sass/style.scss */
 #faq {
   display: inline-block;
   vertical-align: top;
@@ -130,11 +138,11 @@ section:before {
   margin: 0;
 }
 
-/* line 144, ../sass/style.scss */
+/* line 155, ../sass/style.scss */
 header {
   z-index: 999;
 }
-/* line 146, ../sass/style.scss */
+/* line 157, ../sass/style.scss */
 header ul {
   list-style-type: none;
   margin: 0;
@@ -144,20 +152,20 @@ header ul {
   text-align: center;
   list-style: none;
 }
-/* line 156, ../sass/style.scss */
+/* line 167, ../sass/style.scss */
 header li {
   display: inline-block;
 }
-/* line 158, ../sass/style.scss */
+/* line 169, ../sass/style.scss */
 header li.apply {
   margin-left: 1rem;
   background-color: #3498db;
 }
-/* line 163, ../sass/style.scss */
+/* line 174, ../sass/style.scss */
 header li.sponsor {
   background-color: #e67e22;
 }
-/* line 169, ../sass/style.scss */
+/* line 180, ../sass/style.scss */
 header li a {
   display: block;
   color: white;
@@ -168,11 +176,11 @@ header li a {
   text-align: center;
   letter-spacing: 1px;
 }
-/* line 180, ../sass/style.scss */
+/* line 191, ../sass/style.scss */
 header li.apply a:hover {
   background-color: #2980b9;
 }
-/* line 183, ../sass/style.scss */
+/* line 194, ../sass/style.scss */
 header li.sponsor a:hover {
   background-color: #d35400;
 }
