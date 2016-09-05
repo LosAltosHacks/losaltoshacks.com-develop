@@ -12,9 +12,15 @@
             <header id="navbar">
                 <ul class="horizontal">
                     <li class="left"><a href="#about">About</a></li>
+<<<<<<< HEAD
                     <li class="right"><a href="#tldr">FAQ</a></li>
                     <li class="right"><a href="#sponsors">Supporters</a></li>
                     <li class="apply"><a href="https://losaltoshacks.typeform.com">Apply</a></li>
+=======
+                    <li class="right"><a href="#faq">FAQ</a></li>
+                    <li class="right"><a href="#supporters">Supporters</a></li>
+                    <li class="apply"><a href="#">Apply</a></li>
+>>>>>>> 31bd162245cec6f9af0d8b7234638017315ccbcb
                     <li class="sponsor"><a href="#">Sponsor</a></li>
                 </ul>
             </header>
@@ -27,6 +33,7 @@
                     Fixie synth paleo irony, taxidermy cornhole semiotics vegan. 8-bit try-hard paleo tattooed. Meditation etsy ugh chillwave VHS actually. Sriracha ethical bitters hashtag. Bitters skateboard selvage, master cleanse blog crucifix distillery kinfolk hashtag health goth disrupt pug.<br><br>Cronut selfies vice, leggings letterpress synth actually street art austin pour-over before they sold out. Pug chicharrones slow-carb polaroid, keytar synth viral narwhal roof party blue bottle.
                 </p>
 
+<<<<<<< HEAD
                 <div class="carousel">
                     <div class="img-container left">
                         <img class="img-responsive" src="img/img1.jpg" alt="Opening Ceremony" />
@@ -40,12 +47,29 @@
                 </div>
 
         <!-- <section id=""> -->
+=======
+        <section id="faq">
+            <div class="container">
+                <h1>FAQ</h1>
+>>>>>>> 31bd162245cec6f9af0d8b7234638017315ccbcb
                 {{#faq}}
                     {{> _faq}}
                 {{/faq}}
             </div>
         <!-- </section> -->
 
+        </section>
+
+        <section id="supporters">
+            <div class="container">
+                <h1>Supporters</h1>
+                <div class="flex-container">
+                    <h2>Community Partners</h2>
+                    {{#communityPartners}}
+                        {{> _supporter}}
+                    {{/communityPartners}}
+                </div>
+            </div>
         </section>
 
         <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=" crossorigin="anonymous"></script>

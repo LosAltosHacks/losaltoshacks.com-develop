@@ -1,3 +1,5 @@
+@import "normalize";
+
 // --- All ---
 
 @font-face {
@@ -245,10 +247,37 @@ header {
     }
 }
 
+// --- Supporters ---
+
+#supporters {
+    max-width: 768px;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    h1 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .supporter-image {
+        display: block;
+        max-width: 100%;
+        height: auto;
+
+        padding: 12px;
+        margin: 5px;
+        max-height: 70px;
+    }
+
+    .flex-container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+}
+
 // --- Footer ---
 
 footer {
 
 }
-
-@import "normalize";
