@@ -67,7 +67,8 @@ $(JS_BUILD): $(JS_FILES)
 	printf "});" >> $(JS_BUILD)
 
 $(BUILD_DIR)/%: $(ASSET_DIR)/%
-	cp -r $< $@
+	rsync -a --del --filter='P $(notdir $(HTML_BUILD))' --filter='P $(notdir $(CSS_BUILD))' \
+	       --filter='P $(notdir $(JS_BUILD))' $(ASSET_DIR)/ $(BUILD_DIR)
 
 .PHONY: checkLiveJS clean prod watch
 
