@@ -1,29 +1,10 @@
+
 // --- All ---
 
 @font-face {
-    font-family: 'Bebas Neue Regular';
-    src: url('fonts/bebasneue_regular-webfont.woff2') format('woff2'),
-         url('fonts/bebasneue_regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    font-family: "Bebas Neue";
+    src: url("../fonts/BebasNeue.otf");
 }
-
-@font-face {
-    font-family: 'Bebas Neue Regular';
-    src: url('fonts/bebasneue_bold-webfont.woff2') format('woff2'),
-         url('fonts/bebasneue_bold-webfont.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Bebas Neue Book';
-    src: url('fonts/bebasneue_book-webfont.woff2') format('woff2'),
-         url('fonts/bebasneue_book-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 
 $dark-grey: #444;
 $grey: #666;
@@ -32,7 +13,7 @@ $darker-blue: darken(#3498db, 7%);
 
 * {
     font-size: 20px;
-    font-family: 'Bebas Neue Regular', sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
     color: $dark-grey;
     h1 {
         font-size: 50px;
@@ -50,12 +31,14 @@ $darker-blue: darken(#3498db, 7%);
     p {
         font-family: "Helvetica Neue", sans-serif;
         color: $grey;
+
     }
 }
 
 section {
     z-index: 0;
     padding: 2rem 0;
+    position: relative;
     &#main {
         text-align: center;
         height: 100vh;
@@ -72,27 +55,18 @@ section {
     margin: 0 auto;
     display: block;
     max-width: 768px;
-    width: 90%;
+    width: 50%;
 }
-
-.img-responsive {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
 
 // --- Main ---
 
 .content {
     padding: 5rem auto;
-    height: calc(100% - 42px);
+    height: calc(100% - 44px);
 
     #title {
         letter-spacing: 2px;
         color: #333;
-        font-weight: bold;
-        font-size: 2.4rem;
     }
 }
 
@@ -137,6 +111,13 @@ section {
     padding: 0;
 }
 
+/* Common style for pseudo-elements */
+*, *:after, *::before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
 // --- TLDR ---
 
 #tldr {
@@ -147,56 +128,15 @@ section {
     }
     p {
     }
-
-    .carousel {
-        margin: 2rem auto;
-        display: -webkit-flex;
-        display: flex;
-
-        .img-container {
-            &.left {
-                margin: 0 0.5rem 0 0;
-            }
-            &.right {
-                margin: 0 0 0 0.5rem;
-            }
-        }
-    }
 }
 
 // --- FAQ ---
 
 #faq {
-    width: 100%;
-    margin: 0 auto;
-    display: block;
-
     display: inline-block;
 	vertical-align: top;
-
-    h1 {
-        // color: white;
-        text-align: center;
-    }
-
-    h2 {
-        font-family: "Bebas Neue Book";
-    }
-
-    .faq-question {
-        // color: white;
-        margin: 0;
-        padding: 0;
-    }
-
-    .faq-answer {
-        // color: white;
-        font-size: 0.8rem;
-        margin: 0;
-        padding: 0;
-    }
-
-
+    background-color: $darker_blue;
+    margin: 0;
 }
 
 // --- Navbar ---
@@ -250,5 +190,3 @@ header {
 footer {
 
 }
-
-@import "normalize";
