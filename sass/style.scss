@@ -152,16 +152,9 @@ section {
 
     .carousel {
         margin: 2rem auto;
-        display: -webkit-flex;
-        display: flex;
 
         .img-container {
-            &.left {
-                margin: 0 0.5rem 0 0;
-            }
-            &.right {
-                margin: 0 0 0 0.5rem;
-            }
+
         }
     }
 }
@@ -249,6 +242,12 @@ header {
 
 // --- Supporters ---
 
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
 #supporters {
     max-width: 768px;
     width: 100%;
@@ -267,12 +266,6 @@ header {
         padding: 12px;
         margin: 5px;
         max-height: 70px;
-    }
-
-    .flex-container {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
     }
 }
 
