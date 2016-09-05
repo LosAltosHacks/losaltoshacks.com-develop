@@ -2,8 +2,8 @@
 
 @font-face {
     font-family: 'Bebas Neue Regular';
-    src: url('../fonts/bebasneue_regular-webfont.woff2') format('woff2'),
-         url('../fonts/bebasneue_regular-webfont.woff') format('woff');
+    src: url('fonts/bebasneue_regular-webfont.woff2') format('woff2'),
+         url('fonts/bebasneue_regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -73,14 +73,14 @@ section {
     margin: 0 auto;
     display: block;
     max-width: 768px;
-    width: 50%;
+    width: 60%;
 }
 
 // --- Main ---
 
 .content {
     padding: 5rem auto;
-    height: calc(100% - 44px);
+    height: calc(100% - 42px);
 
     #title {
         letter-spacing: 2px;
@@ -225,4 +225,3 @@ footer {
 }
 
 @import "normalize";
-
