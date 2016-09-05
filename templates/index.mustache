@@ -13,7 +13,7 @@
                 <ul class="horizontal">
                     <li class="left"><a href="#about">About</a></li>
                     <li class="right"><a href="#faq">FAQ</a></li>
-                    <li class="right"><a href="#sponsors">Supporters</a></li>
+                    <li class="right"><a href="#supporters">Supporters</a></li>
                     <li class="apply"><a href="#">Apply</a></li>
                     <li class="sponsor"><a href="#">Sponsor</a></li>
                 </ul>
@@ -30,11 +30,23 @@
         </section>
 
         <section id="faq">
-            <div class="content">
+            <div class="container">
                 <h1>FAQ</h1>
                 {{#faq}}
                     {{> _faq}}
                 {{/faq}}
+            </div>
+        </section>
+
+        <section id="supporters">
+            <div class="container">
+                <h1>Supporters</h1>
+                <div class="flex-container">
+                    <h2>Community Partners</h2>
+                    {{#communityPartners}}
+                        {{> _supporter}}
+                    {{/communityPartners}}
+                </div>
             </div>
         </section>
 
