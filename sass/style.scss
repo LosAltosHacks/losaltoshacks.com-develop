@@ -29,8 +29,10 @@
 
 $dark-grey: #444;
 $grey: #666;
+$light-grey: #999;
 $blue: #3498db;
 $darker-blue: darken(#3498db, 7%);
+$midnight-blue: #2c3e50;
 
 * {
     font-size: 20px;
@@ -58,7 +60,7 @@ $darker-blue: darken(#3498db, 7%);
 
 section {
     z-index: 0;
-    padding: 2rem 0;
+    padding: 2rem 0 0 0;
     &#main {
         text-align: center;
         height: 100vh;
@@ -95,11 +97,22 @@ section {
     padding: 5rem auto;
     height: calc(100% - 42px);
 
+    @media (max-width: 558px) {
+        height: calc(100% - 2 * 42px);
+    }
+
     #title {
         letter-spacing: 2px;
         color: $dark-grey;
         font-weight: bold;
         font-size: 2.4rem;
+    }
+    h3 {
+        letter-spacing: 1px;
+
+        @media (max-height: 400px) {
+            display: none;
+        }
     }
 }
 
@@ -164,7 +177,14 @@ section {
 
         .img-container {
             max-width: 12rem;
-            margin: 0.25rem 0.5rem 0.25rem 0;
+            margin: 0.75rem 0.5rem 0.5rem 0;
+
+            h3 {
+                color: $light-grey;
+                margin: 0.2rem;
+                font-size: 1rem;
+                font-weight: normal;
+            }
         }
     }
 
@@ -182,7 +202,7 @@ section {
     }
 }
 
-// --- Navbar ---
+// ---  ---
 
 header {
     z-index: 999;
@@ -200,7 +220,6 @@ header {
         display: inline-block;
         &.apply {
             // float: right;
-            margin-left: 1rem;
             background-color: #3498db;
         }
         &.sponsor {
@@ -226,6 +245,15 @@ header {
     li.sponsor a:hover {
         background-color: #d35400;
     }
+
+    @media (max-width: 558px) {
+        .apply, .sponsor {
+            display: block;
+        }
+        .scroll-anchor {
+            display: none;
+        }
+    }
 }
 
 // --- Supporters ---
@@ -237,14 +265,15 @@ header {
 }
 
 #supporters {
-    max-width: 768px;
     width: 100%;
     margin: 0 auto;
     display: block;
     text-align: center;
+    padding-bottom: 4rem;
 
     h1 {
         margin-bottom: 10px;
+
     }
 
     h2 {
@@ -268,5 +297,52 @@ header {
 // --- Footer ---
 
 footer {
+    background-color: $midnight-blue;
+    padding: 2rem 4rem 3rem 4rem;
 
+    a {
+        color: white;
+        text-decoration: none;
+    }
+    .left {
+        float: left;
+    }
+    .right {
+        float: right;
+        a {
+            margin-left: 2rem;
+        }
+    }
+
+    .social-media {
+        font-family: 'Bebas Neue Book';
+        font-weight: lighter;
+    }
+
+    @media (max-width: 651px) {
+        .right {
+            display: block;
+            float: none;
+            margin: 0 auto;
+            text-align: center;
+            a {
+                margin-left: 0;
+                margin-right: 1rem;
+                margin-bottom: 0.4rem;
+            }
+        }
+        .left {
+            display: none;
+        }
+        .social-media {
+            display: block;
+            margin-bottom: 0.8rem;
+        }
+        // .right a {
+        //     margin-left: 0;
+        //     margin-right: 2rem;
+        // }
+        padding: 2rem 4rem 2rem 4rem;
+
+    }
 }
