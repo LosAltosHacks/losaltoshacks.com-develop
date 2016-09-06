@@ -205,7 +205,6 @@ section {
 // ---  ---
 
 header {
-    z-index: 999;
     ul {
         list-style-type: none;
         margin: 0;
@@ -214,16 +213,18 @@ header {
         background-color: #2c3e50;
         text-align: center;
         list-style: none;
+
+        /* Fix spacing between li elements: http://stackoverflow.com/a/10655413 */
+        font-size: 0;
     }
 
     li {
+        font-size: 20px;
         display: inline-block;
         &.apply {
-            // float: right;
             background-color: #3498db;
         }
         &.sponsor {
-            // float: left;
             background-color: #e67e22;
         }
     }
