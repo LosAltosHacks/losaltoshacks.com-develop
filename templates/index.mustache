@@ -12,7 +12,7 @@
             <header id="navbar">
                 <ul class="horizontal">
                     <li class="right"><a href="#tldr">FAQ</a></li>
-                    <li class="right"><a href="#sponsors">Supporters</a></li>
+                    <li class="right"><a href="#supporters">Supporters</a></li>
                     <li class="apply"><a href="https://losaltoshacks.typeform.com">Apply</a></li>
                     <li class="sponsor"><a href="#">Sponsor</a></li>
                 </ul>
@@ -49,11 +49,16 @@
         <section id="supporters">
             <div class="container">
                 <h1>Supporters</h1>
+                <h2>Community Partners</h2>
                 <div class="flex-container">
-                    <h2>Community Partners</h2>
                     {{#communityPartners}}
                         {{> _supporter}}
                     {{/communityPartners}}
+                </div>
+                <div id="supporters-shoutout">
+                    <p>Interested in supporting us?</p>
+                    <a href="docs/sponsorship.pdf">Docs</a>
+                    <a href="mailto:sponsor@losaltoshacks.com">Email</a>
                 </div>
             </div>
         </section>
