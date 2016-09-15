@@ -173,7 +173,6 @@ section {
     margin: 3rem auto;
     h1 {
         text-align: center;
-        font-style: italic;
 
         margin: 0 auto;
         display: inline-block;
@@ -200,15 +199,12 @@ section {
 
 
     .faq-question {
-        // color: white;
-        font-style: italic;
         border-bottom: 2px $darker-blue solid;
         display: inline-block;
         margin: 0.5rem auto 0 auto;
     }
 
     .faq-answer {
-        // color: white;
     }
 }
 
