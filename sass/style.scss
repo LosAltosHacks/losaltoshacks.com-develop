@@ -104,7 +104,7 @@ section {
     background-size: cover;
 
     padding: 5rem auto;
-    height: calc(100% - 42px);
+    height: calc(100% - 2em - 10px);
 
     @media (max-width: 558px) {
         height: calc(100% - 2 * 42px);
@@ -240,7 +240,7 @@ header {
         color: white;
         padding: 0.5rem 2rem;
         text-decoration: none;
-        font-size: 20px;
+        font-size: 1.5em;
         margin: 0;
         text-align: center;
         letter-spacing: 1px;
