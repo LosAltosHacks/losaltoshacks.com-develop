@@ -80,7 +80,7 @@ endif
 endif
 
 clean:
-	rm -rf $(BUILD_DIR)
+	rm -rf $(BUILD_DIR) $(LIVEJS)
 
 prod: site
 ifndef DIR
