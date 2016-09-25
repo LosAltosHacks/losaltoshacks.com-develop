@@ -66,7 +66,7 @@ $(JS_BUILD): $(JS_FILES)
 	printf "});" >> $(JS_BUILD)
 
 
-.PHONY: site 2017 asssets 2016 checkLiveJS clean prod watch
+.PHONY: site 2017 assets 2016 checkLiveJS clean prod watch
 
 # These rsync targets are phony because rsync only copies files that have changed anyways
 
