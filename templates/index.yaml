@@ -16,3 +16,6 @@ communityPartners:
     - name: Hacker Fund
       image: img/hackerfund.png
       site: http://hacker.fund/
+    - name: Namecheap
+      image: img/namecheap.png
+      site: http://namecheap.com/

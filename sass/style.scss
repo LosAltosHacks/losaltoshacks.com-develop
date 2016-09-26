@@ -32,6 +32,7 @@ $grey: #666;
 $light-grey: #999;
 $blue: #3498db;
 $darker-blue: darken(#3498db, 7%);
+$even-darker-blue: darken(#3498db, 20%);
 $midnight-blue: #2c3e50;
 
 html {
@@ -60,7 +61,7 @@ html {
     h4 {
         font-size: 25px;
     }
-    p {
+    a, p {
         font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue",
           "Helvetica", "Tahoma", "Geneva", "Arial", "Lucida Grande", sans-serif;
         color: $grey;
@@ -122,6 +123,10 @@ section {
         @media (max-height: 400px) {
             display: none;
         }
+    }
+
+    .apply-button {
+        background-color: $blue;
     }
 }
 
@@ -203,9 +208,6 @@ section {
         display: inline-block;
         margin: 0.5rem auto 0 auto;
     }
-
-    .faq-answer {
-    }
 }
 
 // ---  ---
@@ -244,6 +246,8 @@ header {
         margin: 0;
         text-align: center;
         letter-spacing: 1px;
+
+        font-family: 'Bebas Neue Regular', sans-serif;
     }
 
     li.apply a:hover {
@@ -269,6 +273,12 @@ header {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	-webkit-box-align: center;
+
+	align-items: center;
 }
 
 #supporters {
@@ -289,13 +299,21 @@ header {
     .supporter-image {
         padding: 12px;
         margin: 5px;
-        max-height: 70px;
+        max-width: 200px;
     }
 
     #supporters-shoutout {
         p {
             margin-top: 30px;
             margin-bottom: 0px;
+        }
+        a {
+            padding: 0.25rem;
+            color: $blue;
+
+            &:hover {
+                color: $even-darker-blue;
+            }
         }
     }
 }
@@ -310,6 +328,7 @@ footer {
     a {
         color: white;
         text-decoration: none;
+        font-family: 'Bebas Neue Regular', sans-serif;
     }
     .left {
         float: left;
