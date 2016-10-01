@@ -19,3 +19,47 @@ communityPartners:
     - name: Namecheap
       image: img/namecheap.png
       site: http://namecheap.com/
+
+studentRepresentatives:
+    - name: Alveera Khan
+      school: Evergreen Valley High School
+      affiliation: Girls Who Code
+    - name: Nikhil Cheerla
+      school: Monta Vista High School
+      affiliation: Computer Science Club
+    - name: Nikash Khanna
+      school: Monta Vista High School
+      affiliation: Web Dev Club
+    - name: Aki Praveen
+      school: Cupertino High School
+      affiliation: Tinovation Club
+    - name: Vandita Pendse
+      school: Mountain View High School
+      affiliation: Girls Who Code
+    - name: Parth Pendurkar
+      school: Harker High School
+      affiliation: Harker Programming Club
+    - name: Val Chuong
+      school: Mission San Jose
+      affiliation: Computer Science Club
+    - name: Samuel Escapa
+      school: San Mateo High School
+      affiliation: Programming Club
+    - name: Nikita Ashok
+      school: American High School
+      affiliation: DECA
+    - name: Rishabh Meswani
+      school: Irvington High School
+      affiliation: Hackathons
+    - name: Devin Mui
+      school: Dublin High School
+      affiliation: DHS Build Club
+    - name: Manasi Maheshwari
+      school: American High School
+      affiliation: Girls Who Code
+    - name: Ruchi Shah
+      school: Girls Who Code
+      affiliation: Programming Club
+    - name: Sara Subbanna
+      school: BASIS Independent Silicon Valley
+      affiliation: Base Hacks

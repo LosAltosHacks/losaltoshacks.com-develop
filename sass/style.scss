@@ -28,12 +28,15 @@
 
 
 $dark-grey: #444;
+$nice-grey: #3b3e43;
 $grey: #666;
 $light-grey: #999;
 $blue: #3498db;
+$orange: #e67e22;
 $darker-blue: darken(#3498db, 7%);
 $even-darker-blue: darken(#3498db, 20%);
 $midnight-blue: #2c3e50;
+$almost-white: #FAFAFA;
 
 html {
     /* Fixes supporter images */
@@ -69,7 +72,7 @@ html {
 }
 
 section {
-    padding: 2rem 0 0 0;
+    padding: 3rem 0;
     &#main {
         text-align: center;
         height: 100vh;
@@ -172,16 +175,17 @@ section {
     padding: 0;
 }
 
-// --- TLDR ---
+// --- TLDR + FAQ ---
 
 #tldr {
-    margin: 3rem auto;
+    background-color: #E8E8EE;
+
     h1 {
         text-align: center;
 
         margin: 0 auto;
         display: inline-block;
-        border-bottom: 2px $darker-blue solid;
+        // border-bottom: 2px $darker-blue solid;
     }
     p {
     }
@@ -194,8 +198,9 @@ section {
             margin: 0.75rem 0.5rem 0.5rem 0;
 
             h3 {
-                color: $light-grey;
-                margin: 0.2rem;
+                color: $grey;
+                letter-spacing: 0.5px;
+                margin: 0.2rem 0;
                 font-size: 1rem;
                 font-weight: normal;
             }
@@ -204,9 +209,9 @@ section {
 
 
     .faq-question {
-        border-bottom: 2px $darker-blue solid;
+        // border-bottom: 2px $darker-blue solid;
         display: inline-block;
-        margin: 0.5rem auto 0 auto;
+        margin: 0.8rem auto 0 auto;
     }
 }
 
@@ -230,16 +235,16 @@ header {
         font-size: 20px;
         display: inline-block;
         &.apply {
-            background-color: #3498db;
+            background-color: $blue;
         }
         &.sponsor {
-            background-color: #e67e22;
+            background-color: $orange;
         }
     }
 
     li a {
         display: block;
-        color: white;
+        color: $almost-white;
         padding: 0.5rem 2rem;
         text-decoration: none;
         font-size: 1.2rem;
@@ -282,10 +287,10 @@ header {
 }
 
 #supporters {
+
     width: 100%;
     margin: 0 auto;
     display: block;
-    text-align: center;
     padding-bottom: 4rem;
 
     h1 {
@@ -297,9 +302,8 @@ header {
     }
 
     .supporter-image {
-        padding: 12px;
-        margin: 5px;
-        max-width: 200px;
+        margin: 1.5rem;
+        max-width: 240px;
     }
 
     #supporters-shoutout {
@@ -308,7 +312,6 @@ header {
             margin-bottom: 0px;
         }
         a {
-            padding: 0.25rem;
             color: $blue;
 
             &:hover {
@@ -318,15 +321,22 @@ header {
     }
 }
 
+#schools {
+    background-color: $nice-grey;
+    h1, p, a {
+        color: $almost-white;
+    }
+}
+
 // --- Footer ---
 
 footer {
-    i { color: white; }
-    background-color: $midnight-blue;
+    i { color: $almost-white; }
+    background-color: $nice-grey;
     padding: 2rem 4rem 3rem 4rem;
 
     a {
-        color: white;
+        color: $almost-white;
         text-decoration: none;
         font-family: 'Bebas Neue Regular', sans-serif;
     }
