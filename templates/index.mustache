@@ -16,6 +16,7 @@
                 <ul class="horizontal">
                     <li class="scroll-anchor"><a href="#tldr">FAQ</a></li>
                     <li class="scroll-anchor"><a href="#supporters">Supporters</a></li>
+                    <li class="scroll-anchor"><a href="#schools">Schools</a></li>
                     <li class="apply">
                         <!-- Typeform -->
                         <a class="typeform-share btn" href="https://losaltoshacks.typeform.com/to/n47s2D" data-mode="1">Apply</a>
@@ -62,10 +63,10 @@
         <section id="supporters">
             <div class="container">
                 <h1>Supporters</h1>
-                <div id="supporters-shoutout">
+                <div class="shoutout sponsor">
                     <p>Interested in supporting us?</p>
-                    <a href="docs/sponsorship.pdf">DOCS</a>
-                    <a href="mailto:sponsor@losaltoshacks.com">EMAIL</a>
+                    <a href="docs/sponsorship.pdf">Read our docs</a>
+                    <a href="mailto:sponsor@losaltoshacks.com" class="email-button">Send us an email</a>
                 </div>
 
                 <div class="flex-container">
@@ -79,6 +80,16 @@
         <section id="schools">
             <div class="container">
                 <h1>Student Representatives</h1>
+                <div class="shoutout">
+                    <p>Interested in representing LAH at your school?</p>
+                    <a href="mailto:info@losaltoshacks.com">Send us an email</a>
+                </div>
+
+                <div class="flex-container-students">
+                    {{#studentRepresentatives}}
+                        {{> _student}}
+                    {{/studentRepresentatives}}
+                </div>
             </div>
         </section>
 

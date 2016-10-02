@@ -15,10 +15,19 @@ faq:
 communityPartners:
     - name: Hacker Fund
       image: img/hackerfund.png
-      site: http://hacker.fund/
+      site: https://hacker.fund/
     - name: Namecheap
       image: img/namecheap.png
-      site: http://namecheap.com/
+      site: https://namecheap.com/
+    - name: Lob
+      image: img/lob.png
+      site: https://lob.com
+    - name: Wolfram Alpha
+      image: img/wolfram.png
+      site: http://wolframalpha.com/
+    - name: Stickermule
+      image: img/stickermule.png
+      site: https://stickermule.com/
 
 studentRepresentatives:
     - name: Alveera Khan
@@ -63,3 +72,6 @@ studentRepresentatives:
     - name: Sara Subbanna
       school: BASIS Independent Silicon Valley
       affiliation: Base Hacks
+    - name: Nidhi Jain
+      school: Saratoga High School
+      affiliation: Girls Who Code
