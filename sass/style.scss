@@ -212,8 +212,36 @@ section {
         // border-bottom: 2px $darker-blue solid;
         display: inline-block;
         margin: 0.8rem auto 0 auto;
+        font-size: 1.2rem;
+    }
+
+    .faq-answer {
+        font-size: 0.8rem;
+        a {
+            font-size: 0.8rem;
+        }
     }
 }
+
+.non-flex-faq {
+    display: none;
+}
+
+.faq {
+    flex-direction: row;
+    justify-content: flex-start;
+
+    display: block;
+    max-width: 50%;
+    word-wrap: break-word;
+    padding: 0 0.8rem;
+
+    @media (max-width: 600px) {
+        max-width: 100%;
+    }
+}
+
+
 
 // ---  ---
 
@@ -290,7 +318,7 @@ header {
     display: flex;
     flex-flow: row wrap;
 
-	align-items: center;
+	// align-items: center;
 }
 
 #supporters {
@@ -369,15 +397,19 @@ header {
             color: $almost-white;
         }
 
+        h2 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
         h4 {
             font-family: 'Helvetica Neue';
             font-weight: normal;
-            font-size: 0.9rem;
-            margin: 10px auto;
+            font-size: 0.7rem;
+            margin: 8px auto;
         }
 
-        width: 350px;
-        height: 200px;
+        width: 240px;
+        height: 120px;
         display: inline-block;
     }
 }

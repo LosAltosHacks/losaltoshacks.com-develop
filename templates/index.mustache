@@ -16,7 +16,7 @@
                 <ul class="horizontal">
                     <li class="scroll-anchor"><a href="#tldr">FAQ</a></li>
                     <li class="scroll-anchor"><a href="#supporters">Supporters</a></li>
-                    <li class="scroll-anchor"><a href="#schools">Schools</a></li>
+                    <li class="scroll-anchor"><a href="#schools">Students</a></li>
                     <li class="apply">
                         <!-- Typeform -->
                         <a class="typeform-share btn" href="https://losaltoshacks.typeform.com/to/n47s2D" data-mode="1">Apply</a>
@@ -52,9 +52,12 @@
                 </div>
 
         <!-- <section id=""> -->
-                {{#faq}}
-                    {{> _faq}}
-                {{/faq}}
+                <div class="flex-container-students">
+                    {{#faq}}
+                        {{> _faq}}
+                    {{/faq}}
+                </div>
+
             </div>
         <!-- </section> -->
 
@@ -84,8 +87,7 @@
                     <p>Interested in representing LAH at your school?</p>
                     <a href="mailto:info@losaltoshacks.com">Send us an email</a>
                 </div>
-
-                <div class="flex-container-students">
+                <div class="flex-container">
                     {{#studentRepresentatives}}
                         {{> _student}}
                     {{/studentRepresentatives}}
