@@ -1,7 +1,114 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     {{> _head}}
     <body>
-        {{> _afterparty}}
+        <section id="main">
+            <div class="content">
+                <div class="logo-container">
+                    <img class="logo" src="img/logo.svg" alt="Los Altos Hacks Logo" />
+                    <h1 id="title">Los Altos Hacks II</h1>
+
+                    <h3>February 4-5, 2017</h3>
+                    <!-- <a href="#" class="apply-button">Apply</a> -->
+                </div>
+            </div>
+            <header id="navbar">
+                <ul class="horizontal">
+                    <li class="scroll-anchor"><a href="#tldr">FAQ</a></li>
+                    <li class="scroll-anchor"><a href="#supporters">Supporters</a></li>
+                    <li class="scroll-anchor"><a href="#schools">Students</a></li>
+                    <li class="apply">
+                        <!-- Typeform -->
+                        <a class="typeform-share btn" href="https://losaltoshacks.typeform.com/to/n47s2D" data-mode="1">Apply</a>
+                    </li>
+                    <li class="sponsor"><a href="docs/sponsorship.pdf">Sponsor</a></li>
+                </ul>
+                <script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}id=id+'_';if(!gi.call(d,id)){qs=ce.call(d,'link');qs.rel='stylesheet';qs.id=id;qs.href=b+'share-button.css';s=gt.call(d,'head')[0];s.appendChild(qs,s)}})()</script>
+            </header>
+        </section>
+
+
+        <section id="tldr">
+            <div class="container">
+                <h1>What is Los Altos Hacks?</h1>
+                <p>
+                    Los Altos Hacks is a hackathon run by students from Los Altos High School.
+                    A hackathon is an event where people can code a project together.
+                    At Los Altos Hacks, you will have 24 hours to make your idea a reality.
+                </p>
+                <div class="carousel flex-container">
+                    <div class="img-container left">
+                        <img class="img-responsive" src="img/img1.jpg" alt="Opening Ceremony" />
+                        <h3>Opening Ceremony</h3>
+                    </div>
+                    <div class="img-container">
+                        <img class="img-responsive" src="img/img2.png" alt="Teams Working" />
+                        <h3>Teams Working</h3>
+                    </div>
+                    <div class="img-container right">
+                        <img class="img-responsive" src="img/img3.jpg" alt="Demos" />
+                        <h3>Demos</h3>
+                    </div>
+                </div>
+
+        <!-- <section id=""> -->
+                <div class="flex-container-students">
+                    {{#faq}}
+                        {{> _faq}}
+                    {{/faq}}
+                </div>
+
+            </div>
+        <!-- </section> -->
+
+        </section>
+
+        <section id="supporters">
+            <div class="container">
+                <h1>Supporters</h1>
+                <div class="shoutout sponsor">
+                    <p>Interested in supporting us?</p>
+                    <a href="docs/sponsorship.pdf">Read our docs</a>
+                    <a href="mailto:sponsor@losaltoshacks.com" class="email-button">Send us an email</a>
+                </div>
+
+                <div class="flex-container">
+                    {{#communityPartners}}
+                        {{> _supporter}}
+                    {{/communityPartners}}
+                </div>
+            </div>
+        </section>
+
+        <section id="schools">
+            <div class="container">
+                <h1>Student Representatives</h1>
+                <div class="shoutout">
+                    <p>Interested in representing LAH at your school?</p>
+                    <a href="mailto:info@losaltoshacks.com">Send us an email</a>
+                </div>
+                <div class="flex-container">
+                    {{#studentRepresentatives}}
+                        {{> _student}}
+                    {{/studentRepresentatives}}
+                </div>
+            </div>
+        </section>
+
+        <script src="https://use.fontawesome.com/da7c8e76c3.js"></script>
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="script.js"></script>
+
+        <footer>
+            <a class="left" href="/2016">Visit 2016</a>
+
+            <div class="right">
+                <a class="social-media">Find us on:</a>
+                <a href="http://facebook.com/losaltoshacks"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                <a href="http://twitter.com/losaltoshacks"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="http://instagram.com/losaltoshacks"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </div>
+
+        </footer>
     </body>
 </html>

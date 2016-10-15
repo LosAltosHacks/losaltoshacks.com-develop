@@ -1,0 +1,77 @@
+faq:
+    - question: Who can participate?
+      answer: Any high school student can participate. If you’ve already graduated from high school, you can’t participate, but you can come help mentor others.
+    - question: How do I form or join a team?
+      answer: You can either specify your team on the application or form teams at the hackathon, where we’ll have a session for you to meet others. Each team can have a maximum of 4 people.
+    - question: Does this cost money?
+      answer: No! Los Altos Hacks is free for all participants — all food, swag, and other costs are covered.
+    - question: What if I can't code?
+      answer: No problem! We are accepting people regardless of experience. Plus, we'll have workshops where you can learn.
+    - question: What should I bring? Will I need my own laptop?
+      answer: Bring a valid student ID for admission and your laptop, phone, chargers, etc. We will not provide laptops or chargers for you. Power strips, ethernet cables, sleeping bags, and toiletries are highly recommended.
+    - question: What if I still have a question?
+      answer: Contact us at <a href="mailto:info@losaltoshacks.com">info@losaltoshacks.com</a>.
+
+communityPartners:
+    - name: Hacker Fund
+      image: img/hackerfund.png
+      site: https://hacker.fund/
+    - name: Namecheap
+      image: img/namecheap.png
+      site: https://namecheap.com/
+    - name: Lob
+      image: img/lob.png
+      site: https://lob.com
+    - name: Wolfram Alpha
+      image: img/wolfram.png
+      site: http://wolframalpha.com/
+    - name: Stickermule
+      image: img/stickermule.png
+      site: https://stickermule.com/
+
+studentRepresentatives:
+    - name: Alveera Khan
+      school: Evergreen Valley High School
+      affiliation: Girls Who Code
+    - name: Nikhil Cheerla
+      school: Monta Vista High School
+      affiliation: Computer Science Club
+    - name: Nikash Khanna
+      school: Monta Vista High School
+      affiliation: Web Dev Club
+    - name: Aki Praveen
+      school: Cupertino High School
+      affiliation: Tinovation Club
+    - name: Vandita Pendse
+      school: Mountain View High School
+      affiliation: Girls Who Code
+    - name: Parth Pendurkar
+      school: Harker High School
+      affiliation: Harker Programming Club
+    - name: Val Chuong
+      school: Mission San Jose
+      affiliation: Computer Science Club
+    - name: Samuel Escapa
+      school: San Mateo High School
+      affiliation: Programming Club
+    - name: Nikita Ashok
+      school: American High School
+      affiliation: DECA
+    - name: Rishabh Meswani
+      school: Irvington High School
+      affiliation: Hackathons
+    - name: Devin Mui
+      school: Dublin High School
+      affiliation: DHS Build Club
+    - name: Manasi Maheshwari
+      school: American High School
+      affiliation: Girls Who Code
+    - name: Ruchi Shah
+      school: Cupertino High School
+      affiliation: Programming Club
+    - name: Sara Subbanna
+      school: BASIS High School
+      affiliation: Base Hacks
+    - name: Nidhi Jain
+      school: Saratoga High School
+      affiliation: Girls Who Code
