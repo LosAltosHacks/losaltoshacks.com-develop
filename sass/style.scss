@@ -190,10 +190,6 @@ section {
 #tldr {
     background-color: #f2f2f2;
 
-    #tldr-title, #tldr-desc {
-        padding: 0 0.8rem;
-    }
-
     .carousel {
         margin: 2.5rem auto;
 
@@ -218,7 +214,7 @@ section {
         display: block;
         max-width: 50%;
         word-wrap: break-word;
-        padding: 0 0.8rem;
+        padding: 0 1.2rem 0 0;
 
         .faq-question {
             // border-bottom: 2px $darker-blue solid;
@@ -238,9 +234,6 @@ section {
     @media (max-width: 600px) {
         .faq {
             max-width: 100%;
-            padding: 0;
-        }
-        h1 {
             padding: 0;
         }
     }
@@ -338,6 +331,12 @@ header {
     justify-content: space-between;
 
 	align-items: center;
+
+    margin-top: 1.5rem;
+
+    @media(max-width: 808px) {
+        justify-content: space-around;
+    }
 }
 
 .flex-container-faq {
@@ -351,6 +350,7 @@ header {
     flex-flow: row wrap;
     justify-content: space-between;
 	// align-items: center;
+	margin-top: 0.8rem;
 }
 
 #supporters {

@@ -3,6 +3,8 @@ faq:
       answer: Any high school student can participate. If you’ve already graduated from high school, you can’t participate, but you can come help mentor others.
     - question: How do I form or join a team?
       answer: You can either specify your team on the application or form teams at the hackathon, where we’ll have a session for you to meet others. Each team can have a maximum of 4 people.
+    - question: About how many people will be there?
+      answer: We're hoping for around 350 attendees this year with a 50:50 gender ratio.
     - question: Does this cost money?
       answer: No! Los Altos Hacks is free for all participants — all food, swag, and other costs are covered.
     - question: What if I can't code?
@@ -48,7 +50,7 @@ studentRepresentatives:
     - name: Parth Pendurkar
       school: Harker High School
       affiliation: Harker Programming Club
-    - name: Val Chuong
+    - name: Val Choung
       school: Mission San Jose
       affiliation: Computer Science Club
     - name: Samuel Escapa
@@ -69,9 +71,15 @@ studentRepresentatives:
     - name: Ruchi Shah
       school: Cupertino High School
       affiliation: Programming Club
+    - name: Kimberly Zhu
+      school: Cupertino High School
+      affiliation: Girls Who Code
     - name: Sara Subbanna
       school: BASIS High School
       affiliation: Base Hacks
     - name: Nidhi Jain
       school: Saratoga High School
       affiliation: Girls Who Code
+    - name: Moksh Jawa
+      school: Washington High School
+      affiliation: WHS Coding Club
