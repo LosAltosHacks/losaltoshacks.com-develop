@@ -99,6 +99,16 @@ section {
     height: auto;
 }
 
+// --- Canvas ---
+
+// canvas {
+//     z-index: -1;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     background-position: center top;
+// }
 
 // --- Main ---
 
@@ -180,14 +190,10 @@ section {
 #tldr {
     background-color: #f2f2f2;
 
-    h1 {
-        text-align: center;
-
-        margin: 0 auto;
-        display: inline-block;
+    h1, p {
+        // margin: 0 auto;
+        padding: 0 0.8rem;
         // border-bottom: 2px $darker-blue solid;
-    }
-    p {
     }
 
     .carousel {
@@ -196,7 +202,6 @@ section {
         .img-container {
             max-width: 12rem;
             margin: 0.75rem 0.5rem 0.5rem 0;
-
             h3 {
                 color: $grey;
                 letter-spacing: 0.5px;
@@ -212,11 +217,11 @@ section {
         // border-bottom: 2px $darker-blue solid;
         display: inline-block;
         margin: 0.8rem auto 0 auto;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 
     .faq-answer {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         a {
             font-size: 0.8rem;
         }
@@ -238,6 +243,7 @@ section {
 
     @media (max-width: 600px) {
         max-width: 100%;
+        padding: 0;
     }
 }
 
@@ -290,7 +296,7 @@ header {
         background-color: #d35400;
     }
 
-    @media (max-width: 558px) {
+    @media (max-width: 733px) {
         .apply, .sponsor {
             display: block;
         }
@@ -319,10 +325,17 @@ header {
 	align-items: center;
 }
 
+.flex-container-faq {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+	// align-items: center;
+}
+
 .flex-container-students {
     display: flex;
     flex-flow: row wrap;
-
+    justify-content: space-between;
 	// align-items: center;
 }
 
@@ -366,11 +379,13 @@ header {
         margin-top: 30px;
         margin-bottom: 0px;
     }
-
     a {
-        margin: 1rem 1rem 2rem auto;
-        padding: 0.8rem 1rem;
-        border-radius: 5px;
+        i {
+            color: white;
+        }
+        margin: 0.6rem 0.3rem 1rem 0;
+        padding: 0.6rem 0.8rem;
+        // border-radius: 5px;
         display: inline-block;
         text-decoration: none;
         font-size: 0.8rem;
@@ -379,6 +394,19 @@ header {
 
         &:hover {
             background-color: #2980b9;
+        }
+        &:active {
+            box-shadow                : inset 0px 0px 8px $dark-grey;
+            -ms-box-shadow            : inset 0px 0px 8px $dark-grey;
+            -moz-box-shadow            : inset 0px 0px 8px $dark-grey;
+            -webkit-box-shadow        : inset 0px 0px 8px $dark-grey;
+        }
+
+        transition: box-shadow 0.2s;
+
+        @media (max-width: 400px) {
+            font-size: 0.6rem;
+            padding: 0.6rem 0.8rem;
         }
     }
 

@@ -3,6 +3,7 @@
     {{> _head}}
     <body>
         <section id="main">
+            <!-- <canvas id="canvas"></canvas> -->
             <div class="content">
                 <div class="logo-container">
                     <img class="logo" src="img/logo.svg" alt="Los Altos Hacks Logo" />
@@ -52,7 +53,7 @@
                 </div>
 
         <!-- <section id=""> -->
-                <div class="flex-container-students">
+                <div class="flex-container-faq">
                     {{#faq}}
                         {{> _faq}}
                     {{/faq}}
@@ -68,8 +69,14 @@
                 <h1>Supporters</h1>
                 <div class="shoutout sponsor">
                     <p>Interested in supporting us?</p>
-                    <a href="docs/sponsorship.pdf">Read our docs</a>
-                    <a href="mailto:sponsor@losaltoshacks.com" class="email-button">Send us an email</a>
+                    <a href="docs/sponsorship.pdf">
+                        <i class="fa fa-book" aria-hidden="true"></i>
+                        &nbsp;Read our docs
+                    </a>
+                    <a href="mailto:sponsor@losaltoshacks.com" class="email-button">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        &nbsp;Send us an email
+                    </a>
                 </div>
 
                 <div class="flex-container">
@@ -85,9 +92,12 @@
                 <h1>Student Representatives</h1>
                 <div class="shoutout">
                     <p>Interested in representing LAH at your school?</p>
-                    <a href="mailto:info@losaltoshacks.com">Send us an email</a>
+                    <a href="mailto:info@losaltoshacks.com">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        &nbsp;Send us an email
+                    </a>
                 </div>
-                <div class="flex-container">
+                <div class="flex-container-students">
                     {{#studentRepresentatives}}
                         {{> _student}}
                     {{/studentRepresentatives}}
@@ -97,6 +107,7 @@
 
         <script src="https://use.fontawesome.com/da7c8e76c3.js"></script>
         <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.4.4/randomColor.js"></script> -->
         <script type="text/javascript" src="script.js"></script>
 
         <footer>
