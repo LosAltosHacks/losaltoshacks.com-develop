@@ -120,7 +120,7 @@ section {
     padding: 5rem auto;
     height: calc(100% - 46px);
 
-    @media (max-width: 558px) {
+    @media (max-width: 733px) {
         height: calc(100% - 2 * 46px);
     }
 
@@ -190,10 +190,8 @@ section {
 #tldr {
     background-color: #f2f2f2;
 
-    h1, p {
-        // margin: 0 auto;
+    #tldr-title, #tldr-desc {
         padding: 0 0.8rem;
-        // border-bottom: 2px $darker-blue solid;
     }
 
     .carousel {
@@ -213,43 +211,47 @@ section {
     }
 
 
-    .faq-question {
-        // border-bottom: 2px $darker-blue solid;
-        display: inline-block;
-        margin: 0.8rem auto 0 auto;
-        font-size: 1.3rem;
-    }
+    .faq {
+        flex-direction: row;
+        justify-content: flex-start;
 
-    .faq-answer {
-        font-size: 0.9rem;
-        a {
-            font-size: 0.8rem;
+        display: block;
+        max-width: 50%;
+        word-wrap: break-word;
+        padding: 0 0.8rem;
+
+        .faq-question {
+            // border-bottom: 2px $darker-blue solid;
+            display: inline-block;
+            margin: 0.8rem auto 0 auto;
+            font-size: 1.3rem;
+        }
+
+        .faq-answer {
+            font-size: 0.9rem;
+            a {
+                font-size: 0.8rem;
+            }
         }
     }
+
+    @media (max-width: 600px) {
+        .faq {
+            max-width: 100%;
+            padding: 0;
+        }
+        h1 {
+            padding: 0;
+        }
+    }
+
 }
 
 .non-flex-faq {
     display: none;
 }
 
-.faq {
-    flex-direction: row;
-    justify-content: flex-start;
-
-    display: block;
-    max-width: 50%;
-    word-wrap: break-word;
-    padding: 0 0.8rem;
-
-    @media (max-width: 600px) {
-        max-width: 100%;
-        padding: 0;
-    }
-}
-
-
-
-// ---  ---
+// --- HEADER  ---
 
 header {
     ul {
@@ -308,7 +310,7 @@ header {
 
 // --- Supporters ---
 
-.flex-container {
+.flex-container-carousel {
     display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
     display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
     display: -ms-flexbox;      /* TWEENER - IE 10 */
@@ -325,11 +327,23 @@ header {
 	align-items: center;
 }
 
+.flex-container-supporters {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+	align-items: center;
+}
+
 .flex-container-faq {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
-	// align-items: center;
 }
 
 .flex-container-students {
@@ -355,8 +369,8 @@ header {
     }
 
     .supporter-image {
-        margin: 1.5rem;
-        max-width: 240px;
+        margin: 1.5rem 0.8rem;
+        max-width: 210px;
     }
 
     #supporters-shoutout {

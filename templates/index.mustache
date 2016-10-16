@@ -31,13 +31,13 @@
 
         <section id="tldr">
             <div class="container">
-                <h1>What is Los Altos Hacks?</h1>
-                <p>
+                <h1 id="tldr-title">What is Los Altos Hacks?</h1>
+                <p id="tldr-desc">
                     Los Altos Hacks is a hackathon run by students from Los Altos High School.
                     A hackathon is an event where people can code a project together.
                     At Los Altos Hacks, you will have 24 hours to make your idea a reality.
                 </p>
-                <div class="carousel flex-container">
+                <div class="carousel flex-container-carousel">
                     <div class="img-container left">
                         <img class="img-responsive" src="img/img1.jpg" alt="Opening Ceremony" />
                         <h3>Opening Ceremony</h3>
@@ -79,7 +79,7 @@
                     </a>
                 </div>
 
-                <div class="flex-container">
+                <div class="flex-container-supporters">
                     {{#communityPartners}}
                         {{> _supporter}}
                     {{/communityPartners}}
