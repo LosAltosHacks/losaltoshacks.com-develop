@@ -3,7 +3,7 @@ faq:
       answer: Any high school student can participate. If you’ve already graduated from high school, you can’t participate, but you can come help mentor others.
     - question: How do I form or join a team?
       answer: You can either specify your team on the application or form teams at the hackathon, where we’ll have a session for you to meet others. Each team can have a maximum of 4 people.
-    - question: About how many people will be there?
+    - question: How many people will be there?
       answer: We're hoping for around 350 attendees this year with a 50:50 gender ratio.
     - question: Does this cost money?
       answer: No! Los Altos Hacks is free for all participants — all food, swag, and other costs are covered.
@@ -28,7 +28,7 @@ communityPartners:
       image: hackerfund.png
       site: https://hacker.fund/
       type: partner
-    - name: Namecheap
+    - name: namecheap
       image: namecheap.png
       site: https://namecheap.com/
       type: donor
@@ -58,54 +58,70 @@ communityPartners:
       type: donor
 
 studentRepresentatives:
-    - name: Alveera Khan
+    - first: Alveera
+      last: Khan
       school: Evergreen Valley High School
       affiliation: Girls Who Code
-    - name: Nikhil Cheerla
+    - first: Nikhil
+      last: Cheerla
       school: Monta Vista High School
       affiliation: Computer Science Club
-    - name: Nikash Khanna
+    - first: Nikash
+      last: Khanna
       school: Monta Vista High School
       affiliation: Web Dev Club
-    - name: Aki Praveen
+    - first: Aki
+      last: Praveen
       school: Cupertino High School
       affiliation: Tinovation Club
-    - name: Vandita Pendse
+    - first: Vandita
+      last: Pendse
       school: Mountain View High School
       affiliation: Girls Who Code
-    - name: Parth Pendurkar
+    - first: Parth
+      last: Pendurkar
       school: Harker High School
       affiliation: Harker Programming Club
-    - name: Val Choung
+    - first: Val
+      last: Choung
       school: Mission San Jose
       affiliation: Computer Science Club
-    - name: Samuel Escapa
+    - first: Samuel
+      last: Escapa
       school: San Mateo High School
       affiliation: Programming Club
-    - name: Nikita Ashok
+    - first: Nikita
+      last: Ashok
       school: American High School
       affiliation: DECA
-    - name: Rishabh Meswani
+    - first: Rishabh Meswani
       school: Irvington High School
       affiliation: Hackathons
-    - name: Devin Mui
+    - first: Devin
+      last: Mui
       school: Dublin High School
       affiliation: DHS Build Club
-    - name: Manasi Maheshwari
+    - first: Manasi
+      last: Maheshwari
       school: American High School
       affiliation: Girls Who Code
-    - name: Ruchi Shah
+    - first: Ruchi
+      last: Shah
       school: Cupertino High School
       affiliation: Programming Club
-    - name: Kimberly Zhu
+    - first: Kimberly
+      last: Zhu
       school: Cupertino High School
       affiliation: Girls Who Code
-    - name: Sara Subbanna
+    - first: Sara
+      last: Subbanna
       school: BASIS High School
       affiliation: Base Hacks
-    - name: Nidhi Jain
+    - first: Nidhi
+      last: Jain
       school: Saratoga High School
       affiliation: Girls Who Code
-    - name: Moksh Jawa
+    - first: Moksh
+      last: Jawa
       school: Washington High School
       affiliation: WHS Coding Club
