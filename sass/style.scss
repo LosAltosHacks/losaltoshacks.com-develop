@@ -349,8 +349,12 @@ header {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-	// align-items: center;
 	margin-top: 0.8rem;
+
+    @media(max-width: 814px) {
+        align-items: center;
+        justify-content: space-around;
+    }
 }
 
 #supporters {
@@ -453,6 +457,21 @@ header {
         flex-direction: row;
         justify-content: flex-start;
         font-size: 18px;
+
+        text-align: center;
+        .student-img-container {
+
+            margin: 0 auto;
+            display: block;
+            max-width: 120px;
+            max-height: 120px;
+            .student-img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+            }
+        }
+
         h2, h4 {
             color: $almost-white;
         }
@@ -468,8 +487,9 @@ header {
             margin: 8px auto;
         }
 
-        width: 240px;
-        height: 120px;
+        width: 190px;
+        height: 240px;
+        margin: 0.7rem;
         display: inline-block;
     }
 }
