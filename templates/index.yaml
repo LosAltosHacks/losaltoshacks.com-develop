@@ -15,21 +15,47 @@ faq:
       answer: Contact us at <a href="mailto:info@losaltoshacks.com">info@losaltoshacks.com</a>.
 
 communityPartners:
+
+    - name: Abobe
+      image: adobe.png
+      site: http://adobe.com
+      type: sponsor
+    - name: Redis Labs
+      image: redis.png
+      site: http://redislabs.com
+      type: sponsor
     - name: Hacker Fund
-      image: img/hackerfund.png
+      image: hackerfund.png
       site: https://hacker.fund/
+      type: partner
     - name: Namecheap
-      image: img/namecheap.png
+      image: namecheap.png
       site: https://namecheap.com/
+      type: donor
     - name: Lob
-      image: img/lob.png
+      image: lob.png
       site: https://lob.com
+      type: donor
     - name: Wolfram Alpha
-      image: img/wolfram.png
+      image: wolfram.png
       site: http://wolframalpha.com/
+      type: donor
     - name: Stickermule
-      image: img/stickermule.png
+      image: stickermule.png
       site: https://stickermule.com/
+      type: donor
+    - name: Kloudless
+      image: kloudless.png
+      site: https://kloudless.com/
+      type: donor
+    - name: EA
+      image: ea.png
+      site: http://ea.com
+      type: donor
+    - name: Code for Fun
+      image: codeforfun.png
+      site: http://codeforfun.com
+      type: donor
 
 studentRepresentatives:
     - name: Alveera Khan
