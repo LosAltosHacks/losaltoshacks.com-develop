@@ -101,14 +101,13 @@ section {
 
 // --- Canvas ---
 
-// canvas {
-//     z-index: -1;
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     background-position: center top;
-// }
+canvas {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+}
 
 // --- Main ---
 
@@ -349,7 +348,7 @@ header {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-	margin-top: 0.8rem;
+	margin-top: 2rem;
 
     @media(max-width: 814px) {
         align-items: center;
@@ -430,9 +429,11 @@ header {
 
         transition: box-shadow 0.2s;
 
-        @media (max-width: 400px) {
-            font-size: 0.6rem;
-            padding: 0.6rem 0.8rem;
+        @media (max-width: 434px) {
+            // font-size: 0.6rem;
+            // padding: 0.6rem 0.8rem;
+            display: block;
+            margin: 0.4rem auto;
         }
     }
 
@@ -478,18 +479,18 @@ header {
 
         h2 {
             font-size: 1.4rem;
-            margin-bottom: 0.5rem;
+            margin: 1rem auto 0 auto;
         }
         h4 {
             font-family: 'Helvetica Neue';
             font-weight: normal;
             font-size: 0.7rem;
-            margin: 8px auto;
+            margin: 0;
         }
 
         width: 190px;
         height: 240px;
-        margin: 0.7rem;
+        margin: 0.3rem 0.5rem;
         display: inline-block;
     }
 }
