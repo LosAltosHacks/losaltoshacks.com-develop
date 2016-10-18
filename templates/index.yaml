@@ -18,11 +18,11 @@ communityPartners:
 
     - name: Abobe
       image: adobe.png
-      site: http://adobe.com
+      site: https://www.adobe.com
       type: sponsor
     - name: Redis Labs
       image: redis.png
-      site: http://redislabs.com
+      site: https://redislabs.com
       type: sponsor
     - name: Hacker Fund
       image: hackerfund.png
@@ -38,7 +38,7 @@ communityPartners:
       type: donor
     - name: Wolfram Alpha
       image: wolfram.png
-      site: http://wolframalpha.com/
+      site: https://www.wolframalpha.com/
       type: donor
     - name: Stickermule
       image: stickermule.png
@@ -50,11 +50,11 @@ communityPartners:
       type: donor
     - name: EA
       image: ea.png
-      site: http://ea.com
+      site: http://www.ea.com
       type: donor
     - name: Code for Fun
       image: codeforfun.png
-      site: http://codeforfun.com
+      site: http://www.codeforfun.com
       type: donor
 
 studentRepresentatives:
