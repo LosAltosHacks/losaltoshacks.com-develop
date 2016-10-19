@@ -53,7 +53,7 @@ $(TEMPLATE_DIR)/%.html: $(TEMPLATE_DIR)/%.mustache $(HTML_PARTIALS)
 
 $(BUILD_DIR)/%.html: $(TEMPLATE_DIR)/%.html
 # Remove lines with just whitespace, as Mustache indents blank lines in partials
-	perl -pi -e 's/^[ \t]+$//gm' $^
+	perl -pi -e 's/^[ \t]+$$//gm' $^
 	cp $^ $@
 
 $(CSS_BUILD): $(SASS_FILES)
