@@ -52,8 +52,8 @@ $(TEMPLATE_DIR)/%.html: $(TEMPLATE_DIR)/%.mustache $(HTML_PARTIALS)
 	cd $(TEMPLATE_DIR) && echo | mustache - $(abspath $<) > $(abspath $@)
 
 $(BUILD_DIR)/%.html: $(TEMPLATE_DIR)/%.html
-# Mustache indents blank lines in partials
-	-ex +'%s/\s\+$$' -scwq $^
+# Remove lines with just whitespace, as Mustache indents blank lines in partials
+	perl -pi -e 's/^[ \t]+$//gm' $^
 	cp $^ $@
 
 $(CSS_BUILD): $(SASS_FILES)
