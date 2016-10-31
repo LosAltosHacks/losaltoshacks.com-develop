@@ -10,7 +10,22 @@ BUILD_DIR := build
 # File list and build file definitions
 HTML_FILES := $(wildcard $(TEMPLATE_DIR)/[!_]*.mustache)
 HTML_PARTIALS := $(wildcard $(TEMPLATE_DIR)/_*.mustache)
-HTML_BUILD := $(subst $(TEMPLATE_DIR),$(BUILD_DIR),$(HTML_FILES:.mustache=.html))
+HTML_BUILD := $(HTML_FILES:.mustache=.html)
+
+# We want to place files such as "about.mustache" in their own directory, so
+# that they're built as "/about/index.html" instead of "/about.html". So, we
+# run a foreach to rename the files to their appropriate path. But the root
+# "index.html" is an exception: it should not be placed in "/index/index.html".
+# So we check for its presence and filter it out if necessary.
+ifneq (,$(findstring index.html,$(HTML_BUILD)))
+# Found index.html, filter it out and add it in at the end
+HTML_BUILD := $(filter-out $(TEMPLATE_DIR)/index.html,$(HTML_BUILD))
+HTML_BUILD := $(foreach FILE,$(HTML_BUILD),$(BUILD_DIR)/$(notdir $(basename $(FILE)))/index.html)
+HTML_BUILD += $(BUILD_DIR)/index.html
+else
+# Didn't find index.html
+HTML_BUILD := $(foreach FILE,$(HTML_BUILD),$(BUILD_DIR)/$(notdir $(basename $(FILE)))/index.html)
+endif
 
 JS_FILES := $(wildcard $(JS_DIR)/*.js)
 JS_BUILD := $(BUILD_DIR)/script.js
@@ -51,10 +66,15 @@ $(TEMPLATE_DIR)/%.html: $(TEMPLATE_DIR)/%.yaml $(TEMPLATE_DIR)/%.mustache $(HTML
 $(TEMPLATE_DIR)/%.html: $(TEMPLATE_DIR)/%.mustache $(HTML_PARTIALS)
 	cd $(TEMPLATE_DIR) && echo | mustache - $(abspath $<) > $(abspath $@)
 
-$(BUILD_DIR)/%.html: $(TEMPLATE_DIR)/%.html
+$(BUILD_DIR)/index.html: $(TEMPLATE_DIR)/index.html
 # Remove lines with just whitespace, as Mustache indents blank lines in partials
 	perl -pi -e 's/^[ \t]+$$//gm' $^
-	cp $^ $@
+	mv $^ $@
+
+$(BUILD_DIR)/%/index.html: $(TEMPLATE_DIR)/%.html
+	perl -pi -e 's/^[ \t]+$$//gm' $^
+	mkdir -p $(BUILD_DIR)/$(notdir $(basename $^))
+	mv $^ $@
 
 $(CSS_BUILD): $(SASS_FILES)
 	compass compile
