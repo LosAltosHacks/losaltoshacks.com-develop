@@ -64,6 +64,7 @@ $(TEMPLATE_DIR)/%.html: $(TEMPLATE_DIR)/%.yaml $(TEMPLATE_DIR)/%.mustache $(HTML
 	cd $(TEMPLATE_DIR) && mustache $(abspath $(filter-out $(TEMPLATE_DIR)/_%,$^)) > $(abspath $@)
 
 $(TEMPLATE_DIR)/%.html: $(TEMPLATE_DIR)/%.mustache $(HTML_PARTIALS)
+# We echo nothing to fill in for the lack of a YAML file
 	cd $(TEMPLATE_DIR) && echo | mustache - $(abspath $<) > $(abspath $@)
 
 $(BUILD_DIR)/index.html: $(TEMPLATE_DIR)/index.html
