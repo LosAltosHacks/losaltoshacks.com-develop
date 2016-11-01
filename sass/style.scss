@@ -283,6 +283,11 @@ header {
         font-family: 'Bebas Neue Regular', sans-serif;
     }
 
+    li i {
+        color: $almost-white;
+        margin: 0 0.5rem;
+    }
+
     li.apply a:hover {
         background-color: #2980b9;
     }
@@ -559,4 +564,11 @@ footer {
         padding: 2rem 4rem 2rem 4rem;
 
     }
+}
+
+// --- About ---
+
+.about-splash {
+    display: block;
+    margin: 0 auto;
 }
