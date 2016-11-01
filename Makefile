@@ -61,11 +61,11 @@ $(BUILD_DIR):
 # HTML_PARTIALS added as a hack to rebuild non-partials when partials are updated.
 # Partials are filtered or ignored from the actual prerequisites.
 $(TEMPLATE_DIR)/%.html: $(TEMPLATE_DIR)/%.yaml $(TEMPLATE_DIR)/%.mustache $(HTML_PARTIALS)
-	cd $(TEMPLATE_DIR) && mustache $(abspath $(filter-out $(TEMPLATE_DIR)/_%,$^)) > $(abspath $@)
+	cd $(TEMPLATE_DIR) && mustache $(notdir $(filter-out $(HTML_PARTIALS),$^)) > $(notdir $@)
 
 $(TEMPLATE_DIR)/%.html: $(TEMPLATE_DIR)/%.mustache $(HTML_PARTIALS)
 # We echo nothing to fill in for the lack of a YAML file
-	cd $(TEMPLATE_DIR) && echo | mustache - $(abspath $<) > $(abspath $@)
+	cd $(TEMPLATE_DIR) && echo | mustache - $(notdir $<) > $(notdir $@)
 
 $(BUILD_DIR)/index.html: $(TEMPLATE_DIR)/index.html
 # Remove lines with just whitespace, as Mustache indents blank lines in partials
