@@ -51,13 +51,13 @@ $(error Mustache is not available. Make sure it is installed)
 endif
 
 
-site: 2017
-2017: checkLiveJS $(BUILD_DIR) $(HTML_BUILD) $(CSS_BUILD) $(JS_BUILD) assets 2016
+site: 2017 2016
+2017: checkLiveJS $(BUILD_DIR) $(HTML_BUILD) $(CSS_BUILD) $(JS_BUILD) assets
 
 $(BUILD_DIR):
 	mkdir $(BUILD_DIR)
 
-# Absolute paths let us cd to the templates directory so that Mustache can find partials.
+# We cd to the templates directory so that Mustache can find partials.
 # HTML_PARTIALS added as a hack to rebuild non-partials when partials are updated.
 # Partials are filtered or ignored from the actual prerequisites.
 $(TEMPLATE_DIR)/%.html: $(TEMPLATE_DIR)/%.yaml $(TEMPLATE_DIR)/%.mustache $(HTML_PARTIALS)
