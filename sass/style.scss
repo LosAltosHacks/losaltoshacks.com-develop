@@ -186,7 +186,7 @@ canvas {
 
 // --- TLDR + FAQ ---
 
-#tldr {
+#faq {
     background-color: #f2f2f2;
 
     .carousel {
@@ -206,7 +206,7 @@ canvas {
     }
 
 
-    .faq {
+    .faq-item {
         flex-direction: row;
         justify-content: flex-start;
 
@@ -231,7 +231,7 @@ canvas {
     }
 
     @media (max-width: 600px) {
-        .faq {
+        .faq-item {
             max-width: 100%;
             padding: 0;
         }
@@ -448,7 +448,7 @@ header {
     }
 }
 
-#schools {
+#students {
     background-color: $nice-grey;
     h1, p, a {
         color: $almost-white;
