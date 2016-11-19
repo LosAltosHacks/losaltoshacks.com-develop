@@ -243,6 +243,11 @@ canvas {
     display: none;
 }
 
+.team-img {
+    width: 100%;
+    margin: 0;
+}
+
 // --- HEADER  ---
 
 header {
@@ -379,13 +384,13 @@ header {
     .supporter-image {
         &.sponsor, &.partner {
             max-width: 220px;
-            max-height: 170px;
+            max-height: 190px;
         }
         &.donor {
-            max-width: 170px;
-            max-height: 80px;
+            max-width: 190px;
+            max-height: 110px;
         }
-        margin: 1.5rem 0.8rem;
+        margin: 1.5rem 1rem;
 
     }
 
