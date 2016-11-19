@@ -33,6 +33,7 @@ $grey: #666;
 $light-grey: #999;
 $blue: #3498db;
 $orange: #e67e22;
+$light-indigo: #3c6478;
 $darker-blue: darken(#3498db, 7%);
 $even-darker-blue: darken(#3498db, 20%);
 $midnight-blue: #2c3e50;
@@ -182,6 +183,14 @@ canvas {
 	stroke: $darker-blue;
     margin: 0;
     padding: 0;
+}
+
+// -- MENTOR SIGNUP --
+
+.mentor-signup {
+    h2 {
+        margin: 0;
+    }
 }
 
 // --- TLDR + FAQ ---
