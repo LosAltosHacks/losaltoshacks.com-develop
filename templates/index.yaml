@@ -11,9 +11,6 @@ faq:
       answer: Bring a valid student ID for admission and your laptop, phone, chargers, etc. We will not provide laptops or chargers for you. Power strips, ethernet cables, sleeping bags, and toiletries are highly recommended.
     - question: What if I still have a question?
       answer: Contact us at <a href="mailto:info@losaltoshacks.com">info@losaltoshacks.com</a>.
-    #   answer: <div class="team-img"><img src="img/team.jpg" width=100% /></div>
-
-    #   answer: The Los Altos Hacks II organizing team consists of Aashia Mehta, An Huynh, Cole Brinsfield, Colin Scholler, Dan Appel, Grace Gao, Justin Yu, Krizia Araracap, Kyle Sandell, Oscar Bjorkman, Ryan Huang, and Zooey Nguyen.
 
 communityPartners:
     - name: Hacker Fund
@@ -64,9 +61,9 @@ communityPartners:
       image: ea.png
       site: http://www.ea.com
       type: donor
-    # - name: Square
-    #   image: square.png
-    #   site: https://squareup.com/
+#   - name: Square
+#     image: square.png
+#     site: https://squareup.com/
     - name: Digital Ocean
       image: digitalocean.png
       site: https://www.digitalocean.com/
