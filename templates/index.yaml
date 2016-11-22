@@ -1,80 +1,100 @@
 faq:
     - question: Who can participate?
-      answer: Any high school student can participate. If you’ve already graduated from high school, you can’t participate, but you can come help <a href="#mentor-signup" class="scroll-anchor">mentor</a> others.
+      answer: Any high school student can participate. If you’ve already graduated from high school, you can’t participate, but you can come help <a href="#mentor-signup">mentor</a> others.
+
     - question: How do I form or join a team?
       answer: You can either specify your team on the application or form teams at the hackathon, where we’ll have a session for you to meet others. Each team can have a maximum of 4 people.
+
     - question: Does this cost money?
       answer: No! Los Altos Hacks is free for all participants — all food, swag, and other costs are covered.
+
     - question: What if I can't code?
       answer: No problem! We are accepting people regardless of experience. Plus, we'll have workshops where you can learn.
+
     - question: What should I bring? Will I need my own laptop?
       answer: Bring a valid student ID for admission and your laptop, phone, chargers, etc. We will not provide laptops or chargers for you. Power strips, ethernet cables, sleeping bags, and toiletries are highly recommended.
+
     - question: What if I still have a question?
       answer: Contact us at <a href="mailto:info@losaltoshacks.com">info@losaltoshacks.com</a>.
 
 communityPartners:
     - name: Hacker Fund
       image: hackerfund.png
-      site: https://hacker.fund/
+      site: https://hacker.fund
       type: partner
+
     - name: Abobe
       image: adobe.png
       site: https://www.adobe.com
       type: sponsor
+
     - name: Redis Labs
       image: redis.png
       site: https://redislabs.com
       type: sponsor
+
     - name: GupShup
       image: gupshup.jpg
       site: https://www.gupshup.io
       type: sponsor
+
     - name: Los Altos Community Foundation
       image: lacf.jpg
-      type: sponsor
-    - name: Code for Fun
-      image: codeforfun.png
-      site: http://www.codeforfun.com
+      site: http://losaltoscf.org
       type: sponsor
 
-    - name: namecheap
+    - name: Code for Fun
+      image: codeforfun.png
+      site: https://www.codeforfun.com
+      type: sponsor
+
+    - name: Namecheap
       image: namecheap.png
-      site: https://namecheap.com/
+      site: https://namecheap.com
       type: donor
+
     - name: Lob
       image: lob.png
       site: https://lob.com
       type: donor
+
     - name: Wolfram Alpha
       image: wolfram.png
-      site: https://www.wolframalpha.com/
+      site: https://www.wolframalpha.com
       type: donor
+
     - name: Stickermule
       image: stickermule.png
-      site: https://stickermule.com/
+      site: https://www.stickermule.com
       type: donor
+
     - name: Kloudless
       image: kloudless.png
-      site: https://kloudless.com/
+      site: https://kloudless.com
       type: donor
+
     - name: EA
       image: ea.png
-      site: http://www.ea.com
+      site: https://www.ea.com
       type: donor
+
 #   - name: Square
 #     image: square.png
 #     site: https://squareup.com/
+
     - name: Digital Ocean
       image: digitalocean.png
-      site: https://www.digitalocean.com/
+      site: https://www.digitalocean.com
       type: donor
+
     - name: Ultrapress
       image: ultrapress.png
-      site: https://ultrapress.com/
+      site: https://ultrapress.com
       type: donor
+
     - name: Wikihow
       image: wikihow.png
-      site: https://wikihow.com
+      site: http://www.wikihow.com
       type: donor
 
 studentRepresentatives:
@@ -82,70 +102,87 @@ studentRepresentatives:
       last: Khan
       school: Evergreen Valley High School
       affiliation: Girls Who Code
+
     - first: Nikhil
       last: Cheerla
       school: Monta Vista High School
       affiliation: Computer Science Club
+
     - first: Nikash
       last: Khanna
       school: Monta Vista High School
       affiliation: Web Dev Club
+
     - first: Aki
       last: Praveen
       school: Cupertino High School
       affiliation: Tinovation Club
+
     - first: Vandita
       last: Pendse
       school: Mountain View High School
       affiliation: Girls Who Code
+
     - first: Parth
       last: Pendurkar
       school: Harker High School
       affiliation: Harker Programming Club
+
     - first: Val
       last: Choung
       school: Mission SJ High School
       affiliation: Computer Science Club
+
     - first: Samuel
       last: Escapa
       school: San Mateo High School
       affiliation: Programming Club
+
     - first: Nikita
       last: Ashok
       school: American High School
       affiliation: DECA
+
     - first: Rishabh
       last: Meswani
       school: Irvington High School
       affiliation: Hackathons
+
     - first: Devin
       last: Mui
       school: Dublin High School
       affiliation: DHS Build Club
+
     - first: Manasi
       last: Maheshwari
       school: American High School
       affiliation: Girls Who Code
+
     - first: Ruchi
       last: Shah
       school: Cupertino High School
       affiliation: Programming Club
+
     - first: Kimberly
       last: Zhu
       school: Cupertino High School
       affiliation: Girls Who Code
+
     - first: Sara
       last: Subbanna
       school: BASIS High School
       affiliation: Base Hacks
+
     - first: Nidhi
       last: Jain
       school: Saratoga High School
       affiliation: Girls Who Code
+
     - first: Moksh
       last: Jawa
       school: Washington High School
       affiliation: WHS Coding Club
+
     - first: Yagnya
       last: Patel
       school: Irvington High School
