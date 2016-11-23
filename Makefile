@@ -128,3 +128,11 @@ endif
 	make WATCHING=true
 # -e regex excludes Vim specific files (modified from https://github.com/afcowie/buildtools/blob/master/inotifymake.sh)
 	fswatch -xrE -e '.swp|.swx|4913|~$$' --event Removed --event Created --event Updated --batch-marker $(WATCH_DIRS) | grep --line-buffered NoOp | xargs -n1 -I{} make WATCHING=true
+
+# Disable implicit rules to speed up processing and declutter debug output
+.SUFFIXES:
+%: %,v
+%: RCS/%,v
+%: RCS/%
+%: s.%
+%: SCCS/s.%
