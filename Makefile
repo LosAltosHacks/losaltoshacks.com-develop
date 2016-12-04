@@ -29,10 +29,6 @@ endif
 
 JS_FILES := $(wildcard $(JS_DIR)/*.js)
 JS_BUILD := $(BUILD_DIR)/script.js
-LIVEJS := $(JS_DIR)/live.js
-ifndef WATCHING
-JS_FILES := $(filter-out $(LIVEJS),$(JS_FILES))
-endif
 
 SASS_FILE := $(SASS_DIR)/style.scss
 CSS_BUILD := $(BUILD_DIR)/style.css
@@ -47,7 +43,7 @@ endif
 
 
 site: 2017 2016
-2017: checkLiveJS $(BUILD_DIR) $(HTML_BUILD) $(CSS_BUILD) $(JS_BUILD) assets
+2017: $(BUILD_DIR) $(HTML_BUILD) $(CSS_BUILD) $(JS_BUILD) assets
 
 $(BUILD_DIR):
 	mkdir $(BUILD_DIR)
@@ -87,7 +83,7 @@ $(JS_BUILD): $(JS_FILES)
 	printf "});" >> $(JS_BUILD)
 
 
-.PHONY: site 2017 assets 2016 checkLiveJS clean prod watch
+.PHONY: site 2017 assets 2016 clean prod watch
 
 # These rsync targets are phony because rsync only copies files that have changed anyways
 
@@ -104,15 +100,8 @@ assets:
 2016:
 	rsync -a --del $(ARCHIVE_DIR)/2016 $(BUILD_DIR)/
 
-checkLiveJS:
-ifndef WATCHING
-ifneq ("$(wildcard $(LIVEJS))","")
-	rm -f $(LIVEJS) $(JS_BUILD)
-endif
-endif
-
 clean:
-	rm -rf $(BUILD_DIR) $(LIVEJS)
+	rm -rf $(BUILD_DIR)
 
 prod: site
 ifndef DIR
@@ -124,10 +113,9 @@ watch:
 ifndef FSWATCH
 	$(error "fswatch is not available. Make sure it is installed to use make watch")
 endif
-	printf "document.body.appendChild(document.createElement('script')).src='http://livejs.com/live.js';" > $(LIVEJS)
-	make WATCHING=true
+	make
 # -e regex excludes Vim specific files (modified from https://github.com/afcowie/buildtools/blob/master/inotifymake.sh)
-	fswatch -xrE -e '.swp|.swx|4913|~$$' --event Removed --event Created --event Updated --batch-marker $(WATCH_DIRS) | grep --line-buffered NoOp | xargs -n1 -I{} make WATCHING=true
+	fswatch -xrE -e '.swp|.swx|4913|~$$' --event Removed --event Created --event Updated --batch-marker $(WATCH_DIRS) | grep --line-buffered NoOp | xargs -n1 -I{} make
 
 # Disable implicit rules to speed up processing and declutter debug output
 .SUFFIXES:
