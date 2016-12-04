@@ -1,12 +1,19 @@
 # Los Altos Hacks
 
-The development source for the Los Altos Hacks website.
+The source for the Los Altos Hacks website.
 
 ## Dependencies
 
-* Mustache (`gem install mustache`)
-* Sass (`gem install sass`)
-* Listen (`gem install listen`)
+The easiest way to install all dependencies is to use [Bundler](https://bundler.io/):
+
+```
+$ bundle install
+```
+
+* [autoprefixer-rails](https://github.com/ai/autoprefixer-rails) — Ruby library to add vendor prefixes to CSS rules
+* [listen](https://github.com/guard/listen) — Watches file modifications and reports changes
+* [mustache](https://github.com/mustache/mustache) — Logic-less Ruby templates
+* [sass](https://github.com/sass/sass) — Powerful CSS extension language
 
 ## Building
 
