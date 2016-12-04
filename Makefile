@@ -33,13 +33,16 @@ JS_BUILD := $(BUILD_DIR)/script.js
 SASS_FILE := $(SASS_DIR)/style.scss
 CSS_BUILD := $(BUILD_DIR)/style.css
 
-# Testing for necessary programs
-MUSTACHE := $(shell command -v mustache 2> /dev/null)
+# Test for dependencies
+PROGRAM_DEPS := ruby gem bundle
 
-ifndef MUSTACHE
-$(error Mustache is not available. Make sure it is installed)
-endif
+$(foreach dep,$(PROGRAM_DEPS), \
+    $(if $(shell command -v $(dep) 2> /dev/null),, \
+         $(error $(dep) is not available. Make sure it is installed)))
 
+$(if $(findstring missing,$(shell bundle check)), \
+     $(info Some gems are missing. Running bundle install...) \
+     $(value $(shell bundle install)),)
 
 site: 2017 2016
 2017: $(BUILD_DIR) $(HTML_BUILD) $(CSS_BUILD) $(JS_BUILD) assets
