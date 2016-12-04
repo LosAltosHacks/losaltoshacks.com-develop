@@ -8,9 +8,9 @@ ARCHIVE_DIR := archive
 BUILD_DIR := build
 
 # File list and build file definitions
-HTML_FILES := $(wildcard $(TEMPLATE_DIR)/[!_]*.mustache)
-HTML_PARTIALS := $(wildcard $(TEMPLATE_DIR)/_*.mustache)
-HTML_BUILD := $(HTML_FILES:.mustache=.html)
+MUSTACHE_FILES := $(wildcard $(TEMPLATE_DIR)/[!_]*.mustache)
+MUSTACHE_PARTIALS := $(wildcard $(TEMPLATE_DIR)/_*.mustache)
+HTML_BUILD := $(MUSTACHE_FILES:.mustache=.html)
 
 # We want to place files such as "about.mustache" in their own directory, so
 # that they're built as "/about/index.html" instead of "/about.html". So, we
@@ -51,12 +51,12 @@ $(BUILD_DIR):
 	mkdir $(BUILD_DIR)
 
 # We cd to the templates directory so that Mustache can find partials.
-# HTML_PARTIALS added as a hack to rebuild non-partials when partials are updated.
-# Partials are filtered or ignored from the actual prerequisites.
-$(TEMPLATE_DIR)/%.html: $(TEMPLATE_DIR)/%.yaml $(TEMPLATE_DIR)/%.mustache $(HTML_PARTIALS)
-	cd $(TEMPLATE_DIR) && mustache $(notdir $(filter-out $(HTML_PARTIALS),$^)) > $(notdir $@)
+# MUSTACHE_PARTIALS added as a hack to rebuild non-partials when partials are
+# updated.  Partials are filtered or ignored from the actual prerequisites.
+$(TEMPLATE_DIR)/%.html: $(TEMPLATE_DIR)/%.yaml $(TEMPLATE_DIR)/%.mustache $(MUSTACHE_PARTIALS)
+	cd $(TEMPLATE_DIR) && mustache $(notdir $(filter-out $(MUSTACHE_PARTIALS),$^)) > $(notdir $@)
 
-$(TEMPLATE_DIR)/%.html: $(TEMPLATE_DIR)/%.mustache $(HTML_PARTIALS)
+$(TEMPLATE_DIR)/%.html: $(TEMPLATE_DIR)/%.mustache $(MUSTACHE_PARTIALS)
 # We echo nothing to fill in for the lack of a YAML file
 	cd $(TEMPLATE_DIR) && echo | mustache - $(notdir $<) > $(notdir $@)
 
