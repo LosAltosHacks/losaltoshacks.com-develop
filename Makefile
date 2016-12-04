@@ -3,7 +3,7 @@ TEMPLATE_DIR := templates
 SASS_DIR := sass
 JS_DIR := js
 ASSET_DIR := assets
-WATCH_DIRS := $(TEMPLATE_DIR) $(SASS_DIR) $(JS_DIR) $(ASSET_DIR)
+WATCH_DIRS := "$(TEMPLATE_DIR)", "$(SASS_DIR)", "$(JS_DIR)", "$(ASSET_DIR)"
 ARCHIVE_DIR := archive
 BUILD_DIR := build
 
@@ -35,7 +35,6 @@ CSS_BUILD := $(BUILD_DIR)/style.css
 
 # Testing for necessary programs
 MUSTACHE := $(shell command -v mustache 2> /dev/null)
-FSWATCH := $(shell command -v fswatch 2> /dev/null)
 
 ifndef MUSTACHE
 $(error Mustache is not available. Make sure it is installed)
@@ -109,13 +108,13 @@ ifndef DIR
 endif
 	rsync -Cavh --del --exclude README.md --exclude LICENSE --exclude CNAME $(BUILD_DIR)/ $(DIR)
 
-watch:
-ifndef FSWATCH
-	$(error "fswatch is not available. Make sure it is installed to use make watch")
-endif
-	make
-# -e regex excludes Vim specific files (modified from https://github.com/afcowie/buildtools/blob/master/inotifymake.sh)
-	fswatch -xrE -e '.swp|.swx|4913|~$$' --event Removed --event Created --event Updated --batch-marker $(WATCH_DIRS) | grep --line-buffered NoOp | xargs -n1 -I{} make
+watch: site
+	@echo "Listening for changes..."
+	@ruby -e 'require "listen"; \
+	          listener = Listen.to($(WATCH_DIRS), latency: 0.5) { \
+	            puts "\n" + Time.now.strftime("%-l:%M:%S%P"); \
+	            system("make --no-print-directory") \
+	          }; listener.start; at_exit { listener.stop }; sleep'
 
 # Disable implicit rules to speed up processing and declutter debug output
 .SUFFIXES:

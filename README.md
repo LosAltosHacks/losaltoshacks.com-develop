@@ -6,7 +6,7 @@ The development source for the Los Altos Hacks website.
 
 * Mustache (`gem install mustache`)
 * Sass (`gem install sass`)
-* fswatch (https://github.com/emcrisostomo/fswatch)
+* Listen (`gem install listen`)
 
 ## Building
 
