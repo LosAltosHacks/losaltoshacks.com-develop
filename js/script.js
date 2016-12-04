@@ -1,40 +1,26 @@
-$(document).ready(function(){
-    $("#navbar a").click(function () {
-        $("html, body").animate({scrollTop: $($(this).attr("href")).offset().top}, 800);
-    });
+function ready(fn) {
+    if (document.readyState != "loading") {
+        fn();
+    } else {
+        document.addEventListener("DOMContentLoaded", fn);
+    }
+}
 
-    // var bg = new Background(20);
-});
+function addClickHandlers() {
+    var links = document.querySelectorAll(".scroll-anchor a");
+    for (var i = 0; i < links.length; i++) {
+        links[i].addEventListener("click", function (evt) {
+            // If preventDefault isn't called, the browser will scroll to the
+            // element before our animation starts. Then, when our animation
+            // starts and scrolls the page a bit, the page will "jump" back to
+            // just after where it started. This is because the browser already
+            // scrolled the page, so what should be a small step turns into a
+            // leap. Calling preventDefault stops the browser from scrolling
+            // before our animation, and thus prevents a flash from occuring.
+            evt.preventDefault();
+            scrollToElement(document.querySelector(evt.target.hash), 800);
+        });
+    };
+};
 
-
-// var Background = function(sideLength) {
-//     this.canvas = document.getElementById("canvas");
-//     this.sideLength = sideLength;
-//     this.init();
-// };
-//
-// Background.prototype = {
-//     init: function() {
-//         this.context = this.canvas.getContext("2d");
-//
-//         this.canvas.width = window.innerWidth;
-//         this.canvas.height = window.innerHeight;
-//
-//         this.numRows = Math.floor(this.canvas.width / this.sideLength) + 1;
-//         this.numCols = Math.floor(this.canvas.height / this.sideLength) + 1;
-// 
-//         console.log(this.numRows, this.numCols);
-//
-//         // this.context.fillRect(0, 0, this.canvas.width, this.canvas.height);
-//         for(var i = 0; i < this.numRows; i++) {
-//             for(var j = 0; j < this.numCols; j++) {
-//                 this.context.fillStyle = randomColor({
-//                    luminosity: 'dark',
-//                    format: 'rgba' // e.g. 'rgba(9, 1, 107, 0.6482447960879654)'
-//                 });
-//                 this.context.fillRect(i * this.sideLength, j * this.sideLength,
-//                                       this.sideLength, this.sideLength);
-//             }
-//         }
-//     },
-// }
+ready(addClickHandlers);

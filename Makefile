@@ -75,11 +75,8 @@ $(CSS_BUILD): $(SASS_FILE)
 	         css = File.read("$@"); \
 	         File.open("$@", "w") { |io| io << AutoprefixerRails.process(css) }'
 
-# Depends on jQuery
 $(JS_BUILD): $(JS_FILES)
-	printf '$$(document).ready(function(){' > $(JS_BUILD)
-	cat $(JS_FILES) >> $(JS_BUILD)
-	printf "});" >> $(JS_BUILD)
+	cat $(JS_FILES) > $(JS_BUILD)
 
 
 .PHONY: site 2017 assets 2016 clean prod watch
