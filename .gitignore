@@ -1,6 +1,3 @@
 .DS_Store
-
-# Build directories and files
 build
-
 .sass-cache
