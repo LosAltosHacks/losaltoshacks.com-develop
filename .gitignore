@@ -3,7 +3,6 @@
 # Build directories and files
 build
 
-# Compass
 .sass-cache
 
 # Live.js

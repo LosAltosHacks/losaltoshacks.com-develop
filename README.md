@@ -5,7 +5,7 @@ The development source for the Los Altos Hacks website.
 ## Dependencies
 
 * Mustache (`gem install mustache`)
-* Compass (`gem install compass`)
+* Sass (`gem install sass`)
 * fswatch (https://github.com/emcrisostomo/fswatch)
 
 ## Building

@@ -34,17 +34,12 @@ ifndef WATCHING
 JS_FILES := $(filter-out $(LIVEJS),$(JS_FILES))
 endif
 
-SASS_FILES := $(wildcard $(SASS_DIR)/*.scss)
+SASS_FILE := $(SASS_DIR)/style.scss
 CSS_BUILD := $(BUILD_DIR)/style.css
 
 # Testing for necessary programs
-COMPASS := $(shell command -v compass 2> /dev/null)
 MUSTACHE := $(shell command -v mustache 2> /dev/null)
 FSWATCH := $(shell command -v fswatch 2> /dev/null)
-
-ifndef COMPASS
-$(error Compass is not available. Make sure it is installed)
-endif
 
 ifndef MUSTACHE
 $(error Mustache is not available. Make sure it is installed)
@@ -77,8 +72,8 @@ $(BUILD_DIR)/%/index.html: $(TEMPLATE_DIR)/%.html
 	mkdir -p $(BUILD_DIR)/$(notdir $(basename $^))
 	mv $^ $@
 
-$(CSS_BUILD): $(SASS_FILES)
-	compass compile
+$(CSS_BUILD): $(SASS_FILE)
+	sass -t compressed --sourcemap=none $< $@
 
 # Depends on jQuery
 $(JS_BUILD): $(JS_FILES)
