@@ -17,4 +17,4 @@ $ bundle install
 
 ## Building
 
-After installing dependencies, run `make` to build the website.
+After installing dependencies, run `make` to build the website, or `make help` for more options.

@@ -79,7 +79,7 @@ $(JS_BUILD): $(JS_FILES)
 	cat $(JS_FILES) > $(JS_BUILD)
 
 
-.PHONY: site 2017 assets 2016 clean prod watch
+.PHONY: site 2017 assets 2016 clean prod watch help
 
 # These rsync targets are phony because rsync only copies files that have changed anyways
 
@@ -112,6 +112,18 @@ watch: site
 	            puts "\n" + Time.now.strftime("%-l:%M:%S%P"); \
 	            system("make --no-print-directory") \
 	          }; listener.start; at_exit { listener.stop }; sleep'
+
+help:
+	@echo 'The Los Altos Hacks website'
+	@echo
+	@echo 'Usage: make [target...]'
+	@echo
+	@echo 'Available targets:'
+	@echo '    site                         Build the whole site (default target)'
+	@echo '    clean                        Delete build files'
+	@echo '    watch                        Rebuild the site when files change'
+	@echo '    prod DIR=[directory]         Build site and copy files to DIR'
+	@echo '    help                         Show this help dialog'
 
 # Disable implicit rules to speed up processing and declutter debug output
 .SUFFIXES:
