@@ -5,6 +5,7 @@ ASSET_DIR := assets
 WATCH_DIRS := "$(TEMPLATE_DIR)", "$(SASS_DIR)", "$(JS_DIR)", "$(ASSET_DIR)"
 ARCHIVE_DIR := archive
 BUILD_DIR := build
+PROGRAM_DEPS := ruby gem bundle
 
 
 MUSTACHE_FILES := $(wildcard $(TEMPLATE_DIR)/[!_]*.mustache)
@@ -40,19 +41,7 @@ ASSET_LINKS := $(patsubst $(ASSET_DIR)/%,$(BUILD_DIR)/%,$(wildcard $(ASSET_DIR)/
 2016_LINK := $(BUILD_DIR)/2016
 
 
-# Test for dependencies
-PROGRAM_DEPS := ruby gem bundle
-
-$(foreach dep,$(PROGRAM_DEPS), \
-    $(if $(shell command -v $(dep) 2> /dev/null),, \
-         $(error $(dep) is not available. Make sure it is installed)))
-
-$(if $(findstring missing,$(shell bundle check)), \
-     $(info Some gems are missing. Running bundle install...) \
-     $(value $(shell bundle install)),)
-
-
-site: 2017 $(2016_LINK)
+site: deps 2017 $(2016_LINK)
 2017: $(BUILD_DIR) $(HTML_BUILD) $(CSS_BUILD) $(JS_BUILD) $(ASSET_LINKS)
 
 $(BUILD_DIR):
@@ -121,7 +110,16 @@ help:
 	@echo '    prod DIR=[directory]         Build site and copy files to DIR'
 	@echo '    help                         Show this help dialog'
 
-.PHONY: site 2017 clean prod watch help
+deps:
+	$(foreach dep,$(PROGRAM_DEPS), \
+	    $(if $(shell command -v $(dep) 2> /dev/null),, \
+	    $(error $(dep) is not available. Make sure it is installed)))
+
+	$(if $(findstring missing,$(shell bundle check)), \
+	    $(info Some gems are missing. Running bundle install...) \
+	    $(value $(shell bundle install)),)
+
+.PHONY: site 2017 clean prod watch help deps
 
 # Disable implicit rules to speed up processing and declutter debug output
 .SUFFIXES:
