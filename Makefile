@@ -41,11 +41,11 @@ ASSET_LINKS := $(patsubst $(ASSET_DIR)/%,$(BUILD_DIR)/%,$(wildcard $(ASSET_DIR)/
 2016_LINK := $(BUILD_DIR)/2016
 
 
-site: deps 2017 $(2016_LINK)
-2017: $(BUILD_DIR) $(HTML_BUILD) $(CSS_BUILD) $(JS_BUILD) $(ASSET_LINKS)
+site: deps $(BUILD_DIR) 2017 $(2016_LINK)
+2017: $(HTML_BUILD) $(CSS_BUILD) $(JS_BUILD) $(ASSET_LINKS)
 
 $(BUILD_DIR):
-	mkdir $(BUILD_DIR)
+	mkdir $@
 
 # We cd to the templates directory so that Mustache can find partials.
 # MUSTACHE_PARTIALS are added as a prerequisite so that non-partials are rebuilt
