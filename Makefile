@@ -10,7 +10,6 @@ BUILD_DIR := build
 # File list and build file definitions
 MUSTACHE_FILES := $(wildcard $(TEMPLATE_DIR)/[!_]*.mustache)
 MUSTACHE_PARTIALS := $(wildcard $(TEMPLATE_DIR)/_*.mustache)
-HTML_BUILD := $(MUSTACHE_FILES:.mustache=.html)
 YAML_FILES := $(wildcard $(TEMPLATE_DIR)/*.yaml)
 
 # Check for missing Mustache/YAML files
@@ -24,20 +23,13 @@ $(if $(SINGLE_FILES),$(error Some Mustache/YAML files are missing. "$(SINGLE_FIL
 $(if $(wildcard $(TEMPLATE_DIR)/index.mustache),, \
      $(error $(TEMPLATE_DIR)/index.mustache and $(TEMPLATE_DIR)/index.yaml are missing))
 
-# We want to place files such as "about.mustache" in their own directory, so
-# that they're built as "/about/index.html" instead of "/about.html". So, we
-# run a foreach to rename the files to their appropriate path. But the root
-# "index.html" is an exception: it should not be placed in "/index/index.html".
-# So we check for its presence and filter it out if necessary.
-ifneq (,$(findstring index.html,$(HTML_BUILD)))
-# Found index.html, filter it out and add it in at the end
-HTML_BUILD := $(filter-out $(TEMPLATE_DIR)/index.html,$(HTML_BUILD))
-HTML_BUILD := $(foreach FILE,$(HTML_BUILD),$(BUILD_DIR)/$(notdir $(basename $(FILE)))/index.html)
+# Place HTML files in their own directory for clean URLs (except for the root
+# index.html). For example, "about.mustache" will be built as
+# "/about/index.html" instead of "/about.html".
+HTML_BUILD := $(foreach slug,$(filter-out index,$(notdir $(MUSTACHE_BASENAMES))),\
+                             $(BUILD_DIR)/$(slug)/index.html)
 HTML_BUILD += $(BUILD_DIR)/index.html
-else
-# Didn't find index.html
-HTML_BUILD := $(foreach FILE,$(HTML_BUILD),$(BUILD_DIR)/$(notdir $(basename $(FILE)))/index.html)
-endif
+
 
 JS_FILES := $(wildcard $(JS_DIR)/*.js)
 JS_BUILD := $(BUILD_DIR)/script.js
@@ -63,19 +55,18 @@ $(BUILD_DIR):
 	mkdir $(BUILD_DIR)
 
 # We cd to the templates directory so that Mustache can find partials.
-# MUSTACHE_PARTIALS added as a hack to rebuild non-partials when partials are
-# updated.  Partials are filtered or ignored from the actual prerequisites.
-$(TEMPLATE_DIR)/%.html: $(TEMPLATE_DIR)/%.yaml $(TEMPLATE_DIR)/%.mustache $(MUSTACHE_PARTIALS)
-	cd $(TEMPLATE_DIR) && mustache $(notdir $(filter-out $(MUSTACHE_PARTIALS),$^)) > $(notdir $@)
-
-$(BUILD_DIR)/index.html: $(TEMPLATE_DIR)/index.html
+# MUSTACHE_PARTIALS are added as a prerequisite so that non-partials are rebuilt
+# when partials are modified.
+%.html: %.yaml %.mustache $(MUSTACHE_PARTIALS)
+	cd $(@D) && mustache $(*F).yaml $(*F).mustache > $(@F)
 # Remove lines with just whitespace, as Mustache indents blank lines in partials
-	perl -pi -e 's/^[ \t]+$$//gm' $^
+	perl -pi -e 's/^[ \t]+$$//' $@
+
+$(BUILD_DIR)/%.html: $(TEMPLATE_DIR)/%.html
 	mv $^ $@
 
 $(BUILD_DIR)/%/index.html: $(TEMPLATE_DIR)/%.html
-	perl -pi -e 's/^[ \t]+$$//gm' $^
-	mkdir -p $(BUILD_DIR)/$(notdir $(basename $^))
+	mkdir -p $(BUILD_DIR)/$*
 	mv $^ $@
 
 $(CSS_BUILD): $(SASS_FILE)
