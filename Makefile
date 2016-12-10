@@ -11,6 +11,18 @@ BUILD_DIR := build
 MUSTACHE_FILES := $(wildcard $(TEMPLATE_DIR)/[!_]*.mustache)
 MUSTACHE_PARTIALS := $(wildcard $(TEMPLATE_DIR)/_*.mustache)
 HTML_BUILD := $(MUSTACHE_FILES:.mustache=.html)
+YAML_FILES := $(wildcard $(TEMPLATE_DIR)/*.yaml)
+
+# Check for missing Mustache/YAML files
+MUSTACHE_BASENAMES := $(basename $(MUSTACHE_FILES))
+YAML_BASENAMES := $(basename $(YAML_FILES))
+TEMPLATE_PAIRS := $(filter $(YAML_BASENAMES), $(MUSTACHE_BASENAMES))
+SINGLE_FILES := $(strip $(addsuffix .yaml,$(filter-out $(TEMPLATE_PAIRS),$(YAML_BASENAMES))) \
+                        $(addsuffix .mustache,$(filter-out $(TEMPLATE_PAIRS),$(MUSTACHE_BASENAMES))))
+
+$(if $(SINGLE_FILES),$(error Some Mustache/YAML files are missing. "$(SINGLE_FILES)" cannot be built),)
+$(if $(wildcard $(TEMPLATE_DIR)/index.mustache),, \
+     $(error $(TEMPLATE_DIR)/index.mustache and $(TEMPLATE_DIR)/index.yaml are missing))
 
 # We want to place files such as "about.mustache" in their own directory, so
 # that they're built as "/about/index.html" instead of "/about.html". So, we
@@ -55,10 +67,6 @@ $(BUILD_DIR):
 # updated.  Partials are filtered or ignored from the actual prerequisites.
 $(TEMPLATE_DIR)/%.html: $(TEMPLATE_DIR)/%.yaml $(TEMPLATE_DIR)/%.mustache $(MUSTACHE_PARTIALS)
 	cd $(TEMPLATE_DIR) && mustache $(notdir $(filter-out $(MUSTACHE_PARTIALS),$^)) > $(notdir $@)
-
-$(TEMPLATE_DIR)/%.html: $(TEMPLATE_DIR)/%.mustache $(MUSTACHE_PARTIALS)
-# We echo nothing to fill in for the lack of a YAML file
-	cd $(TEMPLATE_DIR) && echo | mustache - $(notdir $<) > $(notdir $@)
 
 $(BUILD_DIR)/index.html: $(TEMPLATE_DIR)/index.html
 # Remove lines with just whitespace, as Mustache indents blank lines in partials
