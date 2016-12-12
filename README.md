@@ -4,11 +4,15 @@ The source for the Los Altos Hacks website.
 
 ## Dependencies
 
-The easiest way to install all dependencies is to use [Bundler](https://bundler.io/):
+This project uses [Bundler](https://bundler.io/) to manage dependencies. After installing it, run
 
 ```
 $ bundle install
 ```
+
+to install all dependencies.
+
+### Gems
 
 * [autoprefixer-rails](https://github.com/ai/autoprefixer-rails) — Ruby library to add vendor prefixes to CSS rules
 * [listen](https://github.com/guard/listen) — Watches file modifications and reports changes
