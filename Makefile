@@ -88,9 +88,7 @@ clean:
 	rm -rf $(BUILD_DIR)
 
 prod: site
-ifndef DIR
-	$(error Please specify a directory to copy the built files to. Usage: make prod DIR=[directory])
-endif
+	$(if $(DIR),,$(error Usage: make prod DIR=[directory]))
 	find -L $(BUILD_DIR) -maxdepth 1 -type l -exec rm {} +
 	rsync -CavhL --del --exclude README.md --exclude LICENSE --exclude CNAME $(BUILD_DIR)/ $(DIR)
 
