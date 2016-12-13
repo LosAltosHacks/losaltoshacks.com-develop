@@ -5,7 +5,6 @@ ASSET_DIR := assets
 WATCH_DIRS := "$(TEMPLATE_DIR)", "$(SASS_DIR)", "$(JS_DIR)", "$(ASSET_DIR)"
 ARCHIVE_DIR := archive
 BUILD_DIR := build
-PROGRAM_DEPS := ruby gem bundle
 
 
 MUSTACHE_FILES := $(wildcard $(TEMPLATE_DIR)/[!_]*.mustache)
@@ -39,6 +38,11 @@ CSS_BUILD := $(BUILD_DIR)/style.css
 
 ASSET_LINKS := $(patsubst $(ASSET_DIR)/%,$(BUILD_DIR)/%,$(wildcard $(ASSET_DIR)/*))
 2016_LINK := $(BUILD_DIR)/2016
+
+
+PROGRAM_DEPS := ruby gem bundle
+MISSING_DEPS := $(strip $(foreach dep,$(PROGRAM_DEPS),\
+                            $(if $(shell command -v $(dep) 2> /dev/null),,$(dep))))
 
 
 site: deps $(BUILD_DIR) 2017 $(2016_LINK)
@@ -111,9 +115,7 @@ help:
 	@echo '    help                         Show this help dialog'
 
 deps:
-	$(foreach dep,$(PROGRAM_DEPS), \
-	    $(if $(shell command -v $(dep) 2> /dev/null),, \
-	    $(error $(dep) is not available. Make sure it is installed)))
+	$(if $(MISSING_DEPS),$(error Dependencies missing: $(MISSING_DEPS)),)
 
 	$(if $(findstring missing,$(shell bundle check)), \
 	    $(info Some gems are missing. Running bundle install...) \
