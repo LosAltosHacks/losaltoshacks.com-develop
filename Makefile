@@ -117,7 +117,7 @@ deps:
 
 	$(if $(findstring missing,$(shell bundle check)), \
 	    $(info Some gems are missing. Running bundle install...) \
-	    $(value $(shell bundle install)),)
+	    bundle install,)
 
 .PHONY: site 2017 clean prod watch help deps
 
