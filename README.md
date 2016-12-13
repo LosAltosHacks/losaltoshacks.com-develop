@@ -16,6 +16,7 @@ to install all dependencies.
 
 * [autoprefixer-rails](https://github.com/ai/autoprefixer-rails) — Ruby library to add vendor prefixes to CSS rules
 * [listen](https://github.com/guard/listen) — Watches file modifications and reports changes
+* [miniracer](https://github.com/discourse/mini_racer) — Minimal embedded v8
 * [mustache](https://github.com/mustache/mustache) — Logic-less Ruby templates
 * [sass](https://github.com/sass/sass) — Powerful CSS extension language
 
