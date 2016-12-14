@@ -88,9 +88,13 @@ clean:
 	rm -rf $(BUILD_DIR)
 
 prod: site
-	$(if $(DIR),,$(error Usage: make prod DIR=[directory]))
+	$(if $(REPO),,$(error Usage: make prod REPO=[directory]))
+	$(if $(findstring true,$(shell cd $(REPO) && git rev-parse --is-inside-work-tree 2> /dev/null)),,\
+	     $(error $(REPO) is not the work tree of a Git repository, will not copy files))
+	$(if $(shell cd $(REPO) && git status --porcelain), \
+	     $(error $(REPO) is not clean, commit or stash changes before copying files),)
 	find -L $(BUILD_DIR) -maxdepth 1 -type l -exec rm {} +
-	rsync -CavhL --del --exclude README.md --exclude LICENSE --exclude CNAME $(BUILD_DIR)/ $(DIR)
+	rsync -CavhL --del --exclude README.md --exclude LICENSE --exclude CNAME $(BUILD_DIR)/ $(REPO)
 
 watch: site
 	@echo "Listening for changes..."
@@ -109,7 +113,7 @@ help:
 	@echo '    site                         Build the whole site (default target)'
 	@echo '    clean                        Delete build files'
 	@echo '    watch                        Rebuild the site when files change'
-	@echo '    prod DIR=[directory]         Build site and copy files to DIR'
+	@echo '    prod REPO=[directory]        Build site and copy to production repository'
 	@echo '    help                         Show this help dialog'
 
 deps:
