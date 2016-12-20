@@ -48,6 +48,11 @@ communityPartners:
       site: https://www.codeforfun.com
       type: sponsor
 
+    - name: Make School
+      image: makeschool.png
+      site: https://makeschool.com
+      type: sponsor
+
     - name: Namecheap
       image: namecheap.png
       site: https://namecheap.com
