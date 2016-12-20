@@ -82,11 +82,6 @@ communityPartners:
 #     image: square.png
 #     site: https://squareup.com/
 
-    - name: Digital Ocean
-      image: digitalocean.png
-      site: https://www.digitalocean.com
-      type: donor
-
     - name: Ultrapress
       image: ultrapress.png
       site: https://ultrapress.com
