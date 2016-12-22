@@ -50,7 +50,7 @@ communityPartners:
 
     - name: Make School
       image: makeschool.png
-      site: https://makeschool.com
+      site: https://www.makeschool.com
       type: sponsor
 
     - name: Namecheap
