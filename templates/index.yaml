@@ -53,6 +53,11 @@ communityPartners:
       site: https://www.makeschool.com
       type: sponsor
 
+    - name: Square
+      image: square.jpg
+      site: https://squareup.com
+      type: sponsor
+
     - name: Namecheap
       image: namecheap.png
       site: https://namecheap.com
@@ -82,10 +87,6 @@ communityPartners:
       image: ea.png
       site: https://www.ea.com
       type: donor
-
-#   - name: Square
-#     image: square.png
-#     site: https://squareup.com/
 
     - name: Ultrapress
       image: ultrapress.png
