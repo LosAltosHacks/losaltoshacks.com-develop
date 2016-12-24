@@ -28,14 +28,14 @@ communityPartners:
       site: https://www.adobe.com
       type: sponsor
 
+    - name: Make School
+      image: makeschool.png
+      site: https://www.makeschool.com
+      type: sponsor
+
     - name: Redis Labs
       image: redis.png
       site: https://redislabs.com
-      type: sponsor
-
-    - name: GupShup
-      image: gupshup.jpg
-      site: https://www.gupshup.io
       type: sponsor
 
     - name: Los Altos Community Foundation
@@ -43,14 +43,14 @@ communityPartners:
       site: http://losaltoscf.org
       type: sponsor
 
+    - name: GupShup
+      image: gupshup.jpg
+      site: https://www.gupshup.io
+      type: sponsor
+
     - name: Code for Fun
       image: codeforfun.png
       site: https://www.codeforfun.com
-      type: sponsor
-
-    - name: Make School
-      image: makeschool.png
-      site: https://www.makeschool.com
       type: sponsor
 
     - name: Square
