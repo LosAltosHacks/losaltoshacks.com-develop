@@ -34,6 +34,7 @@ JS_FILES := $(wildcard $(JS_DIR)/*.js)
 JS_BUILD := $(BUILD_DIR)/script.js
 
 SASS_FILE := $(SASS_DIR)/main.scss
+SASS_PARTIALS := $(wildcard $(SASS_DIR)/*/_*.scss)
 CSS_BUILD := $(BUILD_DIR)/style.css
 
 ASSET_LINKS := $(patsubst $(ASSET_DIR)/%,$(BUILD_DIR)/%,$(wildcard $(ASSET_DIR)/*))
@@ -66,7 +67,9 @@ $(BUILD_DIR)/%/index.html: $(TEMPLATE_DIR)/%.html
 	mkdir -p $(BUILD_DIR)/$*
 	mv $^ $@
 
-$(CSS_BUILD): $(SASS_FILE)
+# The prerequesite SASS_PARTIALS ensures that CSS_BUILD is rebuilt when
+# partials are modified.
+$(CSS_BUILD): $(SASS_FILE) $(SASS_PARTIALS)
 	sass -t compressed --sourcemap=none $< $@
 # The CSS must be slurped to use autoprefixer-rails. It should not be slow if
 # the file is small enough.
