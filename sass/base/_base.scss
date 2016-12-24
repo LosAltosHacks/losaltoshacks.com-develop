@@ -23,11 +23,11 @@
 }
 
 html {
-    /* Fixes supporter images */
+    // Fixes supporter images
     box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*, *::before, *::after {
     box-sizing: inherit;
 }
 
@@ -49,8 +49,8 @@ html {
         font-size: 25px;
     }
     a, p {
-        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue",
-          "Helvetica", "Tahoma", "Geneva", "Arial", "Lucida Grande", sans-serif;
+        font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'HelveticaNeue', 'Helvetica Neue',
+          'Helvetica', 'Tahoma', 'Geneva', 'Arial', 'Lucida Grande', sans-serif;
         color: $grey;
     }
 }
