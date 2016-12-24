@@ -58,6 +58,11 @@ communityPartners:
       site: https://squareup.com
       type: sponsor
 
+    - name: Evernote
+      image: evernote.png
+      site: https://evernote.com
+      type: sponsor
+
     - name: Namecheap
       image: namecheap.png
       site: https://namecheap.com
