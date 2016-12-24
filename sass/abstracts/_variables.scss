@@ -9,3 +9,18 @@ $darker-blue: darken(#3498db, 7%);
 $even-darker-blue: darken(#3498db, 20%);
 $midnight-blue: #2c3e50;
 $almost-white: #fafafa;
+
+$font-family-text: (
+    'HelveticaNeue-Light',
+    'Helvetica Neue Light',
+    'HelveticaNeue',
+    'Helvetica Neue',
+    'Helvetica',
+    'Tahoma',
+    'Geneva',
+    'Arial',
+    'Lucida Grande',
+    sans-serif,
+);
+
+$font-family-display: ('Bebas Neue Regular', sans-serif);
