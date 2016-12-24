@@ -33,7 +33,7 @@ HTML_BUILD += $(BUILD_DIR)/index.html
 JS_FILES := $(wildcard $(JS_DIR)/*.js)
 JS_BUILD := $(BUILD_DIR)/script.js
 
-SASS_FILE := $(SASS_DIR)/style.scss
+SASS_FILE := $(SASS_DIR)/main.scss
 CSS_BUILD := $(BUILD_DIR)/style.css
 
 ASSET_LINKS := $(patsubst $(ASSET_DIR)/%,$(BUILD_DIR)/%,$(wildcard $(ASSET_DIR)/*))

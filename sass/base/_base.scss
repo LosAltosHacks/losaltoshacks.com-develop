@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'Bebas Neue Regular';
+    src: url('fonts/bebasneue_regular-webfont.woff2') format('woff2'),
+         url('fonts/bebasneue_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bebas Neue Regular';
+    src: url('fonts/bebasneue_bold-webfont.woff2') format('woff2'),
+         url('fonts/bebasneue_bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bebas Neue Book';
+    src: url('fonts/bebasneue_book-webfont.woff2') format('woff2'),
+         url('fonts/bebasneue_book-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    /* Fixes supporter images */
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+* {
+    font-size: 20px;
+    font-family: 'Bebas Neue Regular', sans-serif;
+    color: $dark-grey;
+    h1 {
+        font-size: 50px;
+        margin: 0;
+    }
+    h2 {
+        font-size: 35px;
+    }
+    h3 {
+        font-size: 30px;
+    }
+    h4 {
+        font-size: 25px;
+    }
+    a, p {
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue",
+          "Helvetica", "Tahoma", "Geneva", "Arial", "Lucida Grande", sans-serif;
+        color: $grey;
+    }
+}

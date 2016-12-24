@@ -1,0 +1,63 @@
+footer {
+    i { color: $almost-white; }
+    background-color: $nice-grey;
+    padding: 2rem 4rem 3.5rem 4rem;
+
+    a {
+        color: $almost-white;
+        text-decoration: none;
+        font-family: 'Bebas Neue Regular', sans-serif;
+    }
+    .left {
+        float: left;
+        border: 1px solid $almost-white;
+        padding: 0.5rem 1rem;
+    }
+    .right {
+        float: right;
+        a {
+            margin-left: 2rem;
+        }
+        padding: 0.5rem 1rem;
+
+    }
+
+    .social-media {
+        font-family: 'Bebas Neue Book';
+        font-weight: lighter;
+    }
+
+    @media (max-width: 651px) {
+        .right {
+            display: block;
+            float: none;
+            margin: 0 auto;
+            text-align: center;
+            a {
+                margin-left: 0;
+                margin-bottom: 0.4rem;
+            }
+
+            i {
+                margin: 0.5rem;
+            }
+        }
+        .left {
+            display: block;
+            float: none;
+            margin: 1rem auto;
+
+            text-align: center;
+        }
+        .social-media {
+            display: block;
+            margin-bottom: 0.8rem;
+        }
+        // .right a {
+        //     margin-left: 0;
+        //     margin-right: 2rem;
+        // }
+        padding: 2rem 4rem 2rem 4rem;
+
+    }
+}
