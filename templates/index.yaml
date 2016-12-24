@@ -3,7 +3,7 @@ faq:
       answer: Any high school student can participate. If you’ve already graduated from high school, you can’t participate, but you can come help <a href="#mentor-signup">mentor</a> others.
 
     - question: How do I form or join a team?
-      answer: You can either specify your team on the application or form teams at the hackathon, where we’ll have a session for you to meet others. Each team can have a maximum of 4 people.
+      answer: There will be a session at the beginning of the hackathon for you to meet others and form teams. Each team may have a maximum of 4 people.
 
     - question: Does this cost money?
       answer: No! Los Altos Hacks is free for all participants — all food, swag, and other costs are covered.
@@ -11,11 +11,18 @@ faq:
     - question: What if I can't code?
       answer: No problem! We are accepting people regardless of experience. Plus, we'll have workshops where you can learn.
 
-    - question: What should I bring? Will I need my own laptop?
-      answer: Bring a valid student ID for admission and your laptop, phone, chargers, etc. We will not provide laptops or chargers for you. Power strips, ethernet cables, sleeping bags, and toiletries are highly recommended.
+    - question: What should I bring?
+      answer: |-
+          You will need: <ul>
+              <li>Valid student ID</li>
+              <li>Laptop</li>
+              <li>Chargers</li>
+              <li><a href="https://www.hellosign.com/s/9b653be6">Parent Packet</a> (Sign online or bring to the event)</li>
+              <li>Power strips, sleeping bags, and toiletries highly recommended</li>
 
     - question: Do you have a code of conduct?
-      answer: Yes. We expect all hackers to read and follow the <a href="./docs/conduct.pdf">MLH Code of Conduct</a>.
+      answer: |-
+        Yes. All hackers must follow the <a href="/docs/conduct.pdf">MLH Code of Conduct</a> and the rules in the <a href="https://www.hellosign.com/s/9b653be6">Hacker Fund Parent Packet</a>. The packet must be signed in order to attend.
 
 communityPartners:
     - name: Hacker Fund
