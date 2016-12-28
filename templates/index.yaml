@@ -50,11 +50,6 @@ communityPartners:
       site: https://www.gupshup.io
       type: sponsor
 
-    - name: Code for Fun
-      image: codeforfun.png
-      site: https://www.codeforfun.com
-      type: sponsor
-
     - name: Square
       image: square.jpg
       site: https://squareup.com
@@ -63,6 +58,16 @@ communityPartners:
     - name: Evernote
       image: evernote.png
       site: https://evernote.com
+      type: sponsor
+
+    - name: Code for Fun
+      image: codeforfun.png
+      site: https://www.codeforfun.com
+      type: sponsor
+
+    - name: Interview Cake
+      image: interviewcake.jpg
+      site: https://www.interviewcake.com
       type: sponsor
 
     - name: Namecheap
