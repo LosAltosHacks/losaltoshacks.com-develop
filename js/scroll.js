@@ -2,9 +2,20 @@ var scrollToElement = (function () {
     var animation,
         animating = false;
 
-    var scrollToElement = function (elem, duration) {
+    var scrollToElement = function (elem, duration, evt) {
         if (animating || !requestAnimationFrame) {
             return;
+        } else if (evt != undefined) {
+            // If preventDefault isn't called, the browser will scroll to the
+            // element before our animation starts. Then, when our animation
+            // starts and scrolls the page a bit, the page will "jump" back to
+            // just after where it started. This is because the browser already
+            // scrolled the page, so what should be a small step turns into a
+            // leap. Calling preventDefault stops the browser from scrolling
+            // before our animation, and thus prevents a flash from occuring.
+            // We call preventDefault in scrollToElement so that clicking on
+            // a link still works when requestAnimationFrame is not supported.
+            evt.preventDefault();
         }
 
         var elemTop = elem.getBoundingClientRect().top,
