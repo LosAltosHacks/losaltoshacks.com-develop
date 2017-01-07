@@ -1,0 +1,8 @@
+{
+  "name": "losaltoshacks.com-develop",
+  "version": "2.0.0",
+  "private": true,
+  "devDependencies": {
+    "elm": "^0.18.0"
+  }
+}

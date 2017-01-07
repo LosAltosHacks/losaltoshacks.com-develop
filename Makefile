@@ -2,9 +2,11 @@ TEMPLATE_DIR := templates
 SASS_DIR := sass
 JS_DIR := js
 ASSET_DIR := assets
-WATCH_DIRS := "$(TEMPLATE_DIR)", "$(SASS_DIR)", "$(JS_DIR)", "$(ASSET_DIR)"
+LIVE_DIR := live
+WATCH_DIRS := "$(TEMPLATE_DIR)", "$(SASS_DIR)", "$(JS_DIR)", "$(ASSET_DIR)", "$(LIVE_DIR)"
 ARCHIVE_DIR := archive
 BUILD_DIR := build
+NODE_BIN_DIR := ./node_modules/.bin
 
 
 MUSTACHE_FILES := $(wildcard $(TEMPLATE_DIR)/[!_]*.mustache)
@@ -40,14 +42,19 @@ CSS_BUILD := $(BUILD_DIR)/style.css
 ASSET_LINKS := $(patsubst $(ASSET_DIR)/%,$(BUILD_DIR)/%,$(wildcard $(ASSET_DIR)/*))
 2016_LINK := $(BUILD_DIR)/2016
 
+LIVE_ELM := $(LIVE_DIR)/Main.elm
+LIVE_JS := $(BUILD_DIR)/$(LIVE_DIR)/live.js
+LIVE_FILES := $(BUILD_DIR)/$(LIVE_DIR)/index.html
+LIVE_BUILD := $(LIVE_JS) $(LIVE_FILES)
 
-PROGRAM_DEPS := ruby gem bundle
+
+PROGRAM_DEPS := ruby gem bundle npm
 MISSING_DEPS := $(strip $(foreach dep,$(PROGRAM_DEPS),\
                             $(if $(shell command -v $(dep) 2> /dev/null),,$(dep))))
 
 
 site: deps $(BUILD_DIR) 2017 $(2016_LINK)
-2017: $(HTML_BUILD) $(CSS_BUILD) $(JS_BUILD) $(ASSET_LINKS)
+2017: $(HTML_BUILD) $(CSS_BUILD) $(JS_BUILD) $(ASSET_LINKS) $(LIVE_BUILD)
 
 $(BUILD_DIR):
 	mkdir $@
@@ -85,6 +92,12 @@ $(ASSET_LINKS):
 
 $(2016_LINK):
 	ln -s ../$(ARCHIVE_DIR)/2016 $(BUILD_DIR)
+
+$(LIVE_JS): $(LIVE_ELM)
+	$(NODE_BIN_DIR)/elm-make $< --output=$@ --yes
+
+$(LIVE_FILES): $(BUILD_DIR)/% : %
+	cp $< $@
 
 
 clean:
@@ -125,6 +138,10 @@ deps:
 	$(if $(findstring missing,$(shell bundle check)), \
 	    $(info Some gems are missing. Running bundle install...) \
 	    bundle install,)
+
+	$(if $(findstring MISSING,$(shell npm outdated)), \
+	    $(info Some Node packages are missing. Running npm install...) \
+	    npm install,)
 
 .PHONY: site 2017 clean prod watch help deps
 
