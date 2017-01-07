@@ -94,7 +94,7 @@ $(2016_LINK):
 	ln -s ../$(ARCHIVE_DIR)/2016 $(BUILD_DIR)
 
 $(LIVE_JS): $(LIVE_ELM)
-	$(NODE_BIN_DIR)/elm-make $< --output=$@ --yes
+	$(NODE_BIN_DIR)/elm-make $< --output=$@ --yes --warn
 
 $(LIVE_FILES): $(BUILD_DIR)/% : %
 	cp $< $@
