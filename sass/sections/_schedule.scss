@@ -1,5 +1,9 @@
 #schedule {
     background-color: #f9f9f9;
+    table {
+        width: 100%;
+        max-width: 550px;
+    }
     td {
         font-family: $font-family-text;
     }
