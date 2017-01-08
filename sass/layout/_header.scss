@@ -48,11 +48,28 @@ header {
         background-color: #d35400;
     }
 
+    #mlh-trust-badge {
+        display: block;
+        max-width: 100px;
+        min-width: 60px;
+        position: fixed;
+        top: 0;
+        right: 50px;
+        width: 10%;
+
+        img {
+            width: 100%;
+        }
+    }
+
     @media (max-width: 917px) {
         .apply, .sponsor {
             display: block;
         }
         .scroll-anchor {
+            display: none;
+        }
+        #mlh-trust-badge {
             display: none;
         }
     }
