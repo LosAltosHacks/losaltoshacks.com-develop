@@ -22,21 +22,21 @@ faq:
 schedule:
     - day: Saturday, February 4
       events:
-        - name: Check in
+        - name: Check In
           time: "10:00 a.m."
         - name: Opening Ceremony/Team Mixer
           time: "11:00 a.m."
         - name: Lunch/Hacking Begins
           time: "12:00 p.m."
-        - name: How To Make A Chatbot Workshop (GupShup)
+        - name: How to Make a Chatbot (GupShup)
           time: "1:00 p.m."
         - name: From Idea to MVP (Draper University)
           time: "1:00 p.m."
         - name: Intro to Programming (Make School)
           time: "2:00 p.m."
-        - name: Build your first iPhone App (Make School)
+        - name: Build Your First iPhone App (Make School)
           time: "3:00 p.m."
-        - name: Pitch Workshop (Draper University)
+        - name: How to Pitch Your Idea (Draper University)
           time: "5:00 p.m."
         - name: Dinner
           time: "6:00 p.m."
