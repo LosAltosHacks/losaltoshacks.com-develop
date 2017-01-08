@@ -23,35 +23,35 @@ schedule:
     - day: Saturday, February 4
       events:
         - name: Check In
-          time: "10:00 a.m."
+          time: "10:00am"
         - name: Opening Ceremony/Team Mixer
-          time: "11:00 a.m."
+          time: "11:00am"
         - name: Lunch/Hacking Begins
-          time: "12:00 p.m."
+          time: "12:00pm"
         - name: How to Make a Chatbot (GupShup)
-          time: "1:00 p.m."
+          time: "1:00pm"
         - name: From Idea to MVP (Draper University)
-          time: "1:00 p.m."
+          time: "1:00pm"
         - name: Intro to Programming (Make School)
-          time: "2:00 p.m."
+          time: "2:00pm"
         - name: Build Your First iPhone App (Make School)
-          time: "3:00 p.m."
+          time: "3:00pm"
         - name: How to Pitch Your Idea (Draper University)
-          time: "5:00 p.m."
+          time: "5:00pm"
         - name: Dinner
-          time: "6:00 p.m."
+          time: "6:00pm"
     - day: Sunday, February 5
       events:
         - name: Midnight Snack
-          time: "12:00 a.m."
+          time: "12:00am"
         - name: Breakfast/Submissions to Devpost
-          time: "6:00 a.m."
+          time: "6:00am"
         - name: Judging Expo
-          time: "7:00 a.m."
+          time: "7:00am"
         - name: Closing Ceremony
-          time: "9:00 a.m."
+          time: "9:00am"
         - name: End of Hackathon
-          time: "10:00 a.m."
+          time: "10:00am"
 
 communityPartners:
     - name: Hacker Fund
