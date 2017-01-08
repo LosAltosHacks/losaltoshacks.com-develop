@@ -19,6 +19,40 @@ faq:
       answer: |-
         Yes. All hackers must follow the <a href="/docs/conduct.pdf">MLH Code of Conduct</a> and the rules in the <a href="https://www.hellosign.com/s/9b653be6">Hacker Fund Parent Packet</a>. The packet must be signed in order to attend.
 
+schedule:
+    - day: Saturday, February 4
+      events:
+        - name: Check in
+          time: "10:00 a.m."
+        - name: Opening Ceremony/Team Mixer
+          time: "11:00 a.m."
+        - name: Lunch/Hacking Begins
+          time: "12:00 p.m."
+        - name: How To Make A Chatbot Workshop (GupShup)
+          time: "1:00 p.m."
+        - name: From Idea to MVP (Draper University)
+          time: "1:00 p.m."
+        - name: Intro to Programming (Make School)
+          time: "2:00 p.m."
+        - name: Build your first iPhone App (Make School)
+          time: "3:00 p.m."
+        - name: Pitch Workshop (Draper University)
+          time: "5:00 p.m."
+        - name: Dinner
+          time: "6:00 p.m."
+    - day: Sunday, February 5
+      events:
+        - name: Midnight Snack
+          time: "12:00 a.m."
+        - name: Breakfast/Submissions to Devpost
+          time: "6:00 a.m."
+        - name: Judging Expo
+          time: "7:00 a.m."
+        - name: Closing Ceremony
+          time: "9:00 a.m."
+        - name: End of Hackathon
+          time: "10:00 a.m."
+
 communityPartners:
     - name: Hacker Fund
       image: hackerfund.png

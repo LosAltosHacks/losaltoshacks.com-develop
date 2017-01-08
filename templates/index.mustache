@@ -69,6 +69,24 @@
             </div>
         </section>
 
+        <section id="schedule">
+            <div class="container">
+                {{#schedule}}
+                <h3>{{day}}</h3>
+                <table>
+                    <tbody>
+                        {{#events}}
+                        <tr>
+                            <td>{{name}}</td>
+                            <td>{{time}}</td>
+                        </tr>
+                        {{/events}}
+                    </tbody>
+                </table>
+                {{/schedule}}
+            </div>
+        </section>
+
         <section id="supporters">
             <div class="container">
                 <h1>Supporters</h1>
