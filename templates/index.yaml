@@ -36,6 +36,8 @@ schedule:
           time: "2:00pm"
         - name: Build Your First iPhone App (Make School)
           time: "3:00pm"
+        - name: Build Your Own Personal Website (Hack Club)
+          time: "4:00pm"
         - name: How to Pitch Your Idea (Draper University)
           time: "5:00pm"
         - name: Dinner
