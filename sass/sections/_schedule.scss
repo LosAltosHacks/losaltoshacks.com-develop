@@ -2,4 +2,7 @@
     td {
         font-family: $font-family-text;
     }
+    tr td:nth-child(2) {
+        text-align: right;
+    }
 }
