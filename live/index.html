@@ -26,11 +26,11 @@
                 updatesRef = database.ref("/updates");
 
             scheduleRef.on("value", function (schedule) {
-                console.log(schedule.val());
+                app.ports.schedule.send(schedule.val());
             });
 
             updatesRef.on("value", function (updates) {
-                console.log(updates.val());
+                app.ports.updates.send(updates.val());
             });
         </script>
     </body>
