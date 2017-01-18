@@ -95,14 +95,29 @@ communityPartners:
       site: https://squareup.com
       type: sponsor
 
-    - name: Evernote
-      image: evernote.png
-      site: https://evernote.com
+    - name: Digital Ocean
+      image: digitalocean.jpg
+      site: https://digitalocean.com
       type: sponsor
+
+    - name: IBM
+      image: ibm.jpg
+      site: https://ibm.com
+      type: sponsor
+
+    - name: EA
+      image: ea.png
+      site: https://www.ea.com
+      type: donor
 
     - name: Code for Fun
       image: codeforfun.png
       site: https://www.codeforfun.com
+      type: sponsor
+
+    - name: Evernote
+      image: evernote.png
+      site: https://evernote.com
       type: sponsor
 
     - name: Interview Cake
@@ -133,11 +148,6 @@ communityPartners:
     - name: Kloudless
       image: kloudless.png
       site: https://kloudless.com
-      type: donor
-
-    - name: EA
-      image: ea.png
-      site: https://www.ea.com
       type: donor
 
     - name: Ultrapress
