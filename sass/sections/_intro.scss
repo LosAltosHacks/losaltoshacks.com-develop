@@ -6,7 +6,7 @@
     padding: 5rem auto;
     height: calc(100% - 46px);
 
-    @media (max-width: 733px) {
+    @media (max-width: 917px) {
         height: calc(100% - 2 * 46px);
     }
 
@@ -30,18 +30,6 @@
     }
 }
 
-// .apply {
-//     margin: 2rem auto 0 auto;
-//     max-width: 3rem;
-//     padding: 1rem 2rem;
-//     text-decoration: none;
-//     display: block;
-//
-//     border-radius: 2rem;
-//     background-color: #3498db;
-//     color: white;
-// }
-
 .logo-container {
     width: 20rem;
     max-width: 100%;
@@ -52,14 +40,9 @@
     top: 50%;
     transform: translateY(-50%);
 }
-.logo-container-small {
-    max-width: 2rem;
-    margin: 0 auto;
-    padding: 0;
-    text-align: center;
-}
+
 .logo {
-    width: 90%;
-    height: 90%;
+    width: 75%;
+    height: 75%;
     margin: 0; padding: 0;
 }
