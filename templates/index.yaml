@@ -160,6 +160,11 @@ communityPartners:
       site: http://www.wikihow.com
       type: donor
 
+    - name: Leangap
+      image: leangap.jpg
+      site: https://leangap.org
+      type: donor
+
 studentRepresentatives:
     - first: Alveera
       last: Khan
