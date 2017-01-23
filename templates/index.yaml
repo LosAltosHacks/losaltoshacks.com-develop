@@ -46,6 +46,8 @@ schedule:
           time: "5:00pm"
         - name: Dinner
           time: "6:00pm"
+        - name: How to Sell your First Company at 17 (Leangap)
+          time: "7:00pm"
     - day: Sunday, February 5
       events:
         - name: Midnight Snack
