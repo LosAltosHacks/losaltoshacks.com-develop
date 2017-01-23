@@ -34,11 +34,11 @@ schedule:
           time: "1:00pm"
         - name: Intro to Programming (Make School)
           time: "2:00pm"
-        - name: Machine Learning Workshop (IBM)
+        - name: Machine Learning with Watson (IBM)
           time: "2:00pm"
         - name: Build Your First iPhone App (Make School)
           time: "3:00pm"
-        - name: IoT Workshop (IBM)
+        - name: IoT with Watson (IBM)
           time: "3:00pm"
         - name: Build Your Own Personal Website (Hack Club)
           time: "4:00pm"
