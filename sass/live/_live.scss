@@ -1,0 +1,64 @@
+#live-content {
+    min-width: 768px;
+    margin: 0 auto;
+    text-align: center;
+
+    @media (max-width: 780px) {
+        #updates-container {
+            display: none;
+        }
+
+        #schedule-container {
+            height: 100%;
+            overflow-y: auto;
+        }
+    }
+}
+
+#updates-container, #schedule-container {
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+}
+
+.header {
+    padding: 2rem;
+    .title {
+        font-family: Helvetica;
+        text-align: center;
+    }
+}
+
+.schedule-view, .update-view {
+    width: 300px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+    background-color: white;
+    margin: 1rem 0.5rem;
+
+    h2, p {
+        font-family: Helvetica;
+    }
+
+    transition: 0.2s;
+    &:hover {
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+    }
+}
+
+.update-view {
+    padding: 0.5rem 1.5rem;
+    h2 {
+        font-size: 20px;
+    }
+}
+
+.schedule-view {
+    padding: 0.4rem 1.3rem;
+
+    h2 {
+        font-size: 16px;
+    }
+    p {
+        font-size: 14px;
+    }
+}

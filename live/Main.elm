@@ -3,6 +3,7 @@ port module Main exposing (..)
 import Html exposing (..)
 import Json.Decode exposing (..)
 import Json.Encode
+import Html.Attributes exposing (id, class)
 
 
 port schedule : (Json.Encode.Value -> msg) -> Sub msg
@@ -100,27 +101,27 @@ subscriptions model =
 
 view : Model -> Html msg
 view model =
-    div []
-        [ div [] <| List.map scheduleView model.schedule
-        , div [] <| List.map updateView model.updates
+    div [ id "live-content" ]
+        [ div [ id "schedule-container", class "flex-item"] <| List.map scheduleView model.schedule
+        , div [ id "updates-container", class "flex-item" ] <| List.map updateView model.updates
         ]
 
 
 scheduleView : ScheduleItem -> Html msg
 scheduleView item =
-    div []
-        [ div [] [ text item.event ]
-        , div [] [ text item.location ]
-        , div [] [ text item.tag ]
-        , div [] [ text <| toString item.time ]
+    div [ class "schedule-view" ]
+        [ h2 [] [ text item.event ]
+        , p  [] [ text item.location ]
+        , p  [] [ text item.tag ]
+        , p  [] [ text <| toString item.time ]
         ]
 
 
 updateView : UpdateItem -> Html msg
 updateView item =
-    div []
-        [ div [] [ text item.title ]
-        , div [] [ text item.description ]
-        , div [] [ text item.tag ]
-        , div [] [ text <| toString item.time ]
+    div [ class "update-view" ]
+        [ h2  [] [ text item.title ]
+        , p   [] [ text item.description ]
+        , p   [] [ text item.tag ]
+        , p   [] [ text <| toString item.time ]
         ]
