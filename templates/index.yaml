@@ -48,6 +48,10 @@ schedule:
           time: "6:00pm"
         - name: How to Sell your First Company at 17 (Leangap)
           time: "7:00pm"
+        - name: "Cup Stacking Competition"
+          time: "8:00pm"
+        - name: "CTF"
+          time: "TBD"
     - day: Sunday, February 5
       events:
         - name: Midnight Snack
