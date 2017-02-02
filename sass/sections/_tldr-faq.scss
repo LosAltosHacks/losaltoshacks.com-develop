@@ -46,3 +46,13 @@
     flex-flow: row wrap;
     justify-content: flex-start;
 }
+
+#disclaimers {
+    h4 {
+        margin: 0 auto;
+    }
+    p, a {
+        font-size: 15px;
+    }
+
+}
