@@ -3,7 +3,7 @@ port module Main exposing (..)
 import Html exposing (..)
 import Json.Decode exposing (..)
 import Json.Encode
-import Html.Attributes exposing (id, class)
+import Html.Attributes exposing (id, class, href)
 
 
 port schedule : (Json.Encode.Value -> msg) -> Sub msg
@@ -101,10 +101,31 @@ subscriptions model =
 
 view : Model -> Html msg
 view model =
-    div []
-        [ h1 [ id "live-header" ] [ text "Los Altos Hacks", span [] [ text "Live" ] ]
+    div [ id "live-wrapper" ]
+        [ h1 [ id "live-header" ]
+             [ text "Los Altos Hacks"
+             , span [] [ text "Live" ]
+             ]
           , div [ id "live-content" ]
-                [ div [ class "column" ]
+                [ div [ id "toolbar-container" ]
+                      [ a [ class "toolbar-button blue", href "https://drive.google.com/open?id=14Lqb-RDxgzJcSCmgyQ8zz8eVl5bsAI96UEAQguIifSI" ]
+                          [ i [ class "fa fa-gears fa-2x" ] []
+                          , h3 [] [ text "Hardware" ]
+                          ]
+                      , a [ class "toolbar-button orange", href "/#faq" ]
+                          [ i [ class "fa fa-question fa-2x" ] []
+                          , h3 [] [ text "FAQ" ]
+                          ]
+                      , a [ class "toolbar-button red", href "" ]
+                          [ i [ class "fa fa-question fa-2x" ] []
+                          , h3 [] [ text "FAQ" ]
+                          ]
+                      , a [ class "toolbar-button purple", href "" ]
+                          [ i [ class "fa fa-question fa-2x" ] []
+                          , h3 [] [ text "FAQ" ]
+                          ]
+                      ]
+                , div [ class "column" ]
                     [ h3 [ class "column-title" ] [ text "Schedule" ]
                     , div [ id "schedule-container", class "flex-item"] <| List.map scheduleView model.schedule
                     ]
