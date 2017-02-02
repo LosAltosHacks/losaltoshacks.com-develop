@@ -101,9 +101,18 @@ subscriptions model =
 
 view : Model -> Html msg
 view model =
-    div [ id "live-content" ]
-        [ div [ id "schedule-container", class "flex-item"] <| List.map scheduleView model.schedule
-        , div [ id "updates-container", class "flex-item" ] <| List.map updateView model.updates
+    div []
+        [ h1 [ id "live-header" ] [ text "Los Altos Hacks", span [] [ text "Live" ] ]
+          , div [ id "live-content" ]
+                [ div [ class "column" ]
+                    [ h3 [ class "column-title" ] [ text "Schedule" ]
+                    , div [ id "schedule-container", class "flex-item"] <| List.map scheduleView model.schedule
+                    ]
+                , div [ class "column" ]
+                    [ div [ id "updates-container", class "flex-item" ] <| List.map updateView model.updates
+                    , h3 [ class "column-title" ] [ text "Updates" ]
+                    ]
+                ]
         ]
 
 
