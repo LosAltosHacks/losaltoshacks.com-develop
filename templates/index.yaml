@@ -34,7 +34,7 @@ schedule:
           time: "1:00pm"
         - name: Intro to Programming (Make School)
           time: "2:00pm"
-        - name: Machine Learning with Watson (IBM)
+        - name: Python and Watson Cognitive Computing (IBM)
           time: "2:00pm"
         - name: Build Your First iPhone App (Make School)
           time: "3:00pm"
