@@ -26,7 +26,9 @@ main =
 
 type alias Model =
     { schedule : List ScheduleItem
+    , scheduleLoaded : Bool
     , updates : List UpdateItem
+    , updatesLoaded : Bool
     }
 
 
@@ -48,7 +50,7 @@ type alias UpdateItem =
 
 init : ( Model, Cmd msg )
 init =
-    ( Model [] [], Cmd.none )
+    ( Model [] False [] False, Cmd.none )
 
 
 type Msg
@@ -79,7 +81,7 @@ update msg model =
             ScheduleChange value ->
                 case decodeValue scheduleDecoder value of
                     Ok schedule ->
-                        ( { model | schedule = schedule }, Cmd.none )
+                        ( { model | schedule = schedule, scheduleLoaded = True }, Cmd.none )
 
                     Err _ ->
                         ( model, Cmd.none )
@@ -87,7 +89,7 @@ update msg model =
             UpdatesChange value ->
                 case decodeValue updatesDecoder value of
                     Ok updates ->
-                        ( { model | updates = updates }, Cmd.none )
+                        ( { model | updates = updates, updatesLoaded = True }, Cmd.none )
 
                     Err _ ->
                         ( model, Cmd.none )
@@ -128,12 +130,24 @@ view model =
                           ]
                       ]
                 , div [ class "column" ]
-                    [ h3 [ class "column-title" ] [ text "Schedule" ]
+                    [ h3 [ class "column-title" ] [
+                        if model.scheduleLoaded then
+                               if List.isEmpty model.schedule then
+                                    text "No events yet"
+                        else text "Schedule"
+                           else text "Schedule loading..."
+                        ]
                     , div [ id "schedule-container", class "flex-item"] <| List.map scheduleView model.schedule
                     ]
                 , div [ class "column" ]
-                    [ div [ id "updates-container", class "flex-item" ] <| List.map updateView model.updates
-                    , h3 [ class "column-title" ] [ text "Updates" ]
+                [ div [ id "updates-container", class "flex-item" ] <| List.map updateView model.updates
+                    , h3 [ class "column-title" ] [
+                        if model.updatesLoaded then
+                               if List.isEmpty model.updates then
+                                    text "No updates yet"
+                        else text "Updates"
+                           else text "Updates loading..."
+                        ]
                     ]
                 ]
         ]
