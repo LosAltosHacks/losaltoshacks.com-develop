@@ -39,11 +39,11 @@
 
 #toolbar-container {
     .toolbar-button {
-        min-width: 150px;
+        width: 150px;
 
         display: inline-block;
 
-        padding: 1.5rem;
+        padding: 1.3rem;
         margin: 0.5rem;
 
         box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
@@ -93,8 +93,13 @@
     }
 
     @include material-effect();
-    &:active {
 
+    h5 {
+        margin: 0.5rem auto;
+        &.workshop { color: $blue; }
+        &.logistics { color: $orange; }
+        &.food { color: $red; }
+        &.activity { color: $purple; }
     }
 }
 
