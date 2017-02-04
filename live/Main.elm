@@ -107,84 +107,108 @@ view : Model -> Html msg
 view model =
     div [ id "live-wrapper" ]
         [ h1 [ id "live-header" ]
-             [ text "Los Altos Hacks"
-             , span [] [ text "Live" ]
-             ]
-          , div [ id "live-content" ]
-                [ div [ id "toolbar-container" ]
-                      [ a [ class "toolbar-button blue", href "https://drive.google.com/open?id=14Lqb-RDxgzJcSCmgyQ8zz8eVl5bsAI96UEAQguIifSI" ]
-                          [ i [ class "fa fa-gears fa-2x" ] []
-                          , h3 [] [ text "Hardware" ]
-                          ]
-                      , a [ class "toolbar-button orange", href "/#faq" ]
-                          [ i [ class "fa fa-question fa-2x" ] []
-                          , h3 [] [ text "FAQ" ]
-                          ]
-                      , a [ class "toolbar-button red", href "https://losaltoshacks2.devpost.com/" ]
-                          [ i [ class "fa fa-code fa-2x" ] []
-                          , h3 [] [ text "Devpost" ]
-                          ]
-                      , a [ class "toolbar-button purple", href "/img/map.jpg" ]
-                          [ i [ class "fa fa-map fa-2x" ] []
-                          , h3 [] [ text "Map" ]
-                          ]
-                      ]
-                , div [ class "column" ]
-                    [ h3 [ class "column-title" ] [
-                        if model.scheduleLoaded then
-                               if List.isEmpty model.schedule then
-                                    text "No events yet"
-                        else text "Schedule"
-                           else text "Schedule loading..."
-                        ]
-                    , div [ id "schedule-container", class "flex-item"] <| List.map scheduleView model.schedule
+            [ text "Los Altos Hacks"
+            , span [] [ text "Live" ]
+            ]
+        , div [ id "live-content" ]
+            [ div [ id "toolbar-container" ]
+                [ a [ class "toolbar-button blue", href "https://drive.google.com/open?id=14Lqb-RDxgzJcSCmgyQ8zz8eVl5bsAI96UEAQguIifSI" ]
+                    [ i [ class "fa fa-gears fa-2x" ] []
+                    , h3 [] [ text "Hardware" ]
                     ]
-                , div [ class "column" ]
-                [ div [ id "updates-container", class "flex-item" ] <| List.map updateView model.updates
-                    , h3 [ class "column-title" ] [
-                        if model.updatesLoaded then
-                               if List.isEmpty model.updates then
-                                    text "No updates yet"
-                        else text "Updates"
-                           else text "Updates loading..."
-                        ]
+                , a [ class "toolbar-button orange", href "/#faq" ]
+                    [ i [ class "fa fa-question fa-2x" ] []
+                    , h3 [] [ text "FAQ" ]
+                    ]
+                , a [ class "toolbar-button red", href "https://losaltoshacks2.devpost.com/" ]
+                    [ i [ class "fa fa-code fa-2x" ] []
+                    , h3 [] [ text "Devpost" ]
+                    ]
+                , a [ class "toolbar-button purple", href "/img/map.jpg" ]
+                    [ i [ class "fa fa-map fa-2x" ] []
+                    , h3 [] [ text "Map" ]
                     ]
                 ]
+            , div [ class "column" ]
+                [ h3 [ class "column-title" ]
+                    [ if model.scheduleLoaded then
+                        if List.isEmpty model.schedule then
+                            text "No events yet"
+                        else
+                            text "Schedule"
+                      else
+                        text "Schedule loading..."
+                    ]
+                , div [ id "schedule-container", class "flex-item" ] <| List.map scheduleView model.schedule
+                ]
+            , div [ class "column" ]
+                [ div [ id "updates-container", class "flex-item" ] <| List.map updateView model.updates
+                , h3 [ class "column-title" ]
+                    [ if model.updatesLoaded then
+                        if List.isEmpty model.updates then
+                            text "No updates yet"
+                        else
+                            text "Updates"
+                      else
+                        text "Updates loading..."
+                    ]
+                ]
+            ]
         ]
+
 
 toReadableTime : Time -> String
 toReadableTime epoch =
     let
-        date = Date.fromTime (epoch * 1000)
-        h = (Date.hour date + 8) % 24 -- Timezone correction
+        date =
+            Date.fromTime (epoch * 1000)
+
+        h =
+            (Date.hour date + 8) % 24
+
+        -- Timezone correction
         period =
-            if h < 12 then "am"
-            else "pm"
+            if h < 12 then
+                "am"
+            else
+                "pm"
+
         adjustedHour =
-            if h == 0 || h == 12 then 12
-            else (h % 12)
-        m = Date.minute date
+            if h == 0 || h == 12 then
+                12
+            else
+                (h % 12)
+
+        m =
+            Date.minute date
+
         adjustedMinute =
             if m == 0 then
                 toString m ++ "0"
-            else toString m
-        readableDate = toString adjustedHour ++ ":" ++ adjustedMinute ++ period
-    in readableDate
+            else
+                toString m
+
+        readableDate =
+            toString adjustedHour ++ ":" ++ adjustedMinute ++ period
+    in
+        readableDate
+
 
 scheduleView : ScheduleItem -> Html msg
 scheduleView item =
     div [ class "schedule-view" ]
         [ h2 [] [ text item.event ]
-        , p  [] [ text item.location ]
-        , p  [] [ text <| toReadableTime item.time ]
+        , p [] [ text item.location ]
+        , p [] [ text <| toReadableTime item.time ]
         , div [ class "tag" ] [ h5 [ class item.tag ] [ text item.tag ] ]
         ]
+
 
 updateView : UpdateItem -> Html msg
 updateView item =
     div [ class "update-view" ]
-        [ h2  [] [ text item.title ]
-        , p   [] [ text item.description ]
-        , p   [] [ text <| toReadableTime item.time ]
+        [ h2 [] [ text item.title ]
+        , p [] [ text item.description ]
+        , p [] [ text <| toReadableTime item.time ]
         , div [ class "tag" ] [ h5 [ class item.tag ] [ text item.tag ] ]
         ]
