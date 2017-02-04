@@ -81,6 +81,21 @@
         text-align: left;
         vertical-align: top;
     }
+
+    @media (max-width: 451px) {
+        &:last-child {
+            display: flex;
+            flex-flow: column wrap;
+
+            .column-title {
+                order: -1;
+            }
+
+            #updates-container {
+                margin: auto;
+            }
+        }
+    }
 }
 
 .schedule-view, .update-view {
