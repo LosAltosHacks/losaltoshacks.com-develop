@@ -62,9 +62,19 @@ header {
         }
     }
 
+    .live-btn-header {
+        display: none;
+        a {
+            background-color: $blue;
+        }
+    }
+
     @media (max-width: 917px) {
-        .apply, .sponsor {
+        .live-btn-header {
             display: block;
+        }
+        .apply, .sponsor {
+            display: none;
         }
         .scroll-anchor {
             display: none;
