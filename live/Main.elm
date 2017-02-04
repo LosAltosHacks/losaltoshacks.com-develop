@@ -3,6 +3,8 @@ port module Main exposing (..)
 import Html exposing (..)
 import Json.Decode exposing (..)
 import Json.Encode
+import Time exposing (..)
+import Date
 import Html.Attributes exposing (id, class, href)
 
 
@@ -32,7 +34,7 @@ type alias ScheduleItem =
     { event : String
     , location : String
     , tag : String
-    , time : Int
+    , time : Time
     }
 
 
@@ -40,7 +42,7 @@ type alias UpdateItem =
     { title : String
     , description : String
     , tag : String
-    , time : Int
+    , time : Time
     }
 
 
@@ -63,7 +65,7 @@ update msg model =
                     (field "event" string)
                     (field "location" string)
                     (field "tag" string)
-                    (field "time" int)
+                    (field "time" float)
 
         updatesDecoder =
             list <|
@@ -71,7 +73,7 @@ update msg model =
                     (field "title" string)
                     (field "description" string)
                     (field "tag" string)
-                    (field "time" int)
+                    (field "time" float)
     in
         case msg of
             ScheduleChange value ->
@@ -136,22 +138,39 @@ view model =
                 ]
         ]
 
+toReadableTime : Time -> String
+toReadableTime epoch =
+    let
+        date = Date.fromTime (epoch * 1000)
+        h = (Date.hour date + 8) % 24 -- Timezone correction
+        period =
+            if h < 12 then "am"
+            else "pm"
+        adjustedHour =
+            if h == 0 || h == 12 then 12
+            else (h % 12)
+        m = Date.minute date
+        adjustedMinute =
+            if m == 0 then
+                toString m ++ "0"
+            else toString m
+        readableDate = toString adjustedHour ++ ":" ++ adjustedMinute ++ period
+    in readableDate
 
 scheduleView : ScheduleItem -> Html msg
 scheduleView item =
     div [ class "schedule-view" ]
         [ h2 [] [ text item.event ]
         , p  [] [ text item.location ]
-        , p  [] [ text item.tag ]
-        , p  [] [ text <| toString item.time ]
+        , p  [] [ text <| toReadableTime item.time ]
+        , div [ class "tag" ] [ h5 [ class item.tag ] [ text item.tag ] ]
         ]
-
 
 updateView : UpdateItem -> Html msg
 updateView item =
     div [ class "update-view" ]
         [ h2  [] [ text item.title ]
         , p   [] [ text item.description ]
-        , p   [] [ text item.tag ]
-        , p   [] [ text <| toString item.time ]
+        , p   [] [ text <| toReadableTime item.time ]
+        , div [ class "tag" ] [ h5 [ class item.tag ] [ text item.tag ] ]
         ]
