@@ -44,7 +44,7 @@ ASSET_LINKS := $(patsubst $(ASSET_DIR)/%,$(BUILD_DIR)/%,$(wildcard $(ASSET_DIR)/
 
 LIVE_ELM := $(LIVE_DIR)/Main.elm
 LIVE_JS := $(BUILD_DIR)/$(LIVE_DIR)/live.js
-LIVE_FILES := $(addprefix $(BUILD_DIR)/$(LIVE_DIR)/,index.html firebase-config.js)
+LIVE_FILES := $(addprefix $(BUILD_DIR)/$(LIVE_DIR)/,index.html firebase-config.js manifest.json)
 LIVE_BUILD := $(LIVE_JS) $(LIVE_FILES)
 
 
