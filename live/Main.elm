@@ -89,7 +89,14 @@ update msg model =
             UpdatesChange value ->
                 case decodeValue updatesDecoder value of
                     Ok updates ->
-                        ( { model | updates = updates, updatesLoaded = True }, Cmd.none )
+                        let
+                            descComp a b =
+                                case compare a.time b.time of
+                                    LT -> GT
+                                    EQ -> EQ
+                                    GT -> LT
+                        in
+                            ( { model | updates = List.sortWith descComp updates, updatesLoaded = True }, Cmd.none )
 
                     Err _ ->
                         ( model, Cmd.none )
