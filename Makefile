@@ -47,7 +47,7 @@ LIVE_FILES := $(addprefix $(BUILD_DIR)/$(LIVE_DIR)/,index.html firebase-config.j
 LIVE_BUILD := $(LIVE_JS) $(LIVE_FILES)
 
 
-PROGRAM_DEPS := ruby gem bundle npm
+PROGRAM_DEPS := npm
 MISSING_DEPS := $(strip $(foreach dep,$(PROGRAM_DEPS),\
                             $(if $(shell command -v $(dep) 2> /dev/null),,$(dep))))
 
@@ -135,10 +135,6 @@ help:
 
 deps:
 	$(if $(MISSING_DEPS),$(error Dependencies missing: $(MISSING_DEPS)),)
-
-	$(if $(findstring missing,$(shell bundle check)), \
-	    $(info Some gems are missing. Running bundle install...) \
-	    bundle install,)
 
 	$(if $(findstring MISSING,$(shell npm outdated)), \
 	    $(info Some Node packages are missing. Running npm install...) \
