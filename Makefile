@@ -3,7 +3,6 @@ SASS_DIR := sass
 JS_DIR := js
 ASSET_DIR := assets
 LIVE_DIR := live
-WATCH_DIRS := "$(TEMPLATE_DIR)", "$(SASS_DIR)", "$(JS_DIR)", "$(ASSET_DIR)", "$(LIVE_DIR)"
 ARCHIVE_DIR := archive
 BUILD_DIR := build
 NODE_BIN_DIR := ./node_modules/.bin
@@ -110,11 +109,9 @@ prod: site
 
 watch: site
 	@echo "Listening for changes..."
-	@ruby -e 'require "listen"; \
-	          listener = Listen.to($(WATCH_DIRS), latency: 0.5) { \
-	            puts "\n" + Time.now.strftime("%-l:%M:%S%P"); \
-	            system("make --no-print-directory") \
-	          }; listener.start; at_exit { listener.stop }; sleep'
+	@$(NODE_BIN_DIR)/chokidar "$(TEMPLATE_DIR)/*.mustache" "$(TEMPLATE_DIR)/*.yaml" \
+	    "$(SASS_DIR)" "$(JS_DIR)" "$(ASSET_DIR)" "$(LIVE_DIR)" \
+        --silent -c "echo; date +'%-l:%M:%S%P'; make --no-print-directory"
 
 help:
 	@echo 'The Los Altos Hacks website'

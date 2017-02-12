@@ -4,6 +4,7 @@
   "private": true,
   "devDependencies": {
     "autoprefixer": "^6.7.2",
+    "chokidar-cli": "^1.2.0",
     "elm": "^0.18.0",
     "postcss-cli": "^2.6.0"
   }
