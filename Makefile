@@ -58,13 +58,21 @@ site: deps $(BUILD_DIR) 2017 $(2016_LINK)
 $(BUILD_DIR):
 	mkdir $@
 
-# We cd to the templates directory so that Mustache can find partials.
 # MUSTACHE_PARTIALS are added as a prerequisite so that non-partials are rebuilt
 # when partials are modified.
-%.html: %.yaml %.mustache $(MUSTACHE_PARTIALS)
-	cd $(@D) && mustache $(*F).yaml $(*F).mustache > $(@F)
-# Remove lines with just whitespace, as Mustache indents blank lines in partials
-	perl -pi -e 's/^[ \t]+$$//' $@
+# Partials' filenames must have just one dot and one underscore to match the regex.
+%.html: %.mustache %.yaml $(MUSTACHE_PARTIALS)
+	node -e " \
+	    var fs = require('fs'), partials = {}; \
+	    '$(MUSTACHE_PARTIALS)'.split(' ').forEach(function(p) { \
+	        partials[p.match(/_[^./]+/)[0]] = fs.readFileSync(p, 'utf8'); }); \
+	    fs.writeFileSync('$@', require('mustache').render( \
+	        fs.readFileSync('$<', 'utf8'), \
+	        require('js-yaml').safeLoad(fs.readFileSync('$*.yaml')), \
+	        partials));"
+
+	$(NODE_BIN_DIR)/html-beautify -f $@ -r
+
 
 $(BUILD_DIR)/%.html: $(TEMPLATE_DIR)/%.html
 	mv $^ $@
