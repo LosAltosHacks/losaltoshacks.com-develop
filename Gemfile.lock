@@ -1,17 +1,11 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    autoprefixer-rails (6.5.3)
-      execjs
-    execjs (2.7.0)
     ffi (1.9.14)
-    libv8 (5.3.332.38.3)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
-    mini_racer (0.1.7)
-      libv8 (~> 5.3)
     mustache (1.0.3)
     rb-fsevent (0.9.8)
     rb-inotify (0.9.7)
@@ -23,9 +17,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  autoprefixer-rails
   listen
-  mini_racer
   mustache
   sass
 

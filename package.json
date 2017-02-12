@@ -3,6 +3,8 @@
   "version": "2.0.0",
   "private": true,
   "devDependencies": {
-    "elm": "^0.18.0"
+    "autoprefixer": "^6.7.2",
+    "elm": "^0.18.0",
+    "postcss-cli": "^2.6.0"
   }
 }

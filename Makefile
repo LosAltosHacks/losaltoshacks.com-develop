@@ -78,11 +78,7 @@ $(BUILD_DIR)/%/index.html: $(TEMPLATE_DIR)/%.html
 # partials are modified.
 $(CSS_BUILD): $(SASS_FILE) $(SASS_PARTIALS)
 	sass -t compressed --sourcemap=none $< $@
-# The CSS must be slurped to use autoprefixer-rails. It should not be slow if
-# the file is small enough.
-	ruby -e 'require "autoprefixer-rails"; \
-	         css = File.read("$@"); \
-	         File.open("$@", "w") { |io| io << AutoprefixerRails.process(css) }'
+	$(NODE_BIN_DIR)/postcss --use autoprefixer $@ -o $@
 
 $(JS_BUILD): $(JS_FILES)
 	cat $(JS_FILES) > $(JS_BUILD)
