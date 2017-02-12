@@ -76,7 +76,7 @@ $(BUILD_DIR)/%/index.html: $(TEMPLATE_DIR)/%.html
 # The prerequesite SASS_PARTIALS ensures that CSS_BUILD is rebuilt when
 # partials are modified.
 $(CSS_BUILD): $(SASS_FILE) $(SASS_PARTIALS)
-	sass -t compressed --sourcemap=none $< $@
+	$(NODE_BIN_DIR)/node-sass --output-style compressed $< > $@
 	$(NODE_BIN_DIR)/postcss --use autoprefixer $@ -o $@
 
 $(JS_BUILD): $(JS_FILES)
