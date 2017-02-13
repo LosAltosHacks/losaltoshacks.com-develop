@@ -1,0 +1,51 @@
+#stats {
+    .flex-container {
+        justify-content: center;
+    }
+}
+
+.stat {
+    display: inline-block;
+    margin: 15px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+    h2 {
+        width: 100%;
+        display: inline;
+        padding: 15px;
+        padding-left: 0;
+        margin: 0;
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    span {
+        @extend h2;
+        color: white;
+        padding-left: 15px;
+        padding-right: 10px;
+        margin-right: 10px;
+    }
+
+    .bg-blue {
+        background-color: $blue;
+    }
+    .bg-orange {
+        background-color: $orange;
+    }
+    .bg-green {
+        background-color: $green;
+    }
+    .bg-purple {
+        background-color: $purple;
+    }
+    .bg-indigo {
+        background-color: $light-indigo;
+    }
+    .bg-red {
+        background-color: $red;
+    }
+    .bg-turquoise {
+        background-color: $turquoise;
+    }
+}

@@ -5,3 +5,17 @@
     width: 90%;
     padding-top: 10px;
 }
+
+.flex-container {
+    display: flex;
+
+    flex-flow: row wrap;
+
+    align-items: center;
+
+    margin-top: 1.5rem;
+
+    @media(max-width: 808px) {
+        justify-content: space-around;
+    }
+}

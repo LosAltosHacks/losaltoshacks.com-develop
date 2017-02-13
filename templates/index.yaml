@@ -1,3 +1,21 @@
+stats:
+    - description: attendees
+      value: "300"
+      color: blue
+    - description: mentors
+      value: "30"
+      color: indigo
+    - description: gender diversity
+      value: "2:3"
+      color: orange
+    - description: in prizes
+      value: "$50,000"
+      color: green
+    - description: projects submitted
+      value: "60"
+      color: red
+
+
 faq:
     - question: Who can participate?
       answer: Any high school student can participate. If you’ve already graduated from high school, you can’t participate, but you can come help mentor others.

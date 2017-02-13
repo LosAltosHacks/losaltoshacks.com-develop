@@ -1,19 +1,8 @@
-.flex-container-supporters {
-    display: flex;
-
-    flex-flow: row wrap;
-    justify-content: space-between;
-
-    align-items: center;
-
-    margin-top: 1.5rem;
-
-    @media(max-width: 808px) {
-        justify-content: space-around;
-    }
-}
-
 #supporters {
+    .flex-container {
+        justify-content: space-between;
+    }
+
     width: 100%;
     margin: 0 auto;
     display: block;
@@ -53,6 +42,7 @@
         }
     }
 }
+
 
 .shoutout {
     p {

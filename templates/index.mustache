@@ -23,7 +23,13 @@
 
         <section id="stats">
             <div class="container">
-                <h1>STATS</h1>
+                <h1>Statistics</h1>
+
+                <div class="flex-container">
+                    {{#stats}}
+                    {{> _stat}}
+                    {{/stats}}
+                </div>
             </div>
         </section>
 
@@ -37,7 +43,7 @@
             <div class="container">
                 <h1>A huge thanks to our supporters!</h1>
 
-                <div class="flex-container-supporters">
+                <div class="flex-container">
                     {{#communityPartners}}
                     {{> _supporter}}
                     {{/communityPartners}}
