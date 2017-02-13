@@ -1,6 +1,6 @@
 faq:
     - question: Who can participate?
-      answer: Any high school student can participate. If you’ve already graduated from high school, you can’t participate, but you can come help <a href="#mentor-signup">mentor</a> others.
+      answer: Any high school student can participate. If you’ve already graduated from high school, you can’t participate, but you can come help mentor others.
 
     - question: How do I form or join a team?
       answer: There will be a session at the beginning of the hackathon for you to meet others and form teams. Each team may have a maximum of 4 people.
@@ -17,7 +17,7 @@ faq:
 
     - question: Do you have a code of conduct?
       answer: |-
-        Yes. All hackers must follow the <a href="/docs/conduct.pdf">MLH Code of Conduct</a> and the rules in the <a href="https://www.hellosign.com/s/9b653be6">Hacker Fund Parent Packet</a>. The packet must be signed in order to attend.
+        Yes. All hackers must follow the <a href="docs/conduct.pdf">MLH Code of Conduct</a> and the rules in the <a href="https://www.hellosign.com/s/9b653be6">Hacker Fund Parent Packet</a>. The packet must be signed in order to attend.
 
 schedule:
     - day: Saturday, February 4
