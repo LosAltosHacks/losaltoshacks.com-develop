@@ -8,139 +8,38 @@
                     <img class="logo" src="img/logo.svg" alt="Los Altos Hacks Logo">
                     <h1 id="title">Los Altos Hacks II</h1>
 
-                    {{! <a class="live-btn" href="/live">Live Dashboard</a> }}
                     <h3>February 4-5, 2017<br>Evernote HQ<br>305 Walnut St, Redwood City</h3>
-                    {{! <a href="#" class="apply-button">Apply</a> }}
                 </div>
             </div>
             <header id="navbar">
                 <ul class="horizontal">
-                    <li class="scroll-anchor"><a href="#faq">FAQ</a></li>
-                    <li class="scroll-anchor"><a href="#schedule">Schedule</a></li>
+                    <li class="scroll-anchor"><a href="#stats">Stats</a></li>
+                    <li class="scroll-anchor"><a href="#winners">Students</a></li>
                     <li class="scroll-anchor"><a href="#supporters">Supporters</a></li>
-                    <li class="scroll-anchor"><a href="#students">Students</a></li>
-                    <li class="apply">
-                        <!-- Typeform -->
-                        <a class="typeform-share btn" href="https://losaltoshacks.typeform.com/to/n47s2D" data-mode="1">Waitlist</a>
-                    </li>
-                    <li class="sponsor"><a href="docs/sponsorship.pdf">Sponsor</a></li>
-                    {{! <li class="live-btn-header"><a href="/live">Live Dashboard</a></li> }}
                 </ul>
-                <a id="mlh-trust-badge" href="https://mlh.io/seasons/na-2017/events">
-                    <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2017/blue.svg" alt="Major League Hacking 2017 Hackathon Season">
-                </a>
-                <script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}id=id+'_';if(!gi.call(d,id)){qs=ce.call(d,'link');qs.rel='stylesheet';qs.id=id;qs.href=b+'share-button.css';s=gt.call(d,'head')[0];s.appendChild(qs,s)}})()</script>
             </header>
         </section>
 
-        <section id="mentor-signup">
+        <section id="stats">
             <div class="container">
-                <h1>Hardware</h1>
-                <p>Los Altos Hacks will provide hardware! Thanks to all our sponsors!</p>
-                <div class="shoutout">
-                    <a href="https://docs.google.com/spreadsheets/d/14Lqb-RDxgzJcSCmgyQ8zz8eVl5bsAI96UEAQguIifSI/edit?usp=sharing">
-                        <i class="fa fa-gears" aria-hidden="true"></i>
-                        &nbsp;Hardware Catalog
-                    </a>
-                </div>
+                <h1>STATS</h1>
             </div>
         </section>
 
-        <section id="schedule">
+        <section id="winners">
             <div class="container">
-                <h1>Schedule</h1>
-
-                {{#schedule}}
-                <h2>{{day}}</h2>
-                <table>
-                    <tbody>
-                        {{#events}}
-                        <tr>
-                            <td>{{name}}</td>
-                            <td>{{time}}</td>
-                        </tr>
-                        {{/events}}
-                    </tbody>
-                </table>
-                {{/schedule}}
-            </div>
-        </section>
-
-        <section id="faq">
-            <div class="container">
-                <h1 id="faq-title">What is Los Altos Hacks?</h1>
-                <p id="faq-desc">
-                    Los Altos Hacks is a hackathon, an overnight event where people can code a project together. At Los Altos Hacks, you will have 24 hours to make your idea a reality. This year, we're aiming to have around 300 attendees with an even gender ratio.
-                </p>
-                <p>
-                    Contact us at <a href="mailto:info@losaltoshacks.com">info@losaltoshacks.com</a> if you have questions that aren't answered below.
-                </p>
-
-                <div class="flex-container-faq">
-                    {{#faq}}
-                    {{> _faq}}
-                    {{/faq}}
-                </div>
-                <div class="team">
-                    <h2>Who organized this?</h2>
-                    <div class="team-img">
-                        <img src="img/team.jpg" alt="The Los Altos Hacks II Team">
-                    </div>
-                    <p>
-                        The Los Altos Hacks II team consists of Aashia Mehta, An Huynh, Cole Brinsfield, Colin Scholler, Dan Appel (not shown), Grace Gao, Jamsheed Mistri (not shown), Justin Yu, Krizia Araracap, Kyle Sandell (not shown), Oscar Bjorkman, Ryan Huang, Samuel Shi (not shown) and Zooey Nguyen.
-                    </p>
-                    <div id="disclaimers">
-                        <h4>Disclaimers</h4>
-                        <p>
-                            Los Altos Hacks is a program organized in partnership with Hacker Fund, a fiscal sponsor for charitable community projects that empower technology education. Hacker Fund is a 501(c)(3) public charity with the EIN: 47-2485464. All donations to our event are tax-deductible.
-                        </p>
-                        <p>
-                            By registering, I agree to the terms of both the <a href="https://github.com/MLH/mlh-policies/tree/master/prize-terms-and-conditions">MLH Contest Terms and Conditions</a> and the <a href="https://mlh.io/privacy">MLH Privacy Policy</a>.
-                            Please note that you may receive pre and post-event informational e-mails and occasional messages about hackathons from MLH as per the MLH Privacy Policy.
-                        </p>
-                    </div>
-
-                </div>
+                <h1>WINNERS</h1>
             </div>
         </section>
 
         <section id="supporters">
             <div class="container">
-                <h1>Supporters</h1>
-                <div class="shoutout sponsor">
-                    <p>Interested in supporting us?</p>
-                    <a href="docs/sponsorship.pdf">
-                        <i class="fa fa-book" aria-hidden="true"></i>
-                        &nbsp;Read our prospectus
-                    </a>
-                    <a href="mailto:sponsor@losaltoshacks.com" class="email-button">
-                        <i class="fa fa-envelope" aria-hidden="true"></i>
-                        &nbsp;Send us an email
-                    </a>
-                </div>
+                <h1>A huge thanks to our supporters!</h1>
 
                 <div class="flex-container-supporters">
                     {{#communityPartners}}
                     {{> _supporter}}
                     {{/communityPartners}}
-                </div>
-            </div>
-        </section>
-
-        <section id="students">
-            <div class="container">
-                <h1>Student Representatives</h1>
-                <div class="shoutout">
-                    <p>Interested in representing LAH at your school?</p>
-                    <a href="mailto:info@losaltoshacks.com">
-                        <i class="fa fa-envelope" aria-hidden="true"></i>
-                        &nbsp;Send us an email
-                    </a>
-                </div>
-                <div class="flex-container-students">
-                    {{#studentRepresentatives}}
-                    {{> _student}}
-                    {{/studentRepresentatives}}
                 </div>
             </div>
         </section>
