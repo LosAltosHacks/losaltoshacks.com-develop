@@ -2,6 +2,10 @@
 
 @import 'vendors/normalize';
 
+@media screen {
+    @import 'vendors/flickity';
+}
+
 @import 'base/base';
 
 @import 'layout/header';
@@ -18,5 +22,6 @@
 @import 'sections/supporters';
 @import 'sections/students';
 @import 'sections/stats';
+@import 'sections/winners';
 
 @import 'live/live'

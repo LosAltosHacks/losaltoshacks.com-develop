@@ -37,6 +37,32 @@ faq:
       answer: |-
         Yes. All hackers must follow the <a href="docs/conduct.pdf">MLH Code of Conduct</a> and the rules in the <a href="https://www.hellosign.com/s/9b653be6">Hacker Fund Parent Packet</a>. The packet must be signed in order to attend.
 
+winners:
+    - project: SMS Maps
+      image: first-place.jpg
+      link: "https://devpost.com/software/sms-maps"
+    - project: Oratory
+      image: second-place.jpg
+      link: "https://devpost.com/software/oratory"
+    - project: Anti-Hate Keyboard
+      image: third-place.jpg
+      link: "https://devpost.com/software/anti-hate-keyboard"
+    - project: MatchTheFit.com
+      image: best-wolfram.jpg
+      link: "https://devpost.com/software/matchmyfit-com"
+    - project: ChemBot
+      image: gupshup.jpg
+      link: "https://devpost.com/software/chembot"
+    - project: Activists Assemble
+      image: best-android.jpg
+      link: "https://devpost.com/software/activists-assemble"
+    - project: Studium
+      image: best-beginner.jpg
+      link: "https://devpost.com/software/studium"
+    - project: Auxilium Health
+      image: best-vi.jpg
+      link: "https://devpost.com/software/auxilium-1et0ri"
+
 schedule:
     - day: Saturday, February 4
       events:

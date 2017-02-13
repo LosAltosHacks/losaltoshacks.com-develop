@@ -13,7 +13,7 @@
             <header id="navbar">
                 <ul class="horizontal">
                     <li class="scroll-anchor"><a href="#stats">Stats</a></li>
-                    <li class="scroll-anchor"><a href="#winners">Students</a></li>
+                    <li class="scroll-anchor"><a href="#winners">Winners</a></li>
                     <li class="scroll-anchor"><a href="#supporters">Supporters</a></li>
                 </ul>
             </header>
@@ -34,6 +34,12 @@
         <section id="winners">
             <div class="container">
                 <h1>WINNERS</h1>
+                <a class="winner-project-name"></a>
+                <div class="winner-carousel">
+                    {{#winners}}
+                    {{> _winner}}
+                    {{/winners}}
+                </div>
             </div>
         </section>
 
