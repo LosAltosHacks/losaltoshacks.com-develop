@@ -2,7 +2,6 @@ TEMPLATE_DIR := templates
 SASS_DIR := sass
 JS_DIR := js
 ASSET_DIR := assets
-LIVE_DIR := live
 ARCHIVE_DIR := archive
 BUILD_DIR := build
 NODE_BIN_DIR := ./node_modules/.bin
@@ -39,12 +38,7 @@ SASS_PARTIALS := $(wildcard $(SASS_DIR)/*/_*.scss)
 CSS_BUILD := $(BUILD_DIR)/style.css
 
 ASSET_LINKS := $(patsubst $(ASSET_DIR)/%,$(BUILD_DIR)/%,$(wildcard $(ASSET_DIR)/*))
-2016_LINK := $(BUILD_DIR)/2016
-
-LIVE_ELM := $(LIVE_DIR)/Main.elm
-LIVE_JS := $(BUILD_DIR)/$(LIVE_DIR)/live.js
-LIVE_FILES := $(addprefix $(BUILD_DIR)/$(LIVE_DIR)/,index.html firebase-config.js manifest.json)
-LIVE_BUILD := $(LIVE_JS) $(LIVE_FILES)
+ARCHIVE_LINKS := $(BUILD_DIR)/2016 $(BUILD_DIR)/2017
 
 
 PROGRAM_DEPS := npm
@@ -52,8 +46,8 @@ MISSING_DEPS := $(strip $(foreach dep,$(PROGRAM_DEPS),\
                             $(if $(shell command -v $(dep) 2> /dev/null),,$(dep))))
 
 
-site: deps $(BUILD_DIR) 2017 $(2016_LINK)
-2017: $(HTML_BUILD) $(CSS_BUILD) $(JS_BUILD) $(ASSET_LINKS) $(LIVE_BUILD)
+site: deps $(BUILD_DIR) 2018-soon $(ARCHIVE_LINKS)
+2018-soon: $(HTML_BUILD) $(CSS_BUILD) $(JS_BUILD) $(ASSET_LINKS)
 
 $(BUILD_DIR):
 	mkdir $@
@@ -93,14 +87,8 @@ $(JS_BUILD): $(JS_FILES)
 $(ASSET_LINKS):
 	ln -s ../$(ASSET_DIR)/$(@F) $(BUILD_DIR)
 
-$(2016_LINK):
-	ln -s ../$(ARCHIVE_DIR)/2016 $(BUILD_DIR)
-
-$(LIVE_JS): $(LIVE_ELM)
-	$(NODE_BIN_DIR)/elm-make $< --output=$@ --yes --warn
-
-$(LIVE_FILES): $(BUILD_DIR)/% : %
-	cp $< $@
+$(ARCHIVE_LINKS): $(BUILD_DIR)/% :
+	ln -s ../$(ARCHIVE_DIR)/$* $(BUILD_DIR)
 
 
 clean:
@@ -140,7 +128,7 @@ deps:
 	    $(info Some Node packages are missing. Running npm install...) \
 	    npm install,)
 
-.PHONY: site 2017 clean prod watch help deps
+.PHONY: site 2018-soon clean prod watch help deps
 
 # Disable implicit rules to speed up processing and declutter debug output
 .SUFFIXES:
