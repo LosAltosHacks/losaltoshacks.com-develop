@@ -1,7 +1,11 @@
-.content {
-    background: url('img/bg.svg') center;
+#main {
+    background: url('img/bg.jpg') center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.content {
+    background-color: rgba(0, 0, 0, 0.75);
 
     padding: 5rem auto;
     height: calc(100% - 46px);
@@ -11,10 +15,20 @@
     }
 
     #title {
-        letter-spacing: 2px;
-        color: $dark-grey;
+        color: $almost-white;
         font-weight: bold;
         font-size: 2.4rem;
+    }
+
+    #thanks-message {
+        text-align: left;
+        color: $almost-white;
+    }
+
+    #byline {
+        display: block;
+        text-align: right;
+        color: $almost-white;
     }
 
     #subtitle {
@@ -36,9 +50,10 @@
 }
 
 .logo-container {
-    width: 20rem;
+    width: 24rem;
     max-width: 100%;
     margin: 0 auto;
+    padding: 2rem;
     text-align: center;
 
     position: relative;
@@ -49,7 +64,8 @@
 .logo {
     width: 75%;
     height: 75%;
-    margin: 0; padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .live-btn {
