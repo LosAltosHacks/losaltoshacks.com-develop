@@ -13,6 +13,9 @@ footer {
         border: 1px solid $almost-white;
         padding: 0.5rem 1rem;
     }
+    a.left + a.left {
+        margin-left: 10px;
+    }
     .right {
         float: right;
         a {
