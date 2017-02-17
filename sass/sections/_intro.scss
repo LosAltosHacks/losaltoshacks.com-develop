@@ -67,26 +67,3 @@
     margin: 0;
     padding: 0;
 }
-
-.live-btn {
-    font-family: $font-family-display;
-    font-size: 2rem;
-
-    margin: 0.6rem 0.3rem 1rem 0;
-    margin: 1rem auto;
-    padding: 0.6rem 0.8rem;
-    display: inline-block;
-    text-decoration: none;
-    background-color: $blue;
-    color: white;
-
-    &:hover {
-        background-color: #2980b9;
-    }
-    &:active {
-        box-shadow: inset 0px 0px 8px $dark-grey;
-    }
-    @media (max-width: 917px) {
-        display: none !important;
-    }
-}
