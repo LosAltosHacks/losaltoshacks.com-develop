@@ -25,31 +25,29 @@
 html {
     // Fixes supporter images
     box-sizing: border-box;
+    font-size: 20px;
+    font-family: $font-family-display;
+    color: $dark-grey;
 }
 
 *, *::before, *::after {
     box-sizing: inherit;
 }
 
-* {
-    font-size: 20px;
-    font-family: $font-family-display;
-    color: $dark-grey;
-    h1 {
-        font-size: 50px;
-        margin: 0;
-    }
-    h2 {
-        font-size: 35px;
-    }
-    h3 {
-        font-size: 30px;
-    }
-    h4 {
-        font-size: 25px;
-    }
-    a, p {
-        font-family: $font-family-text;
-        color: $grey;
-    }
+h1 {
+    font-size: 50px;
+    margin: 0;
+}
+h2 {
+    font-size: 35px;
+}
+h3 {
+    font-size: 30px;
+}
+h4 {
+    font-size: 25px;
+}
+a, p {
+    font-family: $font-family-text;
+    color: $grey;
 }
