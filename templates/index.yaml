@@ -9,7 +9,7 @@ stats:
       value: "2:3"
       color: orange
     - description: in prizes
-      value: "$50,000"
+      value: "$1,800"
       color: green
     - description: projects submitted
       value: "60"
