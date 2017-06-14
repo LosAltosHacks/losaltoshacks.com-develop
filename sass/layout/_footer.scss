@@ -31,6 +31,9 @@ footer {
     }
 
     @media (max-width: 651px) {
+        a.left + a.left {
+            margin-left: 0;
+        }
         .right {
             display: block;
             float: none;
